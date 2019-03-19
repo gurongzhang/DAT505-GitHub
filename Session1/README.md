@@ -1,10 +1,10 @@
 # DAT505-Session1
 ## 00-Test *Rotating Cube*
 #### This is one example which shows a *cube* keeps *rotating* in the middle of the screen.
-![Rotating Cube](https://github.com/gurongzhang/DAT505-GitHub/blob/master/Session1/pictures/pic-0.png"Rotating Cube")
+![Rotating Cube](/Users/gurongzhang/Desktop/DAT505-GitHub/Session1/pictures/pic-0.png "Rotating Cube")
 ### Knowledge Points
 1. [Three.js](https://threejs.org) is a website that has a whole bunch of interesting featured projects using threejs to code.
- ⋅⋅* **Documentation** and **Examples** have all the definitions and code which are very fundamental for reference.
+ * **Documentation** and **Examples** have all the definitions and code which are very fundamental for reference.
   * The **js source files** that shows in the "*view source*" of each example need to be copied to the *local js file* from the __three-3.js-master-r102__ file which on the *Desktop*.
   ![view source](/Users/gurongzhang/Desktop/DAT505-GitHub/Session1/pictures/pic-1.png "view source")
     ![three-3.js-master-r102](/Users/gurongzhang/Desktop/DAT505-GitHub/Session1/pictures/pic-2.png "three-3.js-master-r102")
@@ -16,7 +16,10 @@
 3. Do not forget to *add the mesh to the scene*```
 scene.add( mesh );
 ```
+
 ***
+
+
 ## 01-TestX *Creating New Rotating Object*
 #### This project did some changes based on the *00-Test* and demonstrates one rotating *IcosahedronGeometry* with *pink background color*.
 ![rotating IcosahedronGeometry with pink background color](/Users/gurongzhang/Desktop/DAT505-GitHub/Session1/pictures/pic-5.png "rotating IcosahedronGeometry with pink background color")
