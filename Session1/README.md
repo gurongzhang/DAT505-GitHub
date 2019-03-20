@@ -1,5 +1,5 @@
 # DAT505-Session1
-## 00-Test *Rotating Cube*
+## 00-Test:*Rotating Cube*
 #### This is one example which shows a *cube* keeps *rotating* in the middle of the screen.
 ![Rotating Cube](/Users/gurongzhang/Desktop/DAT505-GitHub/Session1/pictures/pic-0.png "Rotating Cube")
 ### Knowledge Points
@@ -20,7 +20,7 @@ scene.add( mesh );
 ***
 
 
-## 01-TestX *Creating New Rotating Object*
+## 01-TestX:*Creating New Rotating Object*
 #### This project did some changes based on the *00-Test* and demonstrates one rotating *IcosahedronGeometry* with *pink background color*.
 ![rotating IcosahedronGeometry with pink background color](/Users/gurongzhang/Desktop/DAT505-GitHub/Session1/pictures/pic-5.png "rotating IcosahedronGeometry with pink background color")
 ### Knowledge Points
@@ -41,3 +41,33 @@ scene.add( mesh );
  material = new THREE.MeshBasicMaterial( { color: "#FFDAB9" } );
  ```
  * Do the quick check of [Hex color code](https://www.cnblogs.com/summary-2017/p/7504126.html).
+
+ *** 
+
+ ## Homework Practice:*Multiple Rotating Objects*
+ #### The content of the exercise:
+ ![Exercise Content](/Users/gurongzhang/Desktop/DAT505-GitHub/Session1/pictures/pic-12.png "Exercise Content")
+ ### The final look of my Homework:
+ ![Homework1](/Users/gurongzhang/Desktop/DAT505-GitHub/Session1/pictures/pic-11.png "Homework1")
+ ### Analysis:
+ 1. Setting two icosahedrons which have the *same position* in the scene but with *different sizes* and *materials*.
+ ```
+ geometry = new THREE.IcosahedronGeometry( radius, 1 );
+material = new THREE.MeshPhysicalMaterial( { color: "#FF1493" } );
+geometry1 = new THREE.IcosahedronGeometry( radius*2, 1 );
+ material1 = new THREE.MeshBasicMaterial( { wireframe: true } );
+ ```
+ 2. Using **wireframe** property in the *material* to show the wireframe of the icosahedrons.
+ ```
+ wireframe: true
+ ```
+ 3. Giving different rotating speed of x, y, z to both icosahedrons.
+  ```
+   mesh.rotation.y += 0.04;
+   mesh.rotation.z += 0.01;
+   mesh.rotation.x += 0.03;
+   mesh1.rotation.y -= 0.03;
+   mesh1.rotation.z -= 0.01;
+   mesh1.rotation.x -= 0.04;
+ ```
+    * The larger the number is, the faster that  the mesh will rotate.
