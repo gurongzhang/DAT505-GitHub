@@ -1,7 +1,7 @@
 # DAT505-Session1
 ## 00-Test:*Rotating Cube*
 #### This is one example which shows a *cube* keeps *rotating* in the middle of the screen.
-![Rotating Cube](/Users/gurongzhang/Desktop/DAT505-GitHub/Session1/pictures/pic-0.png "Rotating Cube")
+![Rotating Cube](/Session1/pictures/pic-0.png "Rotating Cube")
 ### Knowledge Points
 1. [Three.js](https://threejs.org) is a website that has a whole bunch of interesting featured projects using threejs to code.
  * **Documentation** and **Examples** have all the definitions and code which are very fundamental for reference.
