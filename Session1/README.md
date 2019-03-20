@@ -13,7 +13,8 @@
  ![Geometries Categories](/Users/gurongzhang/Desktop/DAT505-GitHub/Session1/pictures/pic-3.png "Geometries Categories")
   There are different kinds of **Material** too(to view more: *Threejs.org - documentation -  [Materials](https://threejs.org/docs/index.html#api/en/geometries/BoxGeometry))*
 ![Materials Categories](/Users/gurongzhang/Desktop/DAT505-GitHub/Session1/pictures/pic-4.png "Materials Categories")
-3. Do not forget to *add the mesh to the scene*```
+3. Do not forget to *add the mesh to the scene*
+```
 scene.add( mesh );
 ```
 
