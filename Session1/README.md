@@ -11,10 +11,12 @@
 2. **Mesh** is one significant element when creating an object. Each mesh includes two elemtents — **geometry** and **material**.
   * **Geometry** has different categories(to view more:*Threejs.org - documentation -  [Geometries](https://threejs.org/docs/index.html#api/en/geometries/BoxGeometry))*
  ![Geometries Categories](/Session1/pictures/pic-3.png "Geometries Categories")
-  There are different kinds of **Material** too(to view more: *Threejs.org - documentation -  [Materials](https://threejs.org/docs/index.html#api/en/geometries/BoxGeometry))*
+
+    There are different kinds of **Material** too(to view more: *Threejs.org - documentation -  [Materials](https://threejs.org/docs/index.html#api/en/geometries/BoxGeometry))*
 ![Materials Categories](/Session1/pictures/pic-4.png "Materials Categories")
+
 3. Do not forget to *add the mesh to the scene*
-```
+```javascript
 scene.add( mesh );
 ```
 
@@ -38,7 +40,7 @@ scene.add( mesh );
  * The *documentation* will also shows what **specific kind of number**(interger,float,etc) that needs to be put for the *constructor* and *property*.
 2. For setting different __colors__:
  * All color should be represented by using **Hex color code**. For example:
- ```
+ ```javascript
  material = new THREE.MeshBasicMaterial( { color: "#FFDAB9" } );
  ```
  * Do the quick check of [Hex color code](https://www.cnblogs.com/summary-2017/p/7504126.html).
@@ -52,18 +54,18 @@ scene.add( mesh );
  ![Homework1](/Session1/pictures/pic-11.png "Homework1")
  ### Analysis:
  1. Setting two icosahedrons which have the *same position* in the scene but with *different sizes* and *materials*.
- ```
+ ```javascript
  geometry = new THREE.IcosahedronGeometry( radius, 1 );
 material = new THREE.MeshPhysicalMaterial( { color: "#FF1493" } );
 geometry1 = new THREE.IcosahedronGeometry( radius*2, 1 );
  material1 = new THREE.MeshBasicMaterial( { wireframe: true } );
  ```
  2. Using **wireframe** property in the *material* to show the wireframe of the icosahedrons.
- ```
+ ```javascript
  wireframe: true
  ```
  3. Giving different rotating speed of x, y, z to both icosahedrons.
-  ```
+  ```javascript
    mesh.rotation.y += 0.04;
    mesh.rotation.z += 0.01;
    mesh.rotation.x += 0.03;
