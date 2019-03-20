@@ -18,7 +18,7 @@
 scene.add( mesh );
 ```
 
-***
+********************
 
 
 ## 01-TestX:*Creating New Rotating Object*
@@ -43,7 +43,7 @@ scene.add( mesh );
  ```
  * Do the quick check of [Hex color code](https://www.cnblogs.com/summary-2017/p/7504126.html).
 
- *** 
+********************
 
  ## Homework Practice:*Multiple Rotating Objects*
  #### The content of the exercise:
