@@ -12,7 +12,7 @@ function init() {
 	// 	Create a box (cube) of 10 width, length, and height
 	for (var x = 0; x < 10; x ++) { // Start from -35 and sequentially add one every 5 pixels
 		var randomValue = Math.random()*0.5;
-	geometry = new THREE.BoxGeometry(  Math.random()*10, Math.random()*10, Math.random()*10 );
+	geometry = new THREE.BoxGeometry(  10,10,10);
 
 	// Load a texture
 	var texture = new THREE.TextureLoader().load( "textures/texture"+ Math.floor(Math.random()*4)+".jpg" );
@@ -23,6 +23,8 @@ function init() {
 
 	// Combine the geometry and material into a mesh
 	mesh = new THREE.Mesh( geometry, material );
+	mesh.position.x=(Math.random()*30)-15;
+	mesh.position.y=(Math.random()*30)-15;
 	// Add the mesh to the scene
 	scene.add( mesh );
 	cubes.push(mesh);
@@ -65,6 +67,9 @@ function animate() {
 	if (c.position.y <- 30){
 		c.position.y = 35;
 		c.position.x = (Math.random() * -20) +10;
+		c.scale.x = (Math.random() * -2) +1;
+		c.scale.y = (Math.random() * -2) +1;
+		c.scale.z = (Math.random() * -2) +1;
 	}
 });
 
