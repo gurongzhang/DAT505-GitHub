@@ -5,7 +5,7 @@
   * ### Material
   * ### Mesh
 #### We studied how to demonstrate different visual effects and simple animations based on these concepts.
-## 00-Test:*Rotating Cube*
+## 00-Test: *Rotating Cube*
 #### This is one example which shows a *cube* keeps *rotating* in the middle of the screen.
 ![Rotating Cube](/Session1/pictures/pic-0.png "Rotating Cube")
 ### Knowledge Points
@@ -18,7 +18,7 @@
   * **Geometry** has different categories(to view more:*Threejs.org - documentation -  [Geometries](https://threejs.org/docs/index.html#api/en/geometries/BoxGeometry))*
  ![Geometries Categories](/Session1/pictures/pic-3.png "Geometries Categories")
 
-    There are different kinds of **Material** too(to view more: *Threejs.org - documentation -  [Materials](https://threejs.org/docs/index.html#api/en/geometries/BoxGeometry))*
+    There are different kinds of **Material** too(to view more: *Threejs.org - documentation -  [Materials](https://threejs.org/docs/index.html#api/en/materials/LineBasicMaterial))*
 ![Materials Categories](/Session1/pictures/pic-4.png "Materials Categories")
 
 3. Do not forget to *add the mesh to the scene*
@@ -29,11 +29,11 @@ scene.add( mesh );
 ********************
 
 
-## 01-TestX:*Creating New Rotating Object*
+## 01-TestX: *Creating New Rotating Object*
 #### This project did some changes based on the *00-Test* and demonstrates one rotating *IcosahedronGeometry* with *pink background color*.
 ![rotating IcosahedronGeometry with pink background color](/Session1/pictures/pic-5.png "rotating IcosahedronGeometry with pink background color")
 ### Knowledge Points
-1. Different *geometry* and *material* has different **Constructor** and **Properties** which can be checked on the (*[Three.js](https://threejs.org) - documentation*)
+1. Different *geometry* and *material* has different **Constructor** and **Properties** which can be checked on the (*[Threejs documentation](https://threejs.org/docs)*)
  * For example : The **constructor** of *BoxGeometry*
  ![The constructor of BoxGeometry](/Session1/pictures/pic-7.png "The constructor of BoxGeometry")
  compares to the **constructor** of *IcosahedronGeometry*
@@ -53,7 +53,7 @@ scene.add( mesh );
 
 ********************
 
- ## Homework Practice:*Multiple Rotating Objects*
+ ## Homework Practice: *Multiple Rotating Objects*
  #### The content of the exercise:
  ![Exercise Content](/Session1/pictures/pic-12.png "Exercise Content")
  ### The final look of my Homework:
