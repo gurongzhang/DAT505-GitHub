@@ -1,10 +1,10 @@
 # DAT505-Session1
 ## Introduction:
-#### This session introduced the concepts of:
-  * #### Geometry
-  * #### Material
-  * #### Mesh
-#### in the threejs, and what we studied is how to demonstrate different visual effects and simple animations based on these concepts. 
+#### This session introduced some basic threejs knowledge about creating an object:
+  * ### Geometry
+  * ### Material
+  * ### Mesh
+#### We studied how to demonstrate different visual effects and simple animations based on these concepts.
 ## 00-Test:*Rotating Cube*
 #### This is one example which shows a *cube* keeps *rotating* in the middle of the screen.
 ![Rotating Cube](/Session1/pictures/pic-0.png "Rotating Cube")
