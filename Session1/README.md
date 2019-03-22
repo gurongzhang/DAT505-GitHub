@@ -4,7 +4,7 @@
   * #### Geometry
   * #### Material
   * #### Mesh
-#### in the threejs, and what we studied is how to demonstrate different visual animations based on these concepts. 
+#### in the threejs, and what we studied is how to demonstrate different visual effects and simple animations based on these concepts. 
 ## 00-Test:*Rotating Cube*
 #### This is one example which shows a *cube* keeps *rotating* in the middle of the screen.
 ![Rotating Cube](/Session1/pictures/pic-0.png "Rotating Cube")
