@@ -4,7 +4,7 @@
   * ### Creating multiple objects
   * ### Different materials
   * ### Multiple different geometries with different materials
-  * ### How to copy the examples on the [Three.js](https://threejs.org) website correctly  
+  * ### How to copy the examples on the [Threejs Examples](https://threejs.org/examples/) website correctly  
 
 ## 00-GeometryExercise-SOLVED: *Multiple Cubes With Different Rotate Speeds*
 #### In this example, 12 same-size cubes were placed in order with different rotate speeds and different rotate directions.
@@ -46,4 +46,4 @@ var render = function () {
 #### In this example, a rotating cube was created for us to change its material to see the differences between basic materials.
 ![Rotating Cube](/Session2/pictures/pic-1.png "Rotating Cube")
 ### Knowledge Points
-  * The characteristics of different materials are different, to see how to use basic materials properly, check: [Basic Materials](https://threejs.org/docs/index.html#api/en/materials/LineBasicMaterial). 
+  * The characteristics of different materials are different, to see how to use basic materials properly, check: [Basic Materials](https://threejs.org/docs/index.html#api/en/materials/LineBasicMaterial).
