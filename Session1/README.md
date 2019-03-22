@@ -70,7 +70,7 @@ geometry1 = new THREE.IcosahedronGeometry( radius*2, 1 );
  ```javascript
  wireframe: true
  ```
- 3. Giving different rotating speed of x, y, z to both icosahedrons.
+ 3. Giving different rotate speed of x, y, z to both icosahedrons.
   ```javascript
    mesh.rotation.y += 0.04;
    mesh.rotation.z += 0.01;
