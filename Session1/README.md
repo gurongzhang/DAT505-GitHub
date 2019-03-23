@@ -56,8 +56,8 @@ scene.add( mesh );
  ## 00-MyPractice: *Objects Combination*
  #### The content of the exercise:
  ![Exercise Content](/Session1/(README)pictures/pic-12.png "Exercise Content")
- ### The final look of my Homework:
- ![Homework1](/Session1/(README)pictures/pic-11.png "Homework1")
+ ### The final look of my exercise:
+ ![00-MyPractice](/Session1/(README)pictures/pic-11.png "00-MyPractice")
  ### Analysis:
  1. Setting two icosahedrons which have the *same position* in the scene but with *different sizes* and *materials*.
  ```javascript
