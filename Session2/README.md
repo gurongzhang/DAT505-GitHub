@@ -41,9 +41,16 @@ var render = function () {
 
 ********************
 
-
 ## 01-BasicMaterials: *One Rotating Cubes With MeshBasicMaterial*
 #### In this example, a rotating cube was created for us to change its material to see the differences between basic materials.
 ![Rotating Cube](/Session2/pictures/pic-1.png "Rotating Cube")
 ### Knowledge Points
   * The characteristics of different materials are different, to see how to use basic materials properly, check: [Basic Materials](https://threejs.org/docs/index.html#api/en/materials/LineBasicMaterial).
+
+  ********************
+
+  ## 02-GeometriesAndMaterials: *One Rotating Cubes With MeshBasicMaterial*
+  #### In this exercise, we were asked to create kinds of objects with different geometries, materials and properties.
+  ![GeometriesAndMaterials](/Session2/pictures/pic-2.png "GeometriesAndMaterials")
+  ### Knowledge Points
+  1. The capability of *reflecting light* is different between materials, so *the chosen of material* will decide how the object looks like as we can see in the picture. Meanwhile, we should also take this point under consideration when we adding lights in the scene.
