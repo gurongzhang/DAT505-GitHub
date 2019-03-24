@@ -224,7 +224,7 @@ I will put the copy process of this example here to give a clear demonstration o
      *Add* **'build' folder**, **'js' folder** and **'index.html' file** into this new **'ThreejsExampleCopy' file**.
 
      *Add* **index.js** file into **js** file.
-     
+
      ![Copy process2](/Session2/(README)pictures/pic-5.png "[Copy process2")
 
   4. *Copy* all the **View source code** into **index.html** file. Cut all the code between
@@ -394,6 +394,14 @@ I will put the copy process of this example here to give a clear demonstration o
   ```javascript
   <script src="file directory"></script>
   ```
-  ![Copy process3](/Session2/(README)pictures/pic-8.png "[Copy process3")
+
+  ![Copy process3](/Session2/(README)pictures/pic-8-.png "[Copy process3")
+
 in **three-3.js-master-r102** folder and *copy* them into each **js** or **build** folder
 ![Copy process4](/Session2/(README)pictures/pic-7.png "[Copy process4")
+
+  6. Delete uncessary file directory, in this case are these:
+    ![Copy process4](/Session2/(README)pictures/pic-9.png "[Copy process4")
+    to make the script source available to access in our own computers.
+    So the properly script source directories would be like:
+    ![Copy process5](/Session2/(README)pictures/pic-10.png "[Copy process5")
