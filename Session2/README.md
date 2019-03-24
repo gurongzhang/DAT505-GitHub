@@ -8,7 +8,7 @@
 
 ## 00-GeometryExercise-SOLVED: *Multiple Cubes With Different Rotate Speeds*
 #### In this example, 12 same-size cubes were placed in order with different rotate speeds and different rotate directions.
-![12 Rotating Cube](/Session2/(README)pictures/pic-0.png "12 Rotating Cube")
+![12 Rotating Cubes](/Session2/(README)pictures/pic-0.png "12 Rotating Cubes")
 ### Knowledge Points
 1. Since all cubes were using the *same geometry* and *same material*, we just needed to code the geometry and material **once**.
 ```javascript
@@ -218,6 +218,7 @@ I will put the copy process of this example here to give a clear demonstration o
 	</body>
 </html>
  ```
+
   3. *Create* a **new file**(for example: ThreejsExampleCopy)
 
     *Add* **'build' folder**, **'js' folder** and **'index.html' file** into this new **'ThreejsExampleCopy' file**.
