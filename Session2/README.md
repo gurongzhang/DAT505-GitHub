@@ -398,10 +398,74 @@ I will put the copy process of this example here to give a clear demonstration o
   ![Copy process3](/Session2/(README)pictures/pic-8-.png "[Copy process3")
 
 in **three-3.js-master-r102** folder and *copy* them into each **js** or **build** folder
+
 ![Copy process4](/Session2/(README)pictures/pic-7.png "[Copy process4")
 
-  6. Delete uncessary file directory, in this case are these:
+  6. *Delete uncessary file directories* in the **index.html**, for this case are these:
     ![Copy process4](/Session2/(README)pictures/pic-9.png "[Copy process4")
-    to make the script source available to access in our own computers.
-    So the properly script source directories would be like:
+
+    to make the script sources available to access in our own computers. Since we created the _**js** file_ and _**build** file_, so we can keep *"js/"* and *"build/"* directories.
+
+    The properly script source directories would be like:
     ![Copy process5](/Session2/(README)pictures/pic-10.png "[Copy process5")
+
+  7. *Add* the code
+  ```javascript
+    <script src="js/index.js"></script>
+  ```
+  in the **index.html**, to let the browser read the code in the _**index.js** file_.
+  The finished **index.html file code** would be like:
+  ```javascript
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>threejs webgl - materials - transparency</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <style>
+    body {
+      color: #fff;
+      font-family:Monospace;
+      font-size:13px;
+      text-align:center;
+      background-color: #000;
+      margin: 0px;
+      overflow: hidden;
+    }
+    a { color: #eee }
+    #info {
+      position: absolute;
+      top: 0px; width: 100%;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="container"></div>
+  <div id="info"><a href="http://threejs.org" target="_blank" rel="noopener">threejs</a> - Transparency with Premultiplied Alpha (right) and without (left)<br /> using RGBA8 Buffers by <a href="http://clara.io/" target="_blank" rel="noopener">Ben Houston</a>.</div>
+
+  <script src="build/three.js"></script>
+  <script src="js/OrbitControls.js"></script>
+
+  <script src="js/WebGL.js"></script>
+  <script src="js/stats.min.js"></script>
+
+  <script src="js/dat.gui.min.js"></script>
+
+  <script src="js/index.js"></script>
+  <script>
+
+      </script>
+</html>
+  ```
+
+  8. In this example, texutres are loaded to the scene too：
+  ![Copy process6](/Session2/(README)pictures/pic-11.png "[Copy process6")
+
+     So we should find those two jpg files (**hardwood2_diffuse.jpg** and **hardwood2_roughness.jpg**) under the directory: **three-3.js-master-r102/textures**.
+
+     what is more, to maintain the consistency of the source code we copied, one _**"textures"** file_ is need to built, and those two *texture jpg files* need to be put in it:
+     ![Copy process6](/Session2/(README)pictures/pic-12.png "[Copy process6")
+
+  9. The last step is **start atom-live-server** to check if the browser can load everything we need. If it did not work, check the console and see what is missing or what other problems are.
