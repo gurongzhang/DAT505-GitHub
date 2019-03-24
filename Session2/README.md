@@ -224,6 +224,7 @@ I will put the copy process of this example here to give a clear demonstration o
      *Add* **'build' folder**, **'js' folder** and **'index.html' file** into this new **'ThreejsExampleCopy' file**.
 
      *Add* **index.js** file into **js** file.
+     
      ![Copy process2](/Session2/(README)pictures/pic-5.png "[Copy process2")
 
   4. *Copy* all the **View source code** into **index.html** file. Cut all the code between
