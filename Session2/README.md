@@ -402,9 +402,8 @@ in **three-3.js-master-r102** folder and *copy* them into each **js** or **build
 ![Copy process4](/Session2/(README)pictures/pic-7.png "[Copy process4")
 
   6. *Delete uncessary file directories* in the **index.html**, for this case are these:
-    ![Copy process4](/Session2/(README)pictures/pic-9.png "[Copy process4")
-
-    to make the script sources available to access in our own computers. Since we created the _**js** file_ and _**build** file_, so we can keep *"js/"* and *"build/"* directories.
+  ![Copy process4](/Session2/(README)pictures/pic-9.png "[Copy process4")
+  to make the script sources available to access in our own computers. Since we created the _**js** file_ and _**build** file_, so we can keep *"js/"* and *"build/"* directories.
 
     The properly script source directories would be like:
     ![Copy process5](/Session2/(README)pictures/pic-10.png "[Copy process5")
