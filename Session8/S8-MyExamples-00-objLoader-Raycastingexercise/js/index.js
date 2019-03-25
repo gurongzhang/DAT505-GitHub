@@ -48,8 +48,9 @@ function init() {
   				}
   			});
         var sizeRand = Math.random() * 0.5;
+        //to set the different scales of models but keep the scale of every single modle the same
         mesh.scale.set(sizeRand,sizeRand,sizeRand);
-        mesh.position.set(Math.random()*800-400, Math.random()*800-400, Math.random()*800-400);
+        mesh.position.set(Math.random()*200-100, Math.random()*200-100, Math.random()*200-100);
         mesh.rotation.y = -Math.PI/Math.random()*4;
 
         scene.add(mesh);
