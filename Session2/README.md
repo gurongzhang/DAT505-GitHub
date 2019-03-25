@@ -6,7 +6,7 @@
   * ### Multiple different geometries with different materials
   * ### How to copy the examples on the [Threejs Examples](https://threejs.org/examples/) website correctly  
 
-## 00-GeometryExercise-SOLVED: *Multiple Cubes With Different Rotate Speeds*
+## S2-ClassExamples-00-GeometryExercise-SOLVED: *Multiple Cubes With Different Rotate Speeds*
 #### In this example, 12 same-size cubes were placed in order with different rotate speeds and different rotate directions.
 ![12 Rotating Cubes](/Session2/(README)pictures/pic-0.png "12 Rotating Cubes")
 ### Knowledge Points
@@ -41,7 +41,7 @@ var render = function () {
 
 ********************
 
-## 01-BasicMaterials: *One Rotating Cubes With MeshBasicMaterial*
+## S2-ClassExamples-01-BasicMaterials: *One Rotating Cubes With MeshBasicMaterial*
 #### In this example, a rotating cube was created for us to change its material to see the differences between basic materials.
 ![Rotating Cube](/Session2/(README)pictures/pic-1.png "Rotating Cube")
 ### Knowledge Points
@@ -49,7 +49,7 @@ var render = function () {
 
 ********************
 
-## 00-MyPractice-GeometriesAndMaterials: *Creating multiple objects With Different Materials*
+## S2-MyExamples-00-GeometriesAndMaterials: *Creating multiple objects With Different Materials*
 #### In this exercise, we were asked to create kinds of objects with different geometries, materials and properties.
 ![GeometriesAndMaterials](/Session2/(README)pictures/pic-2.png "GeometriesAndMaterials")
 ### Knowledge Points
@@ -57,7 +57,7 @@ var render = function () {
 
 ********************
 
-## 01-MyPractice-ThreeJS-Materials: *Copy the [Materials/transparency Example](https://threejs.org/examples/#webgl_materials_transparency) on [Threejs](https://threejs.org)*
+## S2-MyExamples-01-ThreeJS-Materials: *Copy the [Materials/transparency Example](https://threejs.org/examples/#webgl_materials_transparency) on [Threejs](https://threejs.org)*
 #### For this exercise, we were asked to copy one example on [Threejs](https://threejs.org) and make it work on our computers.
 ![Transparency Example](/Session2/(README)pictures/pic-3.png "Transparency Example")
 ### Knowledge Points
