@@ -32,7 +32,7 @@ function init(){
   threejs.appendChild(renderer.domElement);
 
   // Create a basic perspective camera --------------
-  camera = new THREE.PerspectiveCamera(35, WIDTH / HEIGHT, 1 , 1000);
+  camera = new THREE.PerspectiveCamera(25, WIDTH / HEIGHT, 1 , 1000);
   camera.position.set(0, 0, 0);
   camera.lookAt(scene.position);
   scene.add(camera);
@@ -232,35 +232,6 @@ function init(){
   mesh17.castShadow = true;
   scene.add(mesh17);
 
-  mesh18 = new THREE.Mesh(geometry, material);
-  mesh18.position.set(0, -4.5, -12);
-  mesh18.rotation.set(0, 0, 0);
-  mesh18.rotation.x = de2ra(45);
-  mesh18.rotation.y = de2ra(-45);
-  mesh18.scale.set(0.96,0.96,0.96);
-  mesh18.doubleSided = true;
-  mesh18.castShadow = true;
-  scene.add(mesh18);
-
-  mesh19 = new THREE.Mesh(geometry, material);
-  mesh19.position.set(2.7, -4.5, -12);
-  mesh19.rotation.set(0, 0, 0);
-  mesh19.rotation.x = de2ra(45);
-  mesh19.rotation.y = de2ra(-45);
-  mesh19.scale.set(0.96,0.96,0.96);
-  mesh19.doubleSided = true;
-  mesh19.castShadow = true;
-  scene.add(mesh19);
-
-  mesh20 = new THREE.Mesh(geometry, material);
-  mesh20.position.set(-2.7, -4.5, -12);
-  mesh20.rotation.set(0, 0, 0);
-  mesh20.rotation.x = de2ra(45);
-  mesh20.rotation.y = de2ra(-45);
-  mesh20.scale.set(0.96,0.96,0.96);
-  mesh20.doubleSided = true;
-  mesh20.castShadow = true;
-  scene.add(mesh20);
 
   lightingSystem();
 
@@ -315,15 +286,7 @@ function init(){
   gui.add(controller, 'rotationY', -180, 180).onChange( function() {
     mesh17.rotation.y = de2ra(controller.rotationY);
   });
-  gui.add(controller, 'rotationZ', -180, 180).onChange( function() {
-    mesh18.rotation.z = de2ra(controller.rotationZ);
-  });
-  gui.add(controller, 'rotationX', -180, 180).onChange( function() {
-    mesh19.rotation.x = de2ra(controller.rotationX);
-  });
-  gui.add(controller, 'rotationY', -180, 180).onChange( function() {
-    mesh20.rotation.y = de2ra(controller.rotationY);
-  });
+
   //f1.add(controller, 'rotationY', -180, 180).onChange( function() {
 //    mesh.rotation.y = de2ra(controller.rotationY);
 //  });
