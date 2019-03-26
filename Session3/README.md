@@ -12,6 +12,6 @@
   ```javascript
     <script src="js/dat.gui.min.js"></script>
   ```
+
      Meanwhile, the _**dat.gui.min.js** file_ should be copied to the _**js** file_ too.
      ![S3-ClassExamples-00-BasicStructure-GUI01](/Session3/(README)pictures/pic-1.png "S3-ClassExamples-00-BasicStructure-GUI01")
-     
