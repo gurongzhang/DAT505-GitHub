@@ -67,3 +67,38 @@
      mesh.rotation.z = (controller.rotationZ);
      });
    ```
+
+   ********************
+
+
+## S3-ClassExamples-01-BasicGUI: *Cube(scale,position,rotation,color,opacity)*
+#### This example added two more properties —— *color* and *opacity* so that users can change the *rotation*, *position*, *scale*, *color* and *opacity* of the cube directly on the user interface.
+![S3-ClassExamples-01-BasicGUI00](/Session3/(README)pictures/pic-2.png "S3-ClassExamples-01-BasicGUI00")
+### Knowledge Points
+  1. To add the **Color converter**, the code below needs to be written to the script:
+     ```javascript
+     function dec2hex(i) {
+     var result = "0x000000";
+     if (i >= 0 && i <= 15) { result = "0x00000" + i.toString(16); }
+     else if (i >= 16 && i <= 255) { result = "0x0000" + i.toString(16); }
+     else if (i >= 256 && i <= 4095) { result = "0x000" + i.toString(16); }
+     else if (i >= 4096 && i <= 65535) { result = "0x00" + i.toString(16); }
+     else if (i >= 65535 && i <= 1048575) { result = "0x0" + i.toString(16); }
+     else if (i >= 1048575 ) { result = '0x' + i.toString(16); }
+     if (result.length == 8){return result;}
+     }
+     ```
+    Do not forget to define the random color at the begining:
+    ```javascript
+    var color;
+    color = Math.random() * 0xffffff;
+    ```
+  2. For adding the **opacity**:
+     ```javascript
+     var controller = new function() {
+       this.boxOpacity = 1;
+     }();
+     gui.add( controller, 'boxOpacity', 0.1, 1 ).onChange( function() {
+       material.opacity = (controller.boxOpacity);
+     });
+     ```
