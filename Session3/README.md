@@ -88,7 +88,7 @@
      if (result.length == 8){return result;}
      }
      ```
-    Do not forget to define the random color at the begining:
+    * Do not forget to define the random color at the begining:
     ```javascript
     var color;
     color = Math.random() * 0xffffff;
