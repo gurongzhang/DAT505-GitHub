@@ -66,10 +66,9 @@
      f3.add(controller, 'rotationZ', -3.14, 3.14).onChange( function(){
      mesh.rotation.z = (controller.rotationZ);
      });
-```
+     ```
 
-
-**************************************
+**************************
 
 
 ## S3-ClassExamples-01-BasicGUI: *Cube(scale,position,rotation,color,opacity)*
