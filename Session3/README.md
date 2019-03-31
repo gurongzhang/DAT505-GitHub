@@ -68,7 +68,9 @@
      });
    ```
 
-********************
+
+**************************************
+
 
 
 ## S3-ClassExamples-01-BasicGUI: *Cube(scale,position,rotation,color,opacity)*
