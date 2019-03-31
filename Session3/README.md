@@ -30,40 +30,40 @@
        this.rotationZ = 1 ;
      }
      ```
-   Since the *rotation*, *position* and *scale* are the 3D properties which can be changed from X,Y and Z. So for users to see those categories conveniently, we need to add different folders to sort those properties out and put therelevant values under the corresponding folders:
-   ```javascript
-   var gui = new dat.GUI();
-   var f1 = gui.addFolder('Scale');
-   var f2 = gui.addFolder('Position');
-   var f3 = gui.addFolder('Rotation');
+     Since the *rotation*, *position* and *scale* are the 3D properties which can be changed from X,Y and Z. So for users to see those properties conveniently, we need to add different folders to sort them out and put the relevant values under the corresponding folders:
+     ```javascript
+     var gui = new dat.GUI();
+     var f1 = gui.addFolder('Scale');
+     var f2 = gui.addFolder('Position');
+     var f3 = gui.addFolder('Rotation');
 
-   f1.add(controller, 'scaleX', 0.1, 5).onChange( function(){
+     f1.add(controller, 'scaleX', 0.1, 5).onChange( function(){
      mesh.scale.x = (controller.scaleX);
-   });
-   f1.add(controller, 'scaleY', 0.1, 5).onChange( function(){
+     });
+     f1.add(controller, 'scaleY', 0.1, 5).onChange( function(){
      mesh.scale.y = (controller.scaleY);
-   });
-   f1.add(controller, 'scaleZ', 0.1, 5).onChange( function(){
+     });
+     f1.add(controller, 'scaleZ', 0.1, 5).onChange( function(){
      mesh.scale.z = (controller.scaleZ);
-  });
+     });
 
-   f2.add(controller, 'positionX', 0.1, 100).onChange( function(){
+     f2.add(controller, 'positionX', 0.1, 100).onChange( function(){
      mesh.position.x = (controller.positionX);
      });
-   f2.add(controller, 'positionY', 0.1, 100).onChange( function(){
+     f2.add(controller, 'positionY', 0.1, 100).onChange( function(){
      mesh.position.y = (controller.positionY);
      });
-   f2.add(controller, 'positionZ',-5000, -400).onChange( function(){
+     f2.add(controller, 'positionZ',-5000, -400).onChange( function(){
      mesh.position.z = (controller.positionZ);
- });
+     });
 
-   f3.add(controller, 'rotationX', -3.14, 3.14).onChange( function(){
+     f3.add(controller, 'rotationX', -3.14, 3.14).onChange( function(){
      mesh.rotation.x = (controller.rotationX);
-       });
-   f3.add(controller, 'rotationY', -3.14, 3.14).onChange( function(){
+     });
+     f3.add(controller, 'rotationY', -3.14, 3.14).onChange( function(){
      mesh.rotation.y = (controller.rotationY);
-       });
-   f3.add(controller, 'rotationZ', -3.14, 3.14).onChange( function(){
+     });
+     f3.add(controller, 'rotationZ', -3.14, 3.14).onChange( function(){
      mesh.rotation.z = (controller.rotationZ);
- });
+     });
    ```
