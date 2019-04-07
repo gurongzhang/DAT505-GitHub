@@ -2,6 +2,12 @@ var renderer, scene, camera;
 var cubes = [];
 // 定义颜色
 var colors = [];
+var rot_spd = [];
+var rot_spd1 = [];
+var rot_spd2 = [];
+var rot_cur = [];
+var rot_cur1 = [];
+var rot_cur2 = [];
 var rot = 0;
 
 // 存入颜色
@@ -34,13 +40,19 @@ function init() {
 
 	for (var x = -20; x < 20; x += 1) {
 		for (var y = -20; y < 20; y += 1) {
-			var boxGeometry = new THREE.BoxGeometry(1, 1, 1);
+			var boxGeometry = new THREE.BoxGeometry(0.7, 0.7, 0.7);
 			var boxMaterial = new THREE.MeshLambertMaterial();
 			var mesh = new THREE.Mesh(boxGeometry, boxMaterial);
 			mesh.position.x = x;
 			mesh.position.y = y;
 			scene.add(mesh);
 			cubes.push(mesh);
+			rot_spd.push(Math.random() * 0.1 - 0.05);
+	  	rot_spd1.push(Math.random() * 0.1 - 0.02);
+	  	rot_spd2.push(Math.random() * 0.1 - 0.08);
+	  	rot_cur.push(0);
+	  	rot_cur1.push(0);
+	  	rot_cur2.push(0);
 
 		}
 	}
@@ -52,6 +64,12 @@ function drawFrame(){
 	requestAnimationFrame(drawFrame);
 	cubes.forEach(function(c, i) {
 		c.material.color.set(colors[i]);
+		rot_cur[i] += rot_spd[i];
+    rot_cur1[i] += rot_spd1[i];
+    rot_cur2[i] += rot_spd2[i];
+    c.rotation.x = rot_cur[i];
+    c.rotation.y = rot_cur1[i];
+    c.rotation.z = rot_cur2[i];
 	});
 
 	renderer.render(scene, camera);
