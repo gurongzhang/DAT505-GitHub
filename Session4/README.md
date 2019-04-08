@@ -298,6 +298,6 @@
      cubes.forEach(function(c, i) {
      c.rotation.x += rot_spd[i];
      c.rotation.y += rot_spd1[i];
-     c.rotation.z += rot_spd2[i];//Rotate the object that is referenced in c
+     c.rotation.z += rot_spd2[i];
      });
      ```
