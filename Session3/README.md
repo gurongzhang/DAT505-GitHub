@@ -126,7 +126,7 @@
 
   2. How to set up the color controller is already aforesaid mentioned.
 
-  3. To creating the randomly different-surfaces-color cube, the following code is for reference:
+  3. To creating the random-different-surfaces-color cube, the following code is for reference:
   ```javascript
   geometry = new THREE.BoxGeometry(2, 2, 2);
   color = Math.random() * 0xffffff;
