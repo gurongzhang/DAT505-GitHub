@@ -42,7 +42,7 @@
 
 ## S4-ClassExamples-01-ArrayMesh-Exercise-template: *225 Cubes Created By For Loop*
 #### This example created more cubes based on what we did for *S4-ClassExamples-00-ArrayMesh*
-![S4-ClassExamples-01-ArrayMesh-Exercise-template00](/Session1/(README)pictures/pic-2.png "S4-ClassExamples-01-ArrayMesh-Exercise-template00")
+![S4-ClassExamples-01-ArrayMesh-Exercise-template00](/Session4/(README)pictures/pic-2.png "S4-ClassExamples-01-ArrayMesh-Exercise-template00")
 ### Knowledge Points
 1. The *for loop* for this one added z position:
    ```javascript
@@ -95,7 +95,7 @@
 
  ## S4-MyExamples-00-ArrayMeshPractice: *Defining specific colors and rotation speed of the cubes created by for loop*
  #### For this exercise, we created 64 cubes(4 on each x,y and z axis). And we divided those cubes into 8 equal groups and we assigned different colors for each one of them.
- ![S4-MyExamples-00-ArrayMeshPractice00](/Session1/(README)pictures/pic-3.png "S4-MyExamples-00-ArrayMeshPractice00")
+ ![S4-MyExamples-00-ArrayMeshPractice00](/Session4/(README)pictures/pic-3.png "S4-MyExamples-00-ArrayMeshPractice00")
  ### Knowledge Points:
  1. First, we need to create the *for loop* for each x,y and z axis.
  ```javascript
