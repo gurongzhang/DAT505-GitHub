@@ -245,25 +245,25 @@
 #### For this exercise, we created 225 cubes(15(X axis)x15(Z axis)). And try to make them have different rotate directions in one still scene.
 ![S4-MyExamples-01-homework(easy)00](/Session4/(README)pictures/pic-4.png "S4-MyExamples-01-homework(easy)00")
 ### Knowledge Points:
-    1. It was very easy to find out the solution based on the for loop that we talked about during *S4-MyExamples-00-ArrayMeshPractice/3*, the solution for this one is to show the result of what each cube looks like after the rotation. So what we need to do is write the rotation code inside the for loop that is all:
-    ```javascript
-    for (var x = -35; x < 40; x += 5) {
-      for (var y = -35; y < 40; y += 5) {
-        var boxGeometry = new THREE.BoxGeometry(3, 3, 3);
+1. It was very easy to find out the solution based on the for loop that we talked about during *S4-MyExamples-00-ArrayMeshPractice/3*, the solution for this one is to show the result of what each cube looks like after the rotation. So what we need to do is write the rotation code inside the for loop that is all:
+   ```javascript
+   for (var x = -35; x < 40; x += 5) {
+   for (var y = -35; y < 40; y += 5) {
+   var boxGeometry = new THREE.BoxGeometry(3, 3, 3);
 
-        var boxMaterial = new THREE.MeshLambertMaterial({color: Math.random() * 0xFFFFFF});
-        var mesh = new THREE.Mesh(boxGeometry, boxMaterial);
+   var boxMaterial = new THREE.MeshLambertMaterial({color: Math.random() * 0xFFFFFF});
+   var mesh = new THREE.Mesh(boxGeometry, boxMaterial);
 
-        mesh.position.x = x;
-        mesh.position.z = y;
-        mesh.rotation.x = Math.random() * 2 * Math.PI;
-        mesh.rotation.y = Math.random() * 2 * Math.PI;
-        mesh.rotation.z = Math.random() * 2 * Math.PI;
-        scene.add(mesh);
-        cubes.push(mesh);
-      }
-    }
-    ```
+   mesh.position.x = x;
+   mesh.position.z = y;
+   mesh.rotation.x = Math.random() * 2 * Math.PI;
+   mesh.rotation.y = Math.random() * 2 * Math.PI;
+   mesh.rotation.z = Math.random() * 2 * Math.PI;
+   scene.add(mesh);
+   cubes.push(mesh);
+     }
+   }
+   ```
 
 ********************
 
@@ -273,7 +273,8 @@
 ### Knowledge Points:
 1. To finding out the solution for this exercise, the **S4-MyExamples-00-ArrayMeshPractice readme note** is good for reference, as we know that if we want to make all cubes created in the for loop to animate, we must push those cubes in an array.
 
-  However, what is this exercise that differ from the *S4-MyExamples-00-ArrayMeshPractice* is that, in this exercise, each cube has their own rotation speed, which means, they will do the rotation individually, in the *S4-MyExamples-00-ArrayMeshPractice*, all cubes rotate the same. So for this *S4-MyExamples-02-homework(hard)* exercise, how to give each cube their unique rotate speed is what should be working on.
+   However, what is this exercise that differ from the *S4-MyExamples-00-ArrayMeshPractice* is that, in this exercise, each cube has their own rotation speed, which means, they will do the rotation individually, in the *S4-MyExamples-00-ArrayMeshPractice*, all cubes rotate the same. So for this *S4-MyExamples-02-homework(hard)* exercise, how to give each cube their unique rotate speed is what should be working on.
+
 2. To solve this quesiton:
    * First, we need to create an array to push all meshes in:
      ```javascript
