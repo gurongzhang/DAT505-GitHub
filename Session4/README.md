@@ -1,7 +1,7 @@
 # DAT505-Session4
 ## Introduction:
 #### This session introduced:
-  * ### Array
+  * ### Array System
   * ### For Loop
 #### We studied how to use **For Loop** to *create objects efficiently* and how to use **Array** to _assaign different values for individual objects which created by *for loop*_.
 ## S4-ClassExamples-00-ArrayMesh: *5 Cubes Created By For Loop*
@@ -209,4 +209,27 @@
  3. The next step is one **key step**, for which the concept of *FOR LOOP* needs to be explained:
     To my understanding, everthing that written in this loop _only happened **once**_, everytime we runs the loop, **one result will be added to the scene**, for example, in this exercise, the first time we run the loop, mesh one, AKA cube0(X:-10, Y:-10,Z:-10)is added to the scene, the second time we run it, cube1(X:-10, Y:-10,Z:-5) is added to the scene,etc. So what we saw on the scene is **the result of 64 times the loop runs**. But since everthing just happened *for one time*, this loop *__can not remember__ the history or I want to say record the results of each loop*, so it *only knows what happened for the __last loop__*. As I set this clear, it is easy to understand that if I put the rotation code inside the for loop, *there would be __just one cube__ that is rotating which is the last cube-cube63*.
  4. To solve this problem, the **Array** is the key now coming on stage：
-    Since the for loop can not support all cubes
+    Since the for loop **can not** support all cubes to rotate, we must bring all cubes out from the *for loop* and define their rotation under the **requestAnimationFrame**
+    ```javascript
+    function drawFrame(){
+      requestAnimationFrame(drawFrame);
+    }
+    ```
+    So first: Creating an array for example name it **cubes**:
+    ```javascript
+    var cubes = [];
+    ```  
+    Then pushing all cubes(meshes) into this array after we set everthing down in the for loop:
+    ```javascript
+    cubes.push(mesh);
+    ```
+    Last but not least, writing the code under the *requestAnimationFrame*:
+    ```javascript
+    rot += 0.02;
+    cubes.forEach(function(c, i){
+                  c.rotation.x = rot;
+                  c.rotation.y = rot;
+                  c.rotation.z = rot;
+              });
+    ```
+   And right now we can have all cubes that do the rotation together.
