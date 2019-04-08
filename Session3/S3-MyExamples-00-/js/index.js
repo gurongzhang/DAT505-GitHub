@@ -32,8 +32,8 @@ function init(){
   threejs.appendChild(renderer.domElement);
 
   // Create a basic perspective camera --------------
-  camera = new THREE.PerspectiveCamera(25, WIDTH / HEIGHT, 1 , 1000);
-  camera.position.set(0, 0, 0);
+  camera = new THREE.PerspectiveCamera(30, WIDTH / HEIGHT, 1, 1000);
+  camera.position.set(0, 0.1, 1);
   camera.lookAt(scene.position);
   scene.add(camera);
 
@@ -123,7 +123,7 @@ function init(){
   scene.add(mesh6);
 
   var mesh7 = new THREE.Mesh(geometry, material);
-  mesh7.position.set(-4.4, 2.49, -12);
+  mesh7.position.set(-4.4, 2.5, -12);
   mesh7.rotation.set(0, 0, 0);
   mesh7.rotation.x = de2ra(45);
   mesh7.rotation.y = de2ra(-45);
@@ -143,51 +143,51 @@ function init(){
   scene.add(mesh8);
 
   mesh9 = new THREE.Mesh(geometry, material);
-  mesh9.position.set(0, 5, -12);
+  mesh9.position.set(0, -4.5, -12);
   mesh9.rotation.set(0, 0, 0);
   mesh9.rotation.x = de2ra(45);
   mesh9.rotation.y = de2ra(-45);
-  mesh9.scale.set(1.06, 1.06, 1.06);
+  mesh9.scale.set(0.96, 0.96, 0.96);
   mesh9.doubleSided = true;
   mesh9.castShadow = true;
   scene.add(mesh9);
 
   mesh10 = new THREE.Mesh(geometry, material);
-  mesh10.position.set(-3, 5, -12);
+  mesh10.position.set(-2.65, -4.5, -12);
   mesh10.rotation.set(0, 0, 0);
   mesh10.rotation.x = de2ra(45);
   mesh10.rotation.y = de2ra(-45);
-  mesh10.scale.set(1.06, 1.06, 1.06);
+  mesh10.scale.set(0.96, 0.96, 0.96);
   mesh10.doubleSided = true;
   mesh10.castShadow = true;
   scene.add(mesh10);
 
   mesh11 = new THREE.Mesh(geometry, material);
-  mesh11.position.set(3, 5, -12);
+  mesh11.position.set(2.65, -4.5, -12);
   mesh11.rotation.set(0, 0, 0);
   mesh11.rotation.x = de2ra(45);
   mesh11.rotation.y = de2ra(-45);
-  mesh11.scale.set(1.06, 1.06, 1.06);
+  mesh11.scale.set(0.96, 0.96, 0.96);
   mesh11.doubleSided = true;
   mesh11.castShadow = true;
   scene.add(mesh11);
 
   mesh12 = new THREE.Mesh(geometry, material);
-  mesh12.position.set(-6, 5, -12);
+  mesh12.position.set(-5.2, -4.5, -12);
   mesh12.rotation.set(0, 0, 0);
   mesh12.rotation.x = de2ra(45);
   mesh12.rotation.y = de2ra(-45);
-  mesh12.scale.set(1.06, 1.06, 1.06);
+  mesh12.scale.set(0.9, 0.9, 0.9);
   mesh12.doubleSided = true;
   mesh12.castShadow = true;
   scene.add(mesh12);
 
   mesh13 = new THREE.Mesh(geometry, material);
-  mesh13.position.set(6, 5, -12);
+  mesh13.position.set(5.3, -4.5, -12);
   mesh13.rotation.set(0, 0, 0);
   mesh13.rotation.x = de2ra(45);
   mesh13.rotation.y = de2ra(-45);
-  mesh13.scale.set(1.06, 1.06, 1.06);
+  mesh13.scale.set(0.96, 0.96, 0.96);
   mesh13.doubleSided = true;
   mesh13.castShadow = true;
   scene.add(mesh13);
@@ -201,6 +201,26 @@ function init(){
   mesh14.doubleSided = true;
   mesh14.castShadow = true;
   scene.add(mesh14);
+
+  var mesh18 = new THREE.Mesh(geometry, material);
+  mesh18.position.set(6.72, -2.33, -12);
+  mesh18.rotation.set(0, 0, 0);
+  mesh18.rotation.x = de2ra(45);
+  mesh18.rotation.y = de2ra(-45);
+  mesh18.scale.set(0.96,0.96,0.96);
+  mesh18.doubleSided = true;
+  mesh18.castShadow = true;
+  scene.add(mesh18);
+
+  var mesh19 = new THREE.Mesh(geometry, material);
+  mesh19.position.set(-6.74, -2.33, -12);
+  mesh19.rotation.set(0, 0, 0);
+  mesh19.rotation.x = de2ra(45);
+  mesh19.rotation.y = de2ra(-45);
+  mesh19.scale.set(0.96,0.96,0.96);
+  mesh19.doubleSided = true;
+  mesh19.castShadow = true;
+  scene.add(mesh19);
 
   var mesh15 = new THREE.Mesh(geometry, material);
   mesh15.position.set(-1.36, -2.33, -12);
@@ -223,7 +243,7 @@ function init(){
   scene.add(mesh16);
 
   var mesh17 = new THREE.Mesh(geometry, material);
-  mesh17.position.set(-4.05, -2.35, -12);
+  mesh17.position.set(-4.05, -2.33, -12);
   mesh17.rotation.set(0, 0, 0);
   mesh17.rotation.x = de2ra(45);
   mesh17.rotation.y = de2ra(-45);
