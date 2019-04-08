@@ -99,7 +99,7 @@
 ********************
 
  ## S4-MyExamples-00-ArrayMeshPractice: *Defining specific colors and rotation speed of the cubes created by for loop*
- #### For this exercise, we created 64 cubes(4 on each x,y and z axis). And we divided those cubes into 8 equal groups and we assigned different colors for each one of them.
+ #### For this exercise, we created 64 cubes(4 on each x,y and z axis,4x4x4). And we divided those cubes into 8 equal groups and we assigned different colors for each one of them.
  ![S4-MyExamples-00-ArrayMeshPractice00](/Session4/(README)pictures/pic-3.png "S4-MyExamples-00-ArrayMeshPractice00")
  ### Knowledge Points:
  1. First, we need to create the *for loop* for each x,y and z axis.
@@ -212,7 +212,7 @@
      (X:-10, Y:-5, Z:-5)
      (X:-10, Y:-10, Z:-10)  
  3. The next step is one **key step**, for which the concept of *FOR LOOP* needs to be explained:
-    To my understanding, everthing that written in this loop _only happened **once**_, everytime we runs the loop, **one result will be added to the scene**, for example, in this exercise, the first time we run the loop, mesh one, AKA cube0(X:-10, Y:-10,Z:-10)is added to the scene, the second time we run it, cube1(X:-10, Y:-10,Z:-5) is added to the scene,etc. So what we saw on the scene is **the result of 64 times the loop runs**. But since everthing just happened *for one time*, this loop *__can not remember__ the history or I want to say record the results of each loop*, so it *only knows what happened for the __last loop__*. As I set this clear, it is easy to understand that if I put the rotation code inside the for loop, *there would be __just one cube__ that is rotating which is the last cube-cube63*.
+    To my understanding, everthing that written in this loop _only happened **once**_, everytime we run the loop, **one result will be added to the scene**, for example, in this exercise, the first time we run the loop, mesh one, AKA cube0(X:-10, Y:-10,Z:-10)is added to the scene, the second time the loop runs, cube1(X:-10, Y:-10,Z:-5) is added to the scene,etc. The loop will stop running until *it finishes adding all the cubes*. So what we saw on the scene is **the result of 64 times the loop runs**. But since everthing just happened *for one time*, this loop *__can not remember__ the history or I want to say record the results of every loop*, so it *only knows what happened for the __last loop__*. As I set this clear, it is easy to understand that if I put the rotation code inside the for loop, *there would be __just one cube__ that is rotating which is the last cube-cube63*.
  4. To solve this problem, the **Array** is the key now coming on stage：
     Since the for loop **can not** support all cubes to rotate, we must bring all cubes out from the *for loop* and define their rotation under the **requestAnimationFrame**
     ```javascript
@@ -238,3 +238,30 @@
               });
     ```
    And right now we can have all cubes that do the rotation together.
+
+********************
+
+## S4-MyExamples-01-homework(easy): *Cubes who stay with different rotation directions*
+#### For this exercise, we created 225 cubes(15(X axis)x15(Z axis)). And try to make them have different rotate directions in one still scene.
+![S4-MyExamples-01-homework(easy)00](/Session4/(README)pictures/pic-4.png "S4-MyExamples-01-homework(easy)00")
+### Knowledge Points:
+    1.It was very easy to find out the solution based on the for loop that we talked about during *S4-MyExamples-00-ArrayMeshPractice/3*, the solution for this one is to show the result of what each cube looks like after the rotation. So what we need to do is write the rotation code inside the for loop that is all:
+    ```javascript
+    for (var x = -35; x < 40; x += 5) {
+      for (var y = -35; y < 40; y += 5) {
+        var boxGeometry = new THREE.BoxGeometry(3, 3, 3);
+
+        var boxMaterial = new THREE.MeshLambertMaterial({color: Math.random() * 0xFFFFFF});
+        var mesh = new THREE.Mesh(boxGeometry, boxMaterial);
+
+        mesh.position.x = x;
+        mesh.position.z = y;
+        mesh.rotation.x = Math.random() * 2 * Math.PI;
+        mesh.rotation.y = Math.random() * 2 * Math.PI;
+        mesh.rotation.z = Math.random() * 2 * Math.PI;
+        scene.add(mesh);
+        cubes.push(mesh);
+      }
+    }
+    ```
+    2. To defining different group colors, we used **if** to restrict conditions：
