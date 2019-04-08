@@ -38,6 +38,7 @@
      3. (X:0, Y:0, Z:0)
      4. (X:5, Y:0, Z:0)
      5. (X:10, Y:0, Z:0)
+
   Since we only difined the *x postion* of the cubes, the *y and z postion* which we did not difine will *remain the value 0*.
 
 ********************
@@ -63,7 +64,8 @@
       }
     }
    ```
-   Although we difined the value under name **Y**, but since we assigned this value after ```javascript
+   Although we difined the value under name **Y**, but since we assigned this value after:
+   ```javascript
    mesh.position.z = ;
    ```
    it means those values will control the *z position* of those cubes.
@@ -74,6 +76,7 @@
      }
    }
    ```
+
    And we can still list those cube postions one by one:
        (X:-35, Y:0, Z:-35)
        (X:-35, Y:0, Z:-30)
