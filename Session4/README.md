@@ -271,31 +271,32 @@
 #### For this exercise, we created 225 cubes(15(X axis)x15(Z axis)). And try to make them rotating with different rotate speeds in the scene.
 ![S4-MyExamples-02-homework(hard)00](/Session4/(README)pictures/pic-5.png "S4-MyExamples-02-homework(hard)00")
 ### Knowledge Points:
-    1. To finding out the solution for this exercise, the **S4-MyExamples-00-ArrayMeshPractice readme note** is good for reference, as we know that if we want to make all cubes created in the for loop to animate, we must push those cubes in an array.
-       However, what is this exercise that differ from the *S4-MyExamples-00-ArrayMeshPractice* is that, in this exercise, each cube has their own rotation speed, which means, they will do the rotation individually, in the *S4-MyExamples-00-ArrayMeshPractice*, all cubes rotate the same. So for this *S4-MyExamples-02-homework(hard)* exercise, how to give each cube their unique rotate speed is what should be working on.
-    2. To solve this quesiton:
-        * First, we need to create an array to push all meshes in:
-          ```javascript
-          var cubes = [];
-          cubes.push(mesh);
-          ```
-        * So right now we can bring all cubes out from the for loop, the next step is to define the unique rotate speed for each cube. So basicly, every cube should has different rotate speed for X,Y,Z. The array which has different random values in it would be a perfect choice to define the rotate speed. So we need to define 3 arrays to put the rotate speed values for X,Y,Z:
-          ```javascript
-          var rot_spd = [];
-          var rot_spd1 = [];
-          var rot_spd2 = [];
-          ```
-        * Then we push random numbers which from different ranges into these 3 arrays to make the rotate speed for X,Y,Z different, if we assign those random numbers directly to the rotate speed, the cubes will still have the same rotate speed ,just with 3 random speed value:
-          ```javascript
-          rot_spd.push(Math.random() * 0.1 - 0.05);
-          rot_spd1.push(Math.random() * 0.1 - 0.02);
-          rot_spd2.push(Math.random() * 0.1 - 0.08);
-          ```
-        * The last step was to assign those values to the X,Y,Z rotate speeds:
-          ```javascript
-          cubes.forEach(function(c, i) {
-            c.rotation.x += rot_spd[i];
-            c.rotation.y += rot_spd1[i];
-            c.rotation.z += rot_spd2[i];//Rotate the object that is referenced in c
-          });
-          ```
+1. To finding out the solution for this exercise, the **S4-MyExamples-00-ArrayMeshPractice readme note** is good for reference, as we know that if we want to make all cubes created in the for loop to animate, we must push those cubes in an array.
+
+  However, what is this exercise that differ from the *S4-MyExamples-00-ArrayMeshPractice* is that, in this exercise, each cube has their own rotation speed, which means, they will do the rotation individually, in the *S4-MyExamples-00-ArrayMeshPractice*, all cubes rotate the same. So for this *S4-MyExamples-02-homework(hard)* exercise, how to give each cube their unique rotate speed is what should be working on.
+2. To solve this quesiton:
+   * First, we need to create an array to push all meshes in:
+     ```javascript
+     var cubes = [];
+     cubes.push(mesh);
+     ```
+   * So right now we can bring all cubes out from the for loop, the next step is to define the unique rotate speed for each cube. So basicly, every cube should has different rotate speed for X,Y,Z. The array which has different random values in it would be a perfect choice to define the rotate speed. So we need to define 3 arrays to put the rotate speed values for X,Y,Z:
+   ```javascript
+   var rot_spd = [];
+   var rot_spd1 = [];
+   var rot_spd2 = [];
+   ```
+   * Then we push random numbers which from different ranges into these 3 arrays to make the rotate speed for X,Y,Z different, if we assign those random numbers directly to the rotate speed, the cubes will still have the same rotate speed ,just with 3 random speed value:
+   ```javascript
+   rot_spd.push(Math.random() * 0.1 - 0.05);
+   rot_spd1.push(Math.random() * 0.1 - 0.02);
+   rot_spd2.push(Math.random() * 0.1 - 0.08);
+   ```
+   * The last step was to assign those values to the X,Y,Z rotate speeds:
+   ```javascript
+   cubes.forEach(function(c, i) {
+   c.rotation.x += rot_spd[i];
+   c.rotation.y += rot_spd1[i];
+   c.rotation.z += rot_spd2[i];//Rotate the object that is referenced in c
+   });
+   ```
