@@ -1,5 +1,4 @@
 var renderer, scene, camera;
-var cubes = [];
 var rot = 0;
 
 function init() {
@@ -20,7 +19,6 @@ function init() {
   renderer = new THREE.WebGLRenderer({antialias:true});
   renderer.setClearColor(0x17293a);
   renderer.setSize(W, H);
-  //renderer.shadowMapEnabled = true;
 
   controls = new THREE.OrbitControls(camera, renderer.domElement);
 
@@ -31,7 +29,6 @@ function init() {
       //The color of the material is assigned a random color
       var boxMaterial = new THREE.MeshLambertMaterial({color: Math.random() * 0xFFFFFF});
       var mesh = new THREE.Mesh(boxGeometry, boxMaterial);
-      //mesh.castShadow = true;
 
       mesh.position.x = x;
       mesh.position.z = y;
@@ -39,7 +36,6 @@ function init() {
       mesh.rotation.y = Math.random() * 2 * Math.PI;
       mesh.rotation.z = Math.random() * 2 * Math.PI;
       scene.add(mesh);
-      cubes.push(mesh);
     }
   }
 
@@ -48,14 +44,6 @@ function init() {
 
 function drawFrame(){
   requestAnimationFrame(drawFrame);
-
-  rot += 0.01;
-
-  //forEach takes all the array entries and passes the c as the object, and i as the index
-  //cubes.forEach(function(c, i) {
-    //c.rotation.x = rot; //Rotate the object that is referenced in c
-  //});
-
   renderer.render(scene, camera);
 }
 
