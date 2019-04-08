@@ -9,7 +9,9 @@
 ![S4-ClassExamples-00-ArrayMesh00](/Session4/(README)pictures/pic-0.png "S4-ClassExamples-00-ArrayMesh00")
 ### Knowledge Points
 1. [For Loop(百度百科)](https://baike.baidu.com/item/for循环/5755435?fr=aladdin) shows the chinese definition of **For Loop**.
+
    [For Loop(Wikipedia)](https://en.wikipedia.org/wiki/For_loop) shows the english definition of **For Loop**.
+
    For DAT505, for loop is used for creating massive objects efficiently, the note down below is made on the fourth class of the workshop, it explained how *for loop* works:
    ![S4-ClassExamples-00-ArrayMesh01](/Session4/(README)pictures/pic-1.png "S4-ClassExamples-00-ArrayMesh01")
 2. The *for loop code* in this example is:
@@ -134,7 +136,7 @@
  }
  ```
  To explaining more clearly:
-  Color 0xFF00FF was given to cubes:
+   * Color 0xFF00FF was given to cubes:
      (X:0, Y:0, Z:0)
      (X:0, Y:0, Z:5)
      (X:0, Y:5, Z:0)
@@ -143,7 +145,7 @@
      (X:5, Y:0, Z:5)
      (X:5, Y:5, Z:0)
      (X:5, Y:5, Z:5)
-  Color 0x0000FF was given to cubes:
+   * Color 0x0000FF was given to cubes:
      (X:0, Y:0, Z:-5)
      (X:0, Y:0, Z:-10)
      (X:0, Y:5, Z:-5)
@@ -152,7 +154,7 @@
      (X:5, Y:0, Z:-10)
      (X:5, Y:5, Z:-5)
      (X:5, Y:5, Z:-10)
-  Color 0x4169E1 was given to cubes:
+   * Color 0x4169E1 was given to cubes:
      (X:-5, Y:0, Z:0)
      (X:-5, Y:0, Z:5)
      (X:-5, Y:5, Z:0)
@@ -161,7 +163,7 @@
      (X:-10, Y:0, Z:5)
      (X:-10, Y:5, Z:0)
      (X:-10, Y:5, Z:5)
-  Color 0xF08080 was given to cubes:
+   * Color 0xF08080 was given to cubes:
      (X:-5, Y:0, Z:-5)
      (X:-5, Y:0, Z:-10)
      (X:-5, Y:5, Z:-5)
@@ -170,7 +172,7 @@
      (X:-10, Y:0, Z:-10)
      (X:-10, Y:5, Z:-5)
      (X:-10, Y:5, Z:-10)
-  Color 0xFFFF00 was given to cubes:
+   * Color 0xFFFF00 was given to cubes:
      (X:0, Y:-5, Z:0)
      (X:0, Y:-10, Z:5)
      (X:0, Y:-5, Z:0)
@@ -179,7 +181,7 @@
      (X:5, Y:-10, Z:5)
      (X:5, Y:-5, Z:0)
      (X:5, Y:-10, Z:5)  
-  Color 0x7B68EE was given to cubes:
+   * Color 0x7B68EE was given to cubes:
      (X:0, Y:-5, Z:-5)
      (X:0, Y:-10, Z:-10)
      (X:0, Y:-5, Z:-5)
@@ -188,7 +190,7 @@
      (X:5, Y:-10, Z:-10)
      (X:5, Y:-5, Z:-5)
      (X:5, Y:-10, Z:-10)  
-  Color 0xFFB6C1 was given to cubes:
+   * Color 0xFFB6C1 was given to cubes:
      (X:-5, Y:-5, Z:0)
      (X:-5, Y:-10, Z:5)
      (X:-5, Y:-5, Z:0)
@@ -197,7 +199,7 @@
      (X:-10, Y:-10, Z:5)
      (X:-10, Y:-5, Z:0)
      (X:-10, Y:-10, Z:5)  
-  Color 0xDC143C was given to cubes:
+   * Color 0xDC143C was given to cubes:
      (X:-5, Y:-5, Z:-5)
      (X:-5, Y:-10, Z:-10)
      (X:-5, Y:-5, Z:-5)
