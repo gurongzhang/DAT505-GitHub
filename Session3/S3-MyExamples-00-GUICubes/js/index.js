@@ -44,7 +44,7 @@ function init(){
   for(let i = 0;i<geometry.faces.length;i++){
   let hex = Math.random() * 0xffffff;
   geometry.faces[ i ].color.setHex( hex );
-            }
+  }
 
   var material = new THREE.MeshLambertMaterial({
                  vertexColors: THREE.FaceColors

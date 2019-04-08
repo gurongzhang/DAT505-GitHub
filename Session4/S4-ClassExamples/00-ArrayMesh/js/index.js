@@ -22,17 +22,15 @@ function init() {
 
   //Create a two dimensional grid of objects, and position them accordingly
   for (var x = -10; x <= 10; x += 5) { // Start from -45 and sequentially add one every 5 pixels
-    //for (var y = -30; y <= 30; y += 5) {
-      var boxGeometry = new THREE.BoxGeometry(3, 6, 3);
-      //The color of the material is assigned a random color
-      var boxMaterial = new THREE.MeshLambertMaterial({color: Math.random() * 0xFFFFFF});
-      var mesh = new THREE.Mesh(boxGeometry, boxMaterial);
-      //mesh.castShadow = true;
-      mesh.position.x = x;
-      mesh.position.z = 0;
-      mesh.scale.y = 0.5;
-      scene.add(mesh);
-  }
+       var boxGeometry = new THREE.BoxGeometry(3, 6, 3);
+       //The color of the material is assigned a random color
+       var boxMaterial = new THREE.MeshLambertMaterial({color: Math.random() * 0xFFFFFF});
+       var mesh = new THREE.Mesh(boxGeometry, boxMaterial);
+       mesh.position.x = x;
+       mesh.position.z = 0;
+       mesh.scale.y = 0.5;
+       scene.add(mesh);
+   }
 
   document.body.appendChild(renderer.domElement);
 }
