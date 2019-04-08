@@ -102,3 +102,41 @@
        material.opacity = (controller.boxOpacity);
      });
      ```
+
+**************************
+
+## S3-MyExamples-00-GUICubes: *Cubes(users can change their rotation on the UI)*
+#### For this exercise, I created 20 cubes who have different colors for each surface and change to random color everytime refresh the page. I also  added rotation controllers and color controller for users controlling the X,Y,Z rotation and the color of those cubes on the UI.
+![S3-MyExamples-00-GUICubes00](/Session3/(README)pictures/pic-3.png "S3-MyExamples-00-GUICubes00")
+### Knowledge Points
+  1. The basic code for setting the cube and the rotation controller is showed below:
+  ```javascript
+  mesh = new THREE.Mesh(geometry, material);
+  mesh.position.set(0, 0, -12);
+  mesh.rotation.x = de2ra(45);
+  mesh.rotation.y = de2ra(-45);
+  mesh.scale.set(1, 1, 1);
+  scene.add(mesh);
+
+  var gui = new dat.GUI();
+  gui.add(controller, 'rotationX', -180, 180).onChange( function() {
+    mesh.rotation.x = de2ra(controller.rotationX);
+  });
+  ```
+
+  2. How to set up the color controller is already aforesaid mentioned.
+
+  3. To creating the randomly different-surfaces-color cube, the following code is for reference:
+  ```javascript
+  geometry = new THREE.BoxGeometry(2, 2, 2);
+  color = Math.random() * 0xffffff;
+
+  for(let i = 0;i<geometry.faces.length;i++){
+  let hex = Math.random() * 0xffffff;
+  geometry.faces[ i ].color.setHex( hex );
+  }
+
+  var material = new THREE.MeshLambertMaterial({
+                 vertexColors: THREE.FaceColors
+  });
+  ```

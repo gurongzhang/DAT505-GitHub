@@ -5,7 +5,7 @@
   * ### Material
   * ### Mesh
 #### We studied how to demonstrate different visual effects and simple animations based on these concepts.
-## 00-Test: *Rotating Cube*
+## S1-ClassExamples-00-Test: *Rotating Cube*
 #### This is one example which shows a *cube* keeps *rotating* in the middle of the screen.
 ![Rotating Cube](/Session1/(README)pictures/pic-0.png "Rotating Cube")
 ### Knowledge Points
@@ -29,7 +29,7 @@ scene.add( mesh );
 ********************
 
 
-## 01-TestX: *Creating New Rotating Object*
+## S1-ClassExamples-01-TestX: *Creating New Rotating Object*
 #### This project did some changes based on the *00-Test* and demonstrates one rotating *IcosahedronGeometry* with *pink background color*.
 ![rotating IcosahedronGeometry with pink background color](/Session1/(README)pictures/pic-5.png "rotating IcosahedronGeometry with pink background color")
 ### Knowledge Points
@@ -53,7 +53,7 @@ scene.add( mesh );
 
 ********************
 
- ## 00-MyPractice: *Objects Combination*
+ ## S1-MyExamples-00: *Objects Combination*
  #### The content of the exercise:
  ![Exercise Content](/Session1/(README)pictures/pic-12.png "Exercise Content")
  ### The final look of my exercise:
