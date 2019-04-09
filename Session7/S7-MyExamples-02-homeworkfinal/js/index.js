@@ -97,13 +97,8 @@ function onDocumentMouseMove( event ) {
 	mousex.forEach(function(c, i) {
 	mouseX = event.clientX - windowHalfX-mousex[i];
 	mousexary[i] = mouseX;
-	//mousexary.push(mouseX);
 	mouseY = event.clientY - windowHalfY-mousey[i];
 	mouseyary[i] = mouseY;
-	//mouseyary.push(mouseY);
 	});
-	//console.log(mouseX,mouseY);
-	//var posx = (event.clientX / window.innerWidth) * 2 -1;
-//	var posy = - (event.clientY / window.innerHeight) * 2 +1;
 	console.log(mousexary);
 }
