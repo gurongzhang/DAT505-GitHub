@@ -1,30 +1,31 @@
-# DAT505-Session5
+# DAT505-Session7
 ## Introduction:
 #### This session introduced:
-  * ### If Function
-  * ### If Else Function
-#### This session is the further study of Session4. We studied how to use **if and if else** to *set up conditions* to define some specific values for particular objects based on the *array* and *for loop* study.
-## S5-MyExamples-00-ParticularRotatingCubes: *Make particular cubes colorful and rotate*
-#### This is one exercise which we were asked to make two specific cubes have different color and keep rotating in the scene. The color of those two specified cubes needs to be random and everytime when someone refresh the web page, those two colors need to change.
-![S5-MyExamples-00-ParticularRotatingCubes00](/Session5/(README)pictures/pic-0.png "S5-MyExamples-00-ParticularRotatingCubes00")
+  * ### How to load different textures randomly in the scene
+  * ### How to transfer threejs 3D world coordinates to screen mouse coordinates
+#### This session has abundant contents, some of them might not be easy to absorb, especially the transformation between 3D coordinates and mouse coordinates, but I will try my best to explaine them.
+## S7-ClassExamples-00-Texture-Cube: *Loading random texures for the objects*
+#### This example demonstrates how to make the object do the drop loop and change its initial position every time refresh the page. Another important part is to show how to load texture for the object.
+![S7-ClassExamples-00-Texture-Cube00](/Session7/(README)pictures/pic-0.png "S7-ClassExamples-00-Texture-Cube00")
 ### Knowledge Points
-1. First is the rotation part, which is well explained in **Session4 README notes**. But the only tiny difference is during Session4, we always make all cubes rotate together, so during Session4 we used:
+1. First, to loading the texture, the following codes need to be added:
    ```javascript
-   cubes.forEach(function(c, i) {});
+   var texture;
+   function init() {
+   	texture = new THREE.TextureLoader().load( "texture.jpg" );
    ```
-   to control all the animation of cubes, although each cube may has different rotate speed, they always rotate together.
-
-   However in this exercise, there were only two cubes need to animate, so the difference is we used those two meshes' array number to define their rotate speed under the *requestAnimationFrame*:
+2. Secondly, to make it looks like 'drop', the y position needs to consistly change, and the x position needs to be randomized. Of course, all these codes should appear under the *animate function*:
    ```javascript
-   function drawFrame(){
-     requestAnimationFrame(drawFrame);
-
-            cubes.forEach(function(c, i){
-            cubes[6].rotation.x +=  rot_spd[i];
-            cubes[18].rotation.x += rot_spd[i];
-           });
-
-     renderer.render(scene, camera);
+   function animate() {
+   	requestAnimationFrame( animate );
+   	//Move the mesh towards the bottom of the screen
+   	mesh.position.y -= 0.2;
+   	//If the mesh passes the bottom of the screen,make it appear on the top.
+    //Also x position is randomized
+   	if (mesh.position.y <- 30){
+   		mesh.position.y = 35;
+   		mesh.position.x = (Math.random() * -20) +10;
+   	}
    }
    ```
    The reason why those two cubes were cubes[6] and cubes[8] is due to the *circular order of the for loop*:

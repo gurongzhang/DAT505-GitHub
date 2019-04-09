@@ -214,7 +214,7 @@
  3. The next step is one **key step**, for which the concept of *FOR LOOP* needs to be explained:
     To my understanding, everthing that written in this loop _only happened **once**_, everytime we run the loop, **one result will be added to the scene**, for example, in this exercise, the first time we run the loop, mesh one, AKA cube0(X:-10, Y:-10,Z:-10)is added to the scene, the second time the loop runs, cube1(X:-10, Y:-10,Z:-5) is added to the scene,etc. The loop will stop running until *it finishes adding all the cubes*. So what we saw on the scene is **the result of 64 times the loop runs**. But since everthing just happened *for one time*, this loop *__can not remember__ the history or I want to say record the results of every loop*, so it *only knows what happened for the __last loop__*. As I set this clear, it is easy to understand that if I put the rotation code inside the for loop, *there would be __just one cube__ that is rotating which is the last cube-cube63*.
  4. To solve this problem, the **Array** is the key now coming on stage：
-    Since the for loop **can not** support all cubes to rotate, we must bring all cubes out from the *for loop* and define their rotation under the **requestAnimationFrame**
+    Since the for loop **can not** support all cubes to rotate, we must bring all cubes out from the *for loop* and define their rotation under the **animate function**
     ```javascript
     function drawFrame(){
       requestAnimationFrame(drawFrame);
@@ -228,7 +228,7 @@
     ```javascript
     cubes.push(mesh);
     ```
-    Last but not least, writing the code under the *requestAnimationFrame*:
+    Last but not least, writing the code under the *animate function*:
     ```javascript
     rot += 0.02;
     cubes.forEach(function(c, i){

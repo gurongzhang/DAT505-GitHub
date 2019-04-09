@@ -14,7 +14,7 @@
    ```
    to control all the animation of cubes, although each cube may has different rotate speed, they always rotate together.
 
-   However in this exercise, there were only two cubes need to animate, so the difference is we used those two meshes' array number to define their rotate speed under the *requestAnimationFrame*:
+   However in this exercise, there were only two cubes need to animate, so the difference is we used those two meshes' array number to define their rotate speed under the *animate function*:
    ```javascript
    function drawFrame(){
      requestAnimationFrame(drawFrame);
