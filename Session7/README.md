@@ -123,7 +123,7 @@
 ![S7-MyExamples-00-homeworkdemo00](/Session7/(README)pictures/pic-11.png "S7-MyExamples-00-homeworkdemo00")
 ### Knowledge Points
 1. I already explain my solution before, so I break my whole processes into several parts:
-   1. I check the origin of the mouse screen coordinate system and the 3D world coordinate system:
+   1. I check the origin of the screen mouse coordinate system and the 3D world coordinate system:
       ![S7-MyExamples-00-homeworkdemo01](/Session7/(README)pictures/pic-12.png "S7-MyExamples-00-homeworkdemo01")  
       by printing the console for *event.clientX,event.clientY*:
       ```javascript
@@ -133,4 +133,13 @@
      	console.log(event.clientX,event.clientY);
       }
       ```
+      ![S7-MyExamples-00-homeworkdemo02](/Session7/(README)pictures/pic-13.png "S7-MyExamples-00-homeworkdemo02")
+      by put the mesh to the position (0,0):
+      ```javascript
+      mesh = new THREE.Mesh( geometry, material );
+	    mesh.position.x= 0;
+	    mesh.position.y= 0;
+	    scene.add( mesh );
+      ```
+      **So right now we can know that the top left corner is the origin of the screen mouse coordinate system and the middle of the screen is the origin of the 3D world coordinate system**
       
