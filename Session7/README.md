@@ -92,5 +92,21 @@
 #### In this example, a sphere with the eye texture will stare fixedly at the mouse, so with the mouse moving, the sphere will do the corresponding rotation.
 ![S7-ClassExamples-01-Texture-Eyes-Interaction00](/Session7/(README)pictures/pic-7.png "S7-ClassExamples-01-Texture-Eyes-Interaction00")
 ### Knowledge Points
-1. 
-2.
+1. First we find the values that **catch the mouse move** and *print them in console* to see the *mouse position*:
+   ```javascript
+   function onDocumentMouseMove( event ) {
+     mouseX = event.clientX - windowHalfX;
+     mouseY = event.clientY - windowHalfY;
+   	console.log(event.clientX - windowHalfX,event.clientY - windowHalfY);
+   }
+   ```
+   ![S7-ClassExamples-01-Texture-Eyes-Interaction01](/Session7/(README)pictures/pic-8.png "S7-ClassExamples-01-Texture-Eyes-Interaction01")
+   So right now we can know that, the mouse coordinate system is like:
+   ![S7-ClassExamples-01-Texture-Eyes-Interaction02](/Session7/(README)pictures/pic-9.png "S7-ClassExamples-01-Texture-Eyes-Interaction02")
+2. Since the value **event.clientX - windowHalfX** is assigned to **mouseX** and the value **event.clientY - windowHalfY** is assigned to the **mouseY**, so right now when using the mouseX and mouseY in the codes relating to the rotation of the sphere:
+   ```javascript
+   mesh.rotation.x = mouseY/window.innerHeight*2;
+   mesh.rotation.y = mouseX/window.innerWidth*2;
+   ```
+   it will do the **positive rotation(right)** and the **negative rotation(left)** according to the *value of mouseX and mouseY*.
+3. So the key to make the eye follow the mouse is to make the middle of the eye become **the origin of the mouse coordinate system** and
