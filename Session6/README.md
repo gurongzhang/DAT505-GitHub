@@ -34,43 +34,21 @@
    var city = new THREE.Mesh(cityGeometry, material);
    scene.add(city);
    ```
-
+   The comments explained everything very well as for reference.
 
 ********************
 
-## S5-MyExamples-01-CreativeObjects: *Creative objects by using if function*
-#### In this example, I created 25 icosahedrons who showed their wireframe and defined them with random color, same position, same extending speed and different initial sizes. And when their size reaches to a certain value, they will turn back to an appropriate size.
-![S5-MyExamples-01-CreativeObjects00](/Session5/(README)pictures/pic-2.png "S5-MyExamples-01-CreativeObjects00")
+## S6-MyExamples-00-tryout: *Random-position cubes*
+#### In this exercise, I tried to create massive cubes that appear randomly in the scene.
+![S6-MyExamples-00-tryout00](/Session6/(README)pictures/pic-1.png "S6-MyExamples-00-tryout00")
 ### Knowledge Points
-1. How to set up the **wireframe**, **initial position**, **color**, and **rotate speed** are well explained in the previous sessions.
-
-2. The *if function* in this exercise is basicly used for definine the range of  **changing speed** and **size** of those icosahedrons:
-   * We can extract the codes which contain the **if function**:
+1. The notes about box BoxHelper:
+   ![S6-MyExamples-00-tryout01](/Session6/(README)pictures/pic-2.png "S6-MyExamples-00-tryout01")
+   Reference [Threejs-LineSegments](https://threejs.org/docs/index.html#api/en/objects/LineSegments)
+2. Setting random position in the for loop:
    ```javascript
-   var size = [];
-
-   var thingssize = Math.random()* 10 * Math.PI/2;
-   size.push(-thingssize);
-
-   cubes.forEach(function(c, i) {
-     c.scale.x = size[i];
-     c.scale.y = size[i];
-     c.scale.z = size[i];
-     size[i] += 0.1;
-   if (size[i] > 10) size[i] = -10;
+   mesh.position.x = Math.floor( Math.random() * 200 - 100 ) * 4;
+   mesh.position.z = Math.floor( Math.random() * 200 - 100 ) * 4;
+   mesh.position.y = Math.floor( Math.random() * 200 - 100 ) * 4;
+   scene.add(mesh);
    ```
-   * __Math.random()* 10 * Math.PI/2__ is a range from [0,5PI), 5PI is about 15.70.
-   * There is a __"-"__ before the "thingssize" in
-     ```javascript
-     size.push(-thingssize);
-     ```
-     which means the range of the array **size** is (-5PI,0], we can also take it as some range around (-15.70,0]
-   * The code:
-     ```javascript
-     size[i] += 0.1;
-     ```
-     shows that the initial scale of those icosahedrons is random and those icosahedrons will keep growing, and we use the if function to limit the growing speed in cause their sizes become too big:
-     ```javascript
-     if (size[i] > 10) size[i] = -10;
-     ```
-     so that if the initial scale or the growing speed is too big or too fast, they will return to value *-10*, so we can always see those icosahedrons in the scene.
