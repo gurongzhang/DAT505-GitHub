@@ -45,7 +45,7 @@
 1. The notes about box BoxHelper:
    ![S6-MyExamples-00-tryout01](/Session6/(README)pictures/pic-2.png "S6-MyExamples-00-tryout01")
    Reference [Threejs-LineSegments](https://threejs.org/docs/index.html#api/en/objects/LineSegments)
-2. Setting random position in the for loop:
+2. Setting random positions in the for loop:
    ```javascript
    mesh.position.x = Math.floor( Math.random() * 200 - 100 ) * 4;
    mesh.position.z = Math.floor( Math.random() * 200 - 100 ) * 4;
