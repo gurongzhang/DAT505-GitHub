@@ -1,56 +1,40 @@
-# DAT505-Session5
+# DAT505-Session6
 ## Introduction:
 #### This session introduced:
-  * ### If Function
-  * ### If Else Function
-#### This session is the further study of Session4. We studied how to use **if and if else** to *set up conditions* to define some specific values for particular objects based on the *array* and *for loop* study.
-## S5-MyExamples-00-ParticularRotatingCubes: *Make particular cubes colorful and rotate*
-#### This is one exercise which we were asked to make two specific cubes have different color and keep rotating in the scene. The color of those two specified cubes needs to be random and everytime when someone refresh the web page, those two colors need to change.
-![S5-MyExamples-00-ParticularRotatingCubes00](/Session5/(README)pictures/pic-0.png "S5-MyExamples-00-ParticularRotatingCubes00")
+  * ### FirstPersonControls
+  * ### setupWorld Function
+  * ### THREE.GeometryUtils.merge(cityGeometry, building);
+#### This session introduced some other controls and method to help us *'experience'* our project and organize massive objects effiently.
+## S6-ClassExample-CityScape-full: *How to create random size objects effiently*
+#### This is one example simulating a city space, and the 'buildings' are consist of randomly distributed cubes of random size. Furthermore, the **FirstPersonControls** is also added to let us *'experience'* this city space better.
+![S6-ClassExample-CityScape-full00](/Session6/(README)pictures/pic-0.png "S6-ClassExample-CityScape-full00")
 ### Knowledge Points
-1. First is the rotation part, which is well explained in **Session4 README notes**. But the only tiny difference is during Session4, we always make all cubes rotate together, so during Session4 we used:
+1. [FirstPersonControls-00](https://www.2cto.com/kf/201803/734241.html) and [FirstPersonControls-01](https://blog.csdn.net/ithanmang/article/details/82351844) can offer some help to understand more about **FirstPersonControls**.
+
+2. Since we need to create massive random-size cubes, in this example we use **cityGeometry** to organize those random-size buildings on account of the for loop:
    ```javascript
-   cubes.forEach(function(c, i) {});
-   ```
-   to control all the animation of cubes, although each cube may has different rotate speed, they always rotate together.
+   //Geometry to store all buildings of the city
+   var cityGeometry = new THREE.Geometry();
+   for (var i = 0; i < 300; i++) {
+     //Create geometry as a clone
+     var building = new THREE.Mesh(geometry.clone());
 
-   However in this exercise, there were only two cubes need to animate, so the difference is we used those two meshes' array number to define their rotate speed under the *requestAnimationFrame*:
-   ```javascript
-   function drawFrame(){
-     requestAnimationFrame(drawFrame);
+     //Randomize position and scale of the buildings
+     building.position.x = Math.floor( Math.random() * 200 - 100 ) * 4;
+     building.position.z = Math.floor( Math.random() * 200 - 100 ) * 4;
+     building.scale.x  = Math.pow(Math.random(), 2) * 50 + 10;
+     building.scale.y  = Math.pow(Math.random(), 3) * building.scale.x * 8 + 8;
+     building.scale.z  = building.scale.x;
 
-            cubes.forEach(function(c, i){
-            cubes[6].rotation.x +=  rot_spd[i];
-            cubes[18].rotation.x += rot_spd[i];
-           });
-
-     renderer.render(scene, camera);
+     //Merge all buildings to one model - cityGeometry
+     THREE.GeometryUtils.merge(cityGeometry, building);
    }
+
+   //Mesh of the city
+   var city = new THREE.Mesh(cityGeometry, material);
+   scene.add(city);
    ```
-   The reason why those two cubes were cubes[6] and cubes[8] is due to the *circular order of the for loop*:
-   ![S5-MyExamples-00-ParticularRotatingCubes01](/Session5/(README)pictures/pic-1.png "S5-MyExamples-00-ParticularRotatingCubes01")
-2. For the color part:
-   * If we define the color directly random, such as:
-     ```javascript
-     cubes[6].material.color.set(Math.random() * 0xFFFFFF);
-     cubes[18].material.color.set(Math.random() * 0xFFFFFF);
-     ```
-     the result would be like the color of those two cubes *keep changing very fast* instead of staying with one random color. So right now we can use **if else** function to specify the cube color:
-     ```javascript
-     if (x==-5 && y==-5){
-        var boxMaterial = new THREE.MeshLambertMaterial({color: Math.random() * 0xFFFFFF});
-     }else{
-            boxMaterial = new THREE.MeshLambertMaterial({color: 0xFFFFFF});
-     if (x==5 && y==5){
-            boxMaterial = new THREE.MeshLambertMaterial({color: Math.random() * 0xFFFFFF});
-     }else {
-            boxMaterial = new THREE.MeshLambertMaterial({color: 0xFFFFFF});
-          }
-     }
-     ```
-   Those codes mean that:
-   * If the X and Y position of the cube is (X:-5, Y:-5) or (X:5, Y:5), the color of it would be a random color, otherwise, the color would be white.
-   * Those codes were in the for loop, this explained why the specified cubes appear with random color but will not keep changing their color.
+
 
 ********************
 
