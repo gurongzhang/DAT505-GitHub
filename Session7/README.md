@@ -103,10 +103,34 @@
    ![S7-ClassExamples-01-Texture-Eyes-Interaction01](/Session7/(README)pictures/pic-8.png "S7-ClassExamples-01-Texture-Eyes-Interaction01")
    So right now we can know that, the mouse coordinate system is like:
    ![S7-ClassExamples-01-Texture-Eyes-Interaction02](/Session7/(README)pictures/pic-9.png "S7-ClassExamples-01-Texture-Eyes-Interaction02")
-2. Since the value **event.clientX - windowHalfX** is assigned to **mouseX** and the value **event.clientY - windowHalfY** is assigned to the **mouseY**, so right now when using the mouseX and mouseY in the codes relating to the rotation of the sphere:
+2. Since the value **event.clientX - windowHalfX** is assigned to **mouseX** and the value **event.clientY - windowHalfY** is assigned to the **mouseY**, so right now when using the **mouseX** and **mouseY** in the codes relating to the rotation of the sphere:
    ```javascript
    mesh.rotation.x = mouseY/window.innerHeight*2;
    mesh.rotation.y = mouseX/window.innerWidth*2;
    ```
    it will do the **positive rotation(right)** and the **negative rotation(left)** according to the *value of mouseX and mouseY*.
-3. So the key to make the eye follow the mouse is to make the middle of the eye become **the origin of the mouse coordinate system** and
+3. So the key to make the eye follow the mouse is to:
+   1. Making the middle of the eye(s) become **the origin(s) of the mouse coordinate system**. So when users moving the mouse in the scene, the **mouseX** and **mouseY** can always be the positive or negative numbers(screen mouse coordinates) due to those different *origin(s)*.
+   2. In order to make 'Ⅰ' happened, I need to explain few more things:
+      * We can always know the 3D world coordinates of the middle of our eye(s) whatever their position is random or not.
+      * If we can transfer the threejs 3D world coordinate(s) of our eye(s) to screen mouse coordinate(s), the only thing we need to do is to **subtract the transferred screen mouse coordinate(s)** from **mouseX** and **mouseY**.
+      ![S7-ClassExamples-01-Texture-Eyes-Interaction03](/Session7/(README)pictures/pic-10.png "S7-ClassExamples-01-Texture-Eyes-Interaction03")
+
+********************
+
+## S7-MyExamples-00-homeworkdemo:*Changing the position of the 'eye' to another certain spot*
+#### In this example, I move the position of the 'eye' from (0,0) to (30,10) and make the new 'eye' still follow the mouse.
+![S7-MyExamples-00-homeworkdemo00](/Session7/(README)pictures/pic-11.png "S7-MyExamples-00-homeworkdemo00")
+### Knowledge Points
+1. I already explain my solution before, so I break my whole processes into several parts:
+   1. I check the origin of the mouse screen coordinate system and the 3D world coordinate system:
+      ![S7-MyExamples-00-homeworkdemo01](/Session7/(README)pictures/pic-12.png "S7-MyExamples-00-homeworkdemo01")  
+      by printing the console for *event.clientX,event.clientY*:
+      ```javascript
+      function onDocumentMouseMove( event ) {
+      mouseX = event.clientX;
+      mouseY = event.clientY;
+     	console.log(event.clientX,event.clientY);
+      }
+      ```
+      

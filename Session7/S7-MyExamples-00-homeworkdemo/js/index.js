@@ -55,7 +55,7 @@ function init() {
 	ppx = (mesh.position.x / 40) * windowHalfX;
 	ppy = (-mesh.position.y /40) * windowHalfY;
 	scene.add( mesh );
-console.log(ppx,ppy);
+//console.log(ppx,ppy);
 	renderer = new THREE.WebGLRenderer();
 	renderer.setPixelRatio( window.devicePixelRatio );
 	renderer.setSize( window.innerWidth, window.innerHeight );
@@ -71,7 +71,7 @@ function animate() {
 }
 
 function render() {
-	console.log(window.innerHeight)
+	console.log(window.innerHeight,window.innerWidth)
 	mesh.rotation.x = mouseY/window.innerHeight*2;
 	mesh.rotation.y = mouseX/window.innerWidth*2;
 
@@ -88,5 +88,5 @@ function onWindowResize() {
 function onDocumentMouseMove( event ) {
   mouseX = event.clientX - windowHalfX-ppx;
   mouseY = event.clientY - windowHalfY-ppy;
-	console.log(event.clientX - windowHalfX,event.clientY - windowHalfY);
+	//console.log(event.clientX - windowHalfX,event.clientY - windowHalfY);
 }
