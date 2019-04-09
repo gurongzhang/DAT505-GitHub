@@ -16,7 +16,6 @@ function init() {
 
 	// Load a texture
 	var texture = new THREE.TextureLoader().load( "textures/texture"+ Math.floor(Math.random()*4)+".jpg" );
-	 var boxMaterial = new THREE.MeshLambertMaterial({map: texture});
 
 	// Create a MeshBasicMaterial with a loaded texture
 	material = new THREE.MeshBasicMaterial( { map: texture} );
