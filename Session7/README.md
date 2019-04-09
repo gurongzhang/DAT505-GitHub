@@ -115,11 +115,16 @@
       * We can always know the 3D world coordinates of the middle of our eye(s) whatever their position is random or not.
       * If we can transfer the threejs 3D world coordinate(s) of our eye(s) to screen mouse coordinate(s), the only thing we need to do is to **subtract the transferred screen mouse coordinate(s)** from **mouseX** and **mouseY**.
       ![S7-ClassExamples-01-Texture-Eyes-Interaction03](/Session7/(README)pictures/pic-10.png "S7-ClassExamples-01-Texture-Eyes-Interaction03")
+      The new mouseX and mouseY would be like:
+      ```javascript
+      mouseX = event.clientX - windowHalfX-transferredX;
+      mouseY = event.clientY - windowHalfY-transferredY;
+      ```
 
 ********************
 
 ## S7-MyExamples-00-homeworkdemo:*Changing the position of the 'eye' to another certain spot*
-#### In this example, I move the position of the 'eye' from (0,0) to (30,10) and make the new 'eye' still follow the mouse.
+#### In this demo, I moved the position of the 'eye' from (0,0) to (30,10) and made the new 'eye' still follow the mouse.
 ![S7-MyExamples-00-homeworkdemo00](/Session7/(README)pictures/pic-11.png "S7-MyExamples-00-homeworkdemo00")
 ### Knowledge Points
 1. I already explain my solution before, so I break my whole processes into several parts:
@@ -142,4 +147,92 @@
 	    scene.add( mesh );
       ```
       **So right now we can know that the top left corner is the origin of the screen mouse coordinate system and the middle of the screen is the origin of the 3D world coordinate system**
-      
+      ![S7-MyExamples-00-homeworkdemo03](/Session7/(README)pictures/pic-14.png "S7-MyExamples-00-homeworkdemo03")
+   2. Since the direction of y-aixs in those two systems is reversed, we should put **'-'** before the y value when unifying the coordinates.
+   3. So if we know the length and width of the scene in the camera(3D world), we can calculate the proportion of the eye's coordinate in the half 3D world x-aixs and half 3D world y-axis and time the half length of the window.innerWidth and the negative value of half length of the window.innerHeight(unifying the coordinates). And the result will the be the coordinates of the eye in the screen mouse coordinate system. The code for this would be:
+      ```javascript
+      transferredcoordinateX = (mesh.position.x / HalfcamerasceneWidth) * windowHalfX;
+      transferredcoordinateY = (-mesh.position.y / HalfcamerasceneHeight) * windowHalfY;
+      ```
+      In my exercise, I just used **ppx** and **ppy** to represent *transferredcoordinateX* and *transferredcoordinateY*, and I tried to get the data of the *HalfcamerasceneWidth* and *HalfcamerasceneHeight* by changing the position of the mesh, and finally after adjusting for several times, I found out '40' is a suitable number to use, so now I have the transferred coordinates, even if they are not absolutely correct, but it would kind of work:
+      ```javascript
+      var ppx;
+      var ppy;
+      ppx = (mesh.position.x / 40) * windowHalfX;
+    	ppy = (-mesh.position.y / 40) * windowHalfY;
+      ```
+      And I __subtract *ppx* and *ppy*__ from __*mouseX* and *mouseY*__:
+      ```javascript
+      function onDocumentMouseMove( event ) {
+        mouseX = event.clientX - windowHalfX-ppx;
+        mouseY = event.clientY - windowHalfY-ppy;
+      ```
+      It seemed like I made it!
+
+********************
+
+## S7-MyExamples-01-homeworkdemo:*Making a random-position eye work*
+#### In this example, I made the position of the 'eye' random.
+![S7-MyExamples-01-homeworkdemo00](/Session7/(README)pictures/pic-15.png "S7-MyExamples-01-homeworkdemo00")
+### Knowledge Points
+1. In this demo, I did not change anything from the *S7-MyExamples-00-homeworkdemo* but redefined the position of my 'eye':
+   ```javascript
+   mesh.position.x = (Math.random()*90)-45;
+   mesh.position.y = (Math.random()*90)-45;
+   ```
+   And it worked fine, this showed that I'm on the right track.
+
+********************
+
+## S7-MyExamples-02-homeworkfinal:*Creating 10 random-position eyes and making them always follow the mouse*
+#### In this example, I randomized the position of 10 eyes and tried to make them work. It turned out that some eyes which appear in the corner did not work very well.
+![S7-MyExamples-01-homeworkdemo01](/Session7/(README)pictures/pic-16.png "S7-MyExamples-01-homeworkdemo01")
+### Knowledge Points
+1. In this demo, since I use *for loop* to create 10 eyes, as we mentioned in the **Session4 README note**, if we want to make our objects animate, we need to create arrays to bring those values out, so I defined several arrays and of course, my *ppx* and *ppy* to store different values:
+   ```javascript
+   var spheres = [];
+   var mousex = [];
+   var mousey = [];
+   var mousexary = [];
+   var mouseyary = [];
+   var ppx;
+   var ppy;
+   ```
+   And then I created the *for loop* and start defining values, randomizing positions and pushed them into corresponding arrays:
+   ```javascript
+   for (var x = 0; x < 10; x ++) {
+   	var geometry = new THREE.SphereGeometry( 15, 16, 8 );
+        mesh = new THREE.Mesh( geometry, material );
+   	     mesh.position.x = (Math.random()*120)-60;
+         mesh.position.y = (Math.random()*120)-60;
+        ppx = (mesh.position.x / 60) * windowHalfX;
+      	ppy = (-mesh.position.y /50) * windowHalfY ;
+   	scene.add(mesh);
+   	spheres.push(mesh);
+   	mousex.push(ppx);
+   	mousey.push(ppy);
+   }
+   ```
+2. Because all 'eyes' have the animation, so when we coding their movement, we should replace all the single value to array value:
+   ```javascript
+   function render() {
+   spheres.forEach(function(c, i) {
+   	c.rotation.x = mouseyary[i]/window.innerHeight*3;
+   	c.rotation.y = mousexary[i]/window.innerWidth*3;
+   });
+   	renderer.render( scene, camera );
+   }
+
+   function onDocumentMouseMove( event ) {
+   	mousex.forEach(function(c, i) {
+   	mouseX = event.clientX - windowHalfX-mousex[i];
+   	mousexary[i] = mouseX;
+   	mouseY = event.clientY - windowHalfY-mousey[i];
+   	mouseyary[i] = mouseY;
+   	});
+   }
+   ```
+3. The ptimization method will be showed in the Session8 to fix the 'corner eyes problem'
+4. To understand better about the coordinates transformation:
+   * [Coordinates Transformation1](https://blog.csdn.net/weitaming1/article/details/82387091)
+   * [Coordinates Transformation2](https://blog.csdn.net/yrbin666/article/details/44565731)
