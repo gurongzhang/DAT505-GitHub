@@ -92,7 +92,7 @@ function onDocumentMouseDown( event ) {
 function onDocumentMouseMove( event ) {
   event.preventDefault();
   if ( selectedObject ) {
-    //selectedObject.material.color.set( '#69f' );
+    selectedObject.material.color.set( '#69f' );
     selectedObject = null;
   }
 
