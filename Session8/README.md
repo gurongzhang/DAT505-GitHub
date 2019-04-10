@@ -192,6 +192,6 @@
 #### In this exercise, I tried to load my own models and materials. Meanwhile, I replaced the automatically rotating camera with OrbitControls.
 ![S8-MyExamples-01-objLoader-Raycastingexercise00](/Session8/(README)pictures/pic-5.png "S8-MyExamples-01-objLoader-Raycastingexercise00")
 ### Knowledge Points
-I think the main knowledges are well explained above, the only thing I want to mention in this project is different model and material may have different textures files or other relative files, you should make sure you copy all files you needs in the project file.
+1. I think the main knowledges are well explained above, the only thing I want to mention in this project is different model and material may have different textures files or other relative files, you should make sure you copy all files you needs in the project file.
 
    ![S8-MyExamples-01-objLoader-Raycastingexercise01](/Session8/(README)pictures/pic-6.png "S8-MyExamples-01-objLoader-Raycastingexercise01")
