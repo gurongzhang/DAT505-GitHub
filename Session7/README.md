@@ -149,7 +149,7 @@
       **So right now we can know that the top left corner is the origin of the screen mouse coordinate system and the middle of the screen is the origin of the 3D world coordinate system**
       ![S7-MyExamples-00-homeworkdemo03](/Session7/(README)pictures/pic-14.png "S7-MyExamples-00-homeworkdemo03")
    2. Since the direction of y-aixs in those two systems is reversed, we should put **'-'** before the y value when unifying the coordinates.
-   3. So if we know the *length* and *width* of the scene in the camera(3D world), we can *calculate the proportion of the eye's coordinate in the half 3D world x-aixs and half 3D world y-axis* and *time the half length of the window.innerWidth and the negative value of half length of the window.innerHeight(unifying the coordinates)*. And the result will the be the *coordinates of the eye *in the *screen mouse coordinate system*. The code for this would be:
+   3. So if we know the *length* and *width* of the scene in the camera(3D world), we can *calculate the proportion of the eye's coordinate in the half 3D world x-aixs and half 3D world y-axis* and *time the half length of the window.innerWidth and the negative value of half length of the window.innerHeight(unifying the coordinates)*. And the result will the be the *coordinates of the eye* in the *screen mouse coordinate system*. The code for this would be:
       ```javascript
       transferredcoordinateX = (mesh.position.x / HalfcamerasceneWidth) * windowHalfX;
       transferredcoordinateY = (-mesh.position.y / HalfcamerasceneHeight) * windowHalfY;
