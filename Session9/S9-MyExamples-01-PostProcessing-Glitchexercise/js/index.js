@@ -1,22 +1,6 @@
 var renderer, scene, camera, composer, planetMesh, skeletonMesh, particleMesh;
-var effectGlitch, effectRGB, motion1, motion2;
-var kaleidoParams, kaleidoPass,gammaCorrectionPass ;
-var rgbPass, rgbParams;
-var t1 = 0;
-var t2 = 0;
-var t3 = 0;
-
-var glitchPass;
-
-window.onload = function() {
-  init();
-  animate();
-}
-
-function updateOptions() {
-  //var wildGlitch = document.getElementById( 'wildGlitch' );
-  //glitchPass.goWild = wildGlitch.checked;
-}
+var effectGlitch, effectRGB;
+var kaleidoPass, gammaCorrectionPass, renderPass, glitchPass;
 
 function init() {
   renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
@@ -97,63 +81,20 @@ function init() {
 
   // postprocessing
   composer = new THREE.EffectComposer( renderer );
-  //composer.addPass( new THREE.RenderPass( scene, camera ) );
-  var renderPass = new THREE.RenderPass(scene, camera);
 
-  rgbPass = new THREE.ShaderPass( THREE.FXAAShader);
-  //rgbPass.uniforms[ 'amount' ].value = 0.005;
-  //rgbPass.renderToScreen = true;
- composer.addPass ( renderPass );
-  composer.addPass ( rgbPass );
+  renderPass = new THREE.RenderPass(scene, camera);
 
   kaleidoPass = new THREE.ShaderPass (THREE.ToneMapShader);
-  composer.addPass ( kaleidoPass );
 
   gammaCorrectionPass = new THREE.ShaderPass (THREE.GammaCorrectionShader);
-  composer.addPass ( gammaCorrectionPass );
 
-
-  var glitchPass = new THREE.GlitchPass();
+  glitchPass = new THREE.GlitchPass();
   glitchPass.renderToScreen = true;
+
+  composer.addPass ( renderPass );
+  composer.addPass ( kaleidoPass );
+  composer.addPass ( gammaCorrectionPass );
   composer.addPass( glitchPass );
-
- //rgbParams = {
-//    amount: 0.5,
-//   angle: 0.0
-  // }
-
-//  kaleidoParams = {
-//    sides: 2,
-//    angle: 0.0
-//  }
-
-  //var shaderPass = new THREE.ShaderPass(THREE.ColorifyShader);
-  //shaderPass.uniforms[ 'amount' ].value = 0.02;
-  //shaderPass.renderToScreen = true;
-  //composer.addPass( shaderPass);
-
-  //var effectComposer = new EffectComposer(renderer);
-  //composer.addPass(new EffectComposer.RenderPass(scene, camera));
-
-  //var shaderFXAA = new EffectComposer.ShaderPass(fxaa());
-  //shaderFXAA.renderToScreen = true;
-  //composer.addPass(shaderFXAA);
-
-  //composer.addPass(shaderPass);
-  //effectRGB = new THREE.ShaderPass( THREE.RGBShiftShader );
-  //effectRGB.uniforms[ 'amount' ].value = 0.02;
-  //effectRGB.renderToScreen = true;
-
-  //effectGlitch = new THREE.ShaderPass( THREE.DigitalGlitch );
-  //effectGlitch.uniforms[ 'amount' ].value = 0.;
-  //effectGlitch.uniforms[ 'distortion_x' ].value = Math.random();
-  //effectGlitch.uniforms[ 'distortion_y' ].value = Math.random();
-  //effectGlitch.uniforms[ 'angle' ].value = Math.random()+1;
-  //effectGlitch.uniforms[ 'seed' ].value = Math.random();
-  //effectGlitch.uniforms[ 'col_s' ].value = Math.random();
-  //effectGlitch.uniforms[ 'seed_x' ].value = Math.random();
-  //effectGlitch.uniforms[ 'seed_y' ].value = Math.random();
-  //composer.addPass( effectGlitch );
 
   window.addEventListener('resize', onWindowResize, false);
 };
@@ -165,11 +106,8 @@ function onWindowResize() {
   composer.setSize( window.innerWidth, window.innerHeight );
 }
 
-var reset = 0;
-
 function animate(ts) {
   requestAnimationFrame(animate);
-  //var delta = clock.getDelta()
 
   particlesObject.rotation.x += 0.0000;
   particlesObject.rotation.y -= 0.0040;
@@ -177,8 +115,9 @@ function animate(ts) {
   planetObject.rotation.y -= 0.0030;
   skeletonObject.rotation.x -= 0.0010;
   skeletonObject.rotation.y += 0.0020;
-  //renderer.clear();
 
-  //renderer.render( scene, camera )
   composer.render(0.1);
 };
+
+init();
+animate();
