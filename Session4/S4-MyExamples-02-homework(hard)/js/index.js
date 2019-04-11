@@ -30,7 +30,7 @@ function init() {
   // Set OrbitControls
   controls = new THREE.OrbitControls(camera, renderer.domElement);
 
-  // Create a two dimensional grid of objects, and position them accordingly
+  // Create a two dimensional grid(x,z) of objects, and position them accordingly
   // Start from -35 and sequentially add one every 5 pixels
   for (var x = -35; x < 40; x += 5) {
     for (var y = -35; y < 40; y += 5) {

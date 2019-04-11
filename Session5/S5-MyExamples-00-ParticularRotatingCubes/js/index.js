@@ -4,7 +4,6 @@ var controls;
 var cubes = [];
 var rot_spd = [];
 
-
 // Basic settings(scene, camera, spotLight, renderer)
 // Set OrbitControls
 // Mesh settings
@@ -35,11 +34,11 @@ function init() {
   // Set OrbitControls
   controls = new THREE.OrbitControls(camera, renderer.domElement);
 
-  // Create a two dimensional grid of objects, and position them accordingly
+  // Create a two dimensional grid(x,y) of objects, and position them accordingly
   // Start from -10 and sequentially add one every 5 pixels
   for (var x = -10; x <= 10; x += 5 ) {
    for (var y = -10; y <= 10; y += 5) {
-     // Create 25 Cube Meshes with Lambert material
+    // Create 25 Cube Meshes with Lambert material
     var boxGeometry = new THREE.BoxGeometry(3, 3, 3);
       // Set conditions for colors
       // Assign a random color to Cube(x:-5, y:-5, z:0)

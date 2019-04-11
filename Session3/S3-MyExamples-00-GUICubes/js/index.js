@@ -13,9 +13,6 @@ var de2ra = function(degree) {
   return degree*(Math.PI/180);
 };
 
-init();
-render();
-
 // Basic settings(scene, renderer, camera)
 // Mesh settings
 // Rotation controller settings
@@ -355,7 +352,6 @@ function render () {
 
 
 // Lighting system
-lightingSystem();
 function lightingSystem(){
   var object3d  = new THREE.DirectionalLight('white', 0.15);
   object3d.position.set(6,3,9);
@@ -381,6 +377,9 @@ function lightingSystem(){
   spotLight.shadow.camera.far = 4000;
   spotLight.shadow.camera.fov = 45;
   scene.add( spotLight );
-
-
 }
+
+
+init();
+render();
+lightingSystem();

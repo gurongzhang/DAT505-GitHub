@@ -1,30 +1,38 @@
 var renderer, scene, camera;
+// Arrays
 var cubes = [];
 var rot_spd = [];
-var radius = 2;
 var size = [];
+var radius = 2;
 
+// Basic settings(scene, camera, spotLight, renderer)
+// Set OrbitControls
+// Mesh settings
 function init() {
+  // Add scene
   scene = new THREE.Scene();
-
-  var W = window.innerWidth,
-  H = window.innerHeight;
-
+  // Camera settings
+  var W = window.innerWidth,H = window.innerHeight;
   camera = new THREE.PerspectiveCamera(45, W / H, .1, 1000);
   camera.position.set(0, 55, 85);
   camera.lookAt(scene.position);
-
+  // Set spotLight
   var spotLight = new THREE.SpotLight(0xFFFFFF);
   spotLight.position.set(0, 1000, 0);
   scene.add(spotLight);
-
+  // Set renderer
   renderer = new THREE.WebGLRenderer({antialias:true});
   renderer.setClearColor(0x17293a);
   renderer.setSize(W, H);
+  // Append Renderer to DOM
+  document.body.appendChild(renderer.domElement);
 
+  // Set OrbitControls
   controls = new THREE.OrbitControls(camera, renderer.domElement);
 
-  for (var x = -10; x <= 10; x += 5) { // Start from -10 and sequentially add one every 5 pixels
+  // Create a two dimensional grid of objects, and position them accordingly
+  // Start from -10 and sequentially add one every 5 pixels
+  for (var x = -10; x <= 10; x += 5) {
     for (var y = -10; y <= 10; y += 5) {
       var boxGeometry = new THREE.IcosahedronGeometry(radius, 2);
       //The color of the material is assigned a random color
@@ -47,8 +55,6 @@ function init() {
       size.push(-thingssize);
     }
   }
-
-  document.body.appendChild(renderer.domElement);
 }
 
 
