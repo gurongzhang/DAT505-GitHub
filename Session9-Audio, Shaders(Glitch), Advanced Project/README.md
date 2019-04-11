@@ -7,7 +7,7 @@
 #### This session introduced how to **add audio** into the scene and combine the audio with the *Raycasting system*. **Glitch** and **Shaders** were new concepts that introduced to us. In this last session, some other interesting projrcts were given to us as the inspiring resources.
 ## S9-ClassExample-00-RaycastAudio: *Playing sound effect automatically when moving mouse on the objects*
 #### This example is based on the *S8-ClassExamples-02-objLoader-Raycasting*, we studied how to load audio to the scene and adjust the properties of it.
-![S9-ClassExample-00-RaycastAudio00](/Session9/(README)pictures/pic-0.png "S9-ClassExample-00-RaycastAudio00")
+![S9-ClassExample-00-RaycastAudio00](/Session9-Audio%2C%20Shaders(Glitch)%2C%20Advanced%20Project/(README)pictures/pic-0.png "S9-ClassExample-00-RaycastAudio00")
 ### Knowledge Points
 1. The codes relate to loading the audio:
    ```javascript
@@ -37,17 +37,17 @@
      }
    ```
    File to put the audio files in:
-   ![S9-ClassExample-00-RaycastAudio00](/Session9/(README)pictures/pic-1.png "S9-ClassExample-00-RaycastAudio00")
+   ![S9-ClassExample-00-RaycastAudio00](/Session9-Audio%2C%20Shaders(Glitch)%2C%20Advanced%20Project/(README)pictures/pic-1.png "S9-ClassExample-00-RaycastAudio00")
 
 ********************
 
 ## S9-ClassExample-01-PostProcessing-Glitch: *Screen effects*
 #### In this example, lightings and glith are added to the scene to create cool effects.
-![S9-ClassExample-01-PostProcessing-Glitch00](/Session9/(README)pictures/pic-2.png "S9-ClassExample-01-PostProcessing-Glitch00")
+![S9-ClassExample-01-PostProcessing-Glitch00](/Session9-Audio%2C%20Shaders(Glitch)%2C%20Advanced%20Project/(README)pictures/pic-2.png "S9-ClassExample-01-PostProcessing-Glitch00")
 ### Knowledge Points
 1. To adding *different glitch* effects:
    *. The relative shader js files should be *copied* to the project file:
-      ![S9-ClassExample-01-PostProcessing-Glitch01](/Session9/(README)pictures/pic-3.png "S9-ClassExample-01-PostProcessing-Glitch01")
+      ![S9-ClassExample-01-PostProcessing-Glitch01](/Session9-Audio%2C%20Shaders(Glitch)%2C%20Advanced%20Project/(README)pictures/pic-3.png "S9-ClassExample-01-PostProcessing-Glitch01")
 2. The codes to load shaders:
    ```javascript
    var effectGlitch, effectRGB, motion1, motion2;
@@ -83,7 +83,7 @@
 
 ## S9-ClassExample-02-GlitchGUI: *Adding GUI to control the glitch*
 #### In this example, **GUI** was *added* to control the *properties of the glitch*.
-![S9-ClassExample-02-GlitchGUI00](/Session9/(README)pictures/pic-4.png "S9-ClassExample-02-GlitchGUI00")
+![S9-ClassExample-02-GlitchGUI00](/Session9-Audio%2C%20Shaders(Glitch)%2C%20Advanced%20Project/(README)pictures/pic-4.png "S9-ClassExample-02-GlitchGUI00")
 ### Knowledge Points
 1. GUI codes:
    ```javascript
@@ -111,7 +111,7 @@
 
 ## S9-ClassExample-03-PostProcessing-Advanced: *Advanced project*
 #### This example is an advanced project which combine the *model*, *shaders*, *textures*.
-![S9-ClassExample-03-PostProcessing-Advanced00](/Session9/(README)pictures/pic-5.png "S9-ClassExample-03-PostProcessing-Advanced00")
+![S9-ClassExample-03-PostProcessing-Advanced00](/Session9-Audio%2C%20Shaders(Glitch)%2C%20Advanced%20Project/(README)pictures/pic-5.png "S9-ClassExample-03-PostProcessing-Advanced00")
 ### Knowledge Points
 1. Details are all in the **script.js** file.
 
@@ -119,10 +119,10 @@
 
 ## S9-MyExamples-00-RaycastAudioexercise: _Loading audio based on the project *S8-MyExamples-01-objLoader-Raycastingexercise*_
 #### In this exercise I *downloaded 3 sound effects* and *loaded them to my previous project* **S8-MyExamples-01-objLoader-Raycastingexercise**.
-![S9-MyExamples-00-RaycastAudioexercise00](/Session9/(README)pictures/pic-6.png "S9-MyExamples-00-RaycastAudioexercise00")
+![S9-MyExamples-00-RaycastAudioexercise00](/Session9-Audio%2C%20Shaders(Glitch)%2C%20Advanced%20Project/(README)pictures/pic-6.png "S9-MyExamples-00-RaycastAudioexercise00")
 ### Knowledge Points
 1. First, I downloaded 3 sound effects and put them under the folder **audio**:
-   ![S9-MyExamples-00-RaycastAudioexercise01](/Session9/(README)pictures/pic-7.png "S9-MyExamples-00-RaycastAudioexercise01")
+   ![S9-MyExamples-00-RaycastAudioexercise01](/Session9-Audio%2C%20Shaders(Glitch)%2C%20Advanced%20Project/(README)pictures/pic-7.png "S9-MyExamples-00-RaycastAudioexercise01")
 2. Then loaded them randomly when moving mouse on the object and adjusted the properties of those sound effects:
    ```javascript
    audioLoader.load( "audio/sound"+Math.floor(Math.random()*3)+".wav", function( buffer ) {
@@ -136,7 +136,7 @@
 
 ## S9-MyExamples-01-PostProcessing-Glitchexercise: *Trying to load different shaders to the scene*
 #### In this exercise I loaded *GammaCorrectionShader* and created cool effects.
-![S9-MyExamples-01-PostProcessing-Glitchexercise00](/Session9/(README)pictures/pic-8.png "S9-MyExamples-01-PostProcessing-Glitchexercise00")
+![S9-MyExamples-01-PostProcessing-Glitchexercise00](/Session9-Audio%2C%20Shaders(Glitch)%2C%20Advanced%20Project/(README)pictures/pic-8.png "S9-MyExamples-01-PostProcessing-Glitchexercise00")
 ### Knowledge Points
 1. What did I add:
    ```javascript
