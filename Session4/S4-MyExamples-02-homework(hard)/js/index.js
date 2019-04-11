@@ -47,7 +47,7 @@ function init() {
     scene.add(mesh);
     // Push all meshes into the array
     cubes.push(mesh);
-    // Push different random rotate speeds into different arrays
+    // Push different random rotate speeds into 3 arrays
     rot_spd.push(Math.random() * 0.1 - 0.05);
     rot_spd1.push(Math.random() * 0.1 - 0.02);
     rot_spd2.push(Math.random() * 0.1 - 0.08);
@@ -61,7 +61,7 @@ function drawFrame(){
 requestAnimationFrame(drawFrame);
   //forEach takes all the array entries and passes the c as the object, and i as the index
  cubes.forEach(function(c, i) {
-  //Rotate the object that is referenced in c
+  // Assign different random rotate speeds to x,y,z axises
   c.rotation.x += rot_spd[i];
   c.rotation.y += rot_spd1[i];
   c.rotation.z += rot_spd2[i];
