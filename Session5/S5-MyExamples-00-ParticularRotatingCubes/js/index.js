@@ -62,7 +62,7 @@ function init() {
        mesh.rotation.x = Math.random() * 2 * Math.PI;
        mesh.rotation.y = Math.random() * 2 * Math.PI;
        mesh.rotation.z = Math.random() * 2 * Math.PI;
-     // Push random number range[-0.05,0.05) into array
+     // Push random number range: [-0.05,0.05) into array
      rot_spd.push(Math.random() * 0.1 - 0.05);
    // Add mesh to scene
    scene.add( mesh );
