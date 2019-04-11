@@ -1,4 +1,4 @@
-# DAT505-Session6
+# DAT505-Session6-FirstPersonControls, SetupWorld Function, THREE.GeometryUtils
 ## Introduction:
 #### This session introduced:
   * ### FirstPersonControls
