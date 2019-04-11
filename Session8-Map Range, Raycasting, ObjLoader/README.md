@@ -1,8 +1,9 @@
-# DAT505-Session8
+# DAT505-Session8-Map Range, Raycasting, ObjLoader
 ## Introduction:
 #### This session introduced:
   * ### map_range function
   * ### Raycasting(onDocumentMouseDown function, onDocumentMouseMove function)
+  * ### ObjLoader(models, materials)
 #### This session firstly introduced the **map_range** to optimize the 'eyes-interaction' project, then we studied the **Raycasting** and **how to load models and materials** in our project.
 ## S8-ClassExamples-00-Texture-Eyes-Interaction2X: *Optimizing the 'eyes-interaction' project*
 #### This example demonstrates how to limit the rotation range of corner-located eyes with **map_range**.
