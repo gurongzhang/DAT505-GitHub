@@ -6,7 +6,7 @@
 #### This session firstly introduced the **map_range** to optimize the 'eyes-interaction' project, then we studied the **Raycasting** and **how to load models and materials** in our project.
 ## S8-ClassExamples-00-Texture-Eyes-Interaction2X: *Optimizing the 'eyes-interaction' project*
 #### This example demonstrates how to limit the rotation range of corner-located eyes with **map_range**.
-![S8-ClassExamples-00-Texture-Eyes-Interaction2X00](/Session8/(README)pictures/pic-0.png "S8-ClassExamples-00-Texture-Eyes-Interaction2X00")
+![S8-ClassExamples-00-Texture-Eyes-Interaction2X00](/Session8-Map%20Range%2C%20Raycasting%2C%20ObjLoader/(README)pictures/pic-0.png "S8-ClassExamples-00-Texture-Eyes-Interaction2X00")
 ### Knowledge Points
 1. To my understanding, **map_range** is something that can transfer a range to another range:
    ```javascript
@@ -37,7 +37,7 @@
 
 ## S8-ClassExamples-01-RaycastSprite: *Changing cubes' color by clicking*
 #### In this example, when clicking the cubes, their color will change to red and their positions will be printed in console.
-![S8-ClassExamples-01-RaycastSprite00](/Session8/(README)pictures/pic-1.png "S8-ClassExamples-01-RaycastSprite00")
+![S8-ClassExamples-01-RaycastSprite00](/Session8-Map%20Range%2C%20Raycasting%2C%20ObjLoader/(README)pictures/pic-1.png "S8-ClassExamples-01-RaycastSprite00")
 ### Knowledge Points
 1. This example uses **Raycasting system** to know wether we choose an object or not, to know more about it:
    [Threejs Raycaster](https://threejs.org/docs/index.html#api/en/core/Raycaster)
@@ -69,7 +69,7 @@
 
 ## S8-ClassExamples-02-objLoader-Raycasting: *500 loading-material models who will change color when mouse moving on them*
 #### In this example, **'for loop'** was used to create 500 objects and when the **'raycasting system'** detected those objects, the color of them will turn red.
-![S8-ClassExamples-02-objLoader-Raycasting00](/Session8/(README)pictures/pic-2.png "S8-ClassExamples-02-objLoader-Raycasting00")
+![S8-ClassExamples-02-objLoader-Raycasting00](/Session8-Map%20Range%2C%20Raycasting%2C%20ObjLoader/(README)pictures/pic-2.png "S8-ClassExamples-02-objLoader-Raycasting00")
 ### Knowledge Points
 1. To loading model and material:
    ```javascript
@@ -91,7 +91,7 @@
      });
    ```
   Do not forget to *copy the model file*, material file and other js files into the project file:
-  ![S8-ClassExamples-02-objLoader-Raycasting01](/Session8/(README)pictures/pic-3.png "S8-ClassExamples-02-objLoader-Raycasting01")
+  ![S8-ClassExamples-02-objLoader-Raycasting01](/Session8-Map%20Range%2C%20Raycasting%2C%20ObjLoader/(README)pictures/pic-3.png "S8-ClassExamples-02-objLoader-Raycasting01")
 2. To pick the object that when mouse *move on* them and thir color will change:
    ```javascript
    function onDocumentMouseMove( event ) {
@@ -140,7 +140,7 @@
 
 ## S8-MyExamples-00-RaycastSpriteexercise: *Changing cubes' color by moving mouse on them*
 #### In this exercise, when *moving the mouse on cubes*, their color will change to random hex color and when *clicking on them*, their positions will be printed in console.
-![S8-MyExamples-00-RaycastSpriteexercise00](/Session8/(README)pictures/pic-4.png "S8-MyExamples-00-RaycastSpriteexercise00")
+![S8-MyExamples-00-RaycastSpriteexercise00](/Session8-Map%20Range%2C%20Raycasting%2C%20ObjLoader/(README)pictures/pic-4.png "S8-MyExamples-00-RaycastSpriteexercise00")
 ### Knowledge Points
 1. The *difference* between *S8-ClassExamples-01-RaycastSprite* and *S8-MyExamples-00-RaycastSpriteexercise* is: in *S8-ClassExamples-01-RaycastSprite*, the condition for cubes to change color is **clicking** them. However, in this exercise, the condition for cubes to change color is **moving mouse on** them, so there are couple things need to change in the script:
    ```javascript
@@ -190,8 +190,8 @@
 
 ## S8-MyExamples-01-objLoader-Raycastingexercise: *Loading my own objects and when mouse clicking on them, their color will change to a random hex color*
 #### In this exercise, I tried to *load my own models and materials*. Meanwhile, I *replaced the automatically rotating camera with OrbitControls*.
-![S8-MyExamples-01-objLoader-Raycastingexercise00](/Session8/(README)pictures/pic-5.png "S8-MyExamples-01-objLoader-Raycastingexercise00")
+![S8-MyExamples-01-objLoader-Raycastingexercise00](/Session8-Map%20Range%2C%20Raycasting%2C%20ObjLoader/(README)pictures/pic-5.png "S8-MyExamples-01-objLoader-Raycastingexercise00")
 ### Knowledge Points
 1. I think the *main knowledges* are well explained above, the only thing I want to mention in this project is *different model and material may have different textures files or other relative files, you should make sure you copy all files you needs in the project file*.
 
-   ![S8-MyExamples-01-objLoader-Raycastingexercise01](/Session8/(README)pictures/pic-6.png "S8-MyExamples-01-objLoader-Raycastingexercise01")
+   ![S8-MyExamples-01-objLoader-Raycastingexercise01](/Session8-Map%20Range%2C%20Raycasting%2C%20ObjLoader/(README)pictures/pic-6.png "S8-MyExamples-01-objLoader-Raycastingexercise01")
