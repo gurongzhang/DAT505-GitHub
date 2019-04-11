@@ -2,8 +2,7 @@
 ## Introduction:
 #### This session introduced the concept of GUI(Graphical User Interface). From my understanding, GUI means users can change different values on the user interface directly instead of changing them in the code sources. What is more, we did our own creative GUI projects based on what we learned:
   * ### GUI
-  * ### Controller(Scale, Position, Rotation, Color, Opacity)
-  * ### Color converter
+  * ### Controller(Scale, Position, Rotation, Color(Color converter), Opacity)
 ## S3-ClassExamples-00-BasicStructure-GUI: *Cube(scale,position,rotation)*
 #### This example shows that users can change the *rotation*, *position* and *scale* of the cube directly on the user interface.
 ![S3-ClassExamples-00-BasicStructure-GUI00](/Session3/(README)pictures/pic-0.png "S3-ClassExamples-00-BasicStructure-GUI00")
@@ -106,7 +105,7 @@
 **************************
 
 ## S3-MyExamples-00-GUICubes: *Cubes(users can change their rotation on the UI)*
-#### For this exercise, I created 20 cubes who have different colors for each surface and change to random color everytime refresh the page. I also  added rotation controllers and color controller for users controlling the X,Y,Z rotation and the color of those cubes on the UI.
+#### For this exercise, I created 20 cubes who have *different colors for each surface and change to random color everytime refresh the page*. I also *added rotation controllers and color controller for users controlling the X,Y,Z rotation and the color of those cubes on the UI*.
 ![S3-MyExamples-00-GUICubes00](/Session3/(README)pictures/pic-3.png "S3-MyExamples-00-GUICubes00")
 ### Knowledge Points
   1. The basic code for setting the cube and the rotation controller is showed below:
