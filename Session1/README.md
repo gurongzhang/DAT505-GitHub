@@ -29,9 +29,9 @@ scene.add( mesh );
 ********************
 
 
-## S1-ClassExamples-01-TestX: *Creating New Rotating Object*
+## S1-MyExamples-00-TestX: *Creating New Rotating Object*
 #### This project did some changes based on the *00-Test* and demonstrates one rotating *IcosahedronGeometry* with *pink background color*.
-![rotating IcosahedronGeometry with pink background color](/Session1/(README)pictures/pic-5.png "rotating IcosahedronGeometry with pink background color")
+![rotating IcosahedronGeometry with pink background color](/Session1/(README)pictures/pic-5-.png "rotating IcosahedronGeometry with pink background color")
 ### Knowledge Points
 1. Different *geometry* and *material* has different **Constructor** and **Properties** which can be checked on the (*[Threejs documentation](https://threejs.org/docs)*)
  * For example : The **constructor** of *BoxGeometry*
@@ -53,7 +53,7 @@ scene.add( mesh );
 
 ********************
 
- ## S1-MyExamples-00: *Objects Combination*
+ ## S1-MyExamples-01-ObjectsCombination: *Combination of different objects*
  #### The content of the exercise:
  ![Exercise Content](/Session1/(README)pictures/pic-12.png "Exercise Content")
  ### The final look of my exercise:

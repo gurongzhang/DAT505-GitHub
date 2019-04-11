@@ -50,9 +50,10 @@ var render = function () {
   mesh.rotation.z += 0.01;
   mesh.rotation.x += 0.03;
   //Continuously rotate the x,y,z of the mesh
-  mesh1.rotation.y -= 0.03; 
+  mesh1.rotation.y -= 0.03;
   mesh1.rotation.z -= 0.01;
   mesh1.rotation.x -= 0.04;
+  // Set the background pink
   renderer.setClearColor("#FFB6C1");
 
   // Render the scene
