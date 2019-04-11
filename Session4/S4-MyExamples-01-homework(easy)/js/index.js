@@ -39,7 +39,7 @@ function init() {
         // Set mesh position
         mesh.position.x = x;
         mesh.position.z = y;
-        // Assign random rotation to x,y,z axises
+        // Assign random rotate directions to x,y,z axises
         mesh.rotation.x = Math.random() * 2 * Math.PI;
         mesh.rotation.y = Math.random() * 2 * Math.PI;
         mesh.rotation.z = Math.random() * 2 * Math.PI;
@@ -55,6 +55,7 @@ function drawFrame(){
   requestAnimationFrame(drawFrame);
   renderer.render(scene, camera);
 }
+
 
 init();
 drawFrame();
