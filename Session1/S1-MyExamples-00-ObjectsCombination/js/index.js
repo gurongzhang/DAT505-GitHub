@@ -3,7 +3,6 @@ var scene, camera, renderer, dirLight, dirLightHeper;
 var geometry, material, mesh;//IcosahedronGeometry0
 var geometry1, material1, mesh1;//IcosahedronGeometry1
 var spotLight, lightHelper, shadowCameraHelper;
-var gui;
 var radius = 20;
 
 // Basic settings
@@ -24,6 +23,7 @@ function init(){
   // Append Renderer to DOM
   document.body.appendChild( renderer.domElement );
 }
+
 
 // Create objects
 function geometry(){

@@ -6,7 +6,7 @@
   * ### Supplemental project
 #### This session introduced how to **add audio** into the scene and combine the audio with the *Raycasting system*. **Glitch** and **Shaders** were new concepts that introduced to us. In this last session, some other interesting projrcts were given to us as the inspiring resources.
 ## S9-ClassExample-00-RaycastAudio: *Playing sound effect automatically when moving mouse on the objects*
-#### This example is based on the *S8-ClassExamples-02-objLoader-Raycasting*, we studied how to load audio into the scene and adjust the properties of it.
+#### This example is based on the *S8-ClassExamples-02-objLoader-Raycasting*, we studied how to load audio to the scene and adjust the properties of it.
 ![S9-ClassExample-00-RaycastAudio00](/Session9/(README)pictures/pic-0.png "S9-ClassExample-00-RaycastAudio00")
 ### Knowledge Points
 1. The codes relate to loading the audio:
@@ -118,7 +118,7 @@
 ********************
 
 ## S9-MyExamples-00-RaycastAudioexercise: _Loading audio based on the project *S8-MyExamples-01-objLoader-Raycastingexercise*_
-#### In this exercise I *downloaded 3 sound effects* and *loaded them into my previous project* **S8-MyExamples-01-objLoader-Raycastingexercise**.
+#### In this exercise I *downloaded 3 sound effects* and *loaded them to my previous project* **S8-MyExamples-01-objLoader-Raycastingexercise**.
 ![S9-MyExamples-00-RaycastAudioexercise00](/Session9/(README)pictures/pic-6.png "S9-MyExamples-00-RaycastAudioexercise00")
 ### Knowledge Points
 1. First, I downloaded 3 sound effects and put them under the folder **audio**:

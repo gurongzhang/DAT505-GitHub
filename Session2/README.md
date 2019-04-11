@@ -51,7 +51,7 @@ var render = function () {
 
 ## S2-MyExamples-00-GeometriesAndMaterials: *Creating multiple objects With Different Materials*
 #### In this exercise, we were asked to create kinds of objects with different geometries, materials and properties.
-![GeometriesAndMaterials](/Session2/(README)pictures/pic-2.png "GeometriesAndMaterials")
+![GeometriesAndMaterials](/Session2/(README)pictures/pic-13.png "GeometriesAndMaterials")
 ### Knowledge Points
   * The capability of *reflecting light* is different between materials, so *the chosen of material* will decide how the object looks like as we can see in the picture. Meanwhile, we should also take this point under consideration when we adding lights in the scene.
 
