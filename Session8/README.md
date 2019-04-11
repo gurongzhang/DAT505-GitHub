@@ -3,7 +3,7 @@
 #### This session introduced:
   * ### map_range function
   * ### Raycasting(onDocumentMouseDown function, onDocumentMouseMove function)
-#### This session firstly introduced the map_range to optimize the 'eyes-interaction' project, then we studied the Raycasting and how to load models and materials in our project.
+#### This session firstly introduced the **map_range** to optimize the 'eyes-interaction' project, then we studied the **Raycasting** and **how to load models and materials** in our project.
 ## S8-ClassExamples-00-Texture-Eyes-Interaction2X: *Optimizing the 'eyes-interaction' project*
 #### This example demonstrates how to limit the rotation range of corner-located eyes with **map_range**.
 ![S8-ClassExamples-00-Texture-Eyes-Interaction2X00](/Session8/(README)pictures/pic-0.png "S8-ClassExamples-00-Texture-Eyes-Interaction2X00")
@@ -63,12 +63,12 @@
      }
    }
    ```
-   The objects we pick are the blue(color'#69f') objects, and after we clicking them, they will change color to red(color'#f00'). Meanwhile, the console will print the position(x,y,z) of those objects.
+   The objects we pick are the *blue(color'#69f')* objects, and after we clicking them, they will change their color to red(color'#f00'). Meanwhile, the console will *print the position(x,y,z) of those objects*.
 
 ********************
 
 ## S8-ClassExamples-02-objLoader-Raycasting: *500 loading-material models who will change color when mouse moving on them*
-#### In this example, 'for loop' was used to create 500 objects and when the 'raycasting system' detected those objects, the color of them will turn red.
+#### In this example, **'for loop'** was used to create 500 objects and when the **'raycasting system'** detected those objects, the color of them will turn red.
 ![S8-ClassExamples-02-objLoader-Raycasting00](/Session8/(README)pictures/pic-2.png "S8-ClassExamples-02-objLoader-Raycasting00")
 ### Knowledge Points
 1. To loading model and material:
@@ -90,9 +90,9 @@
         }
      });
    ```
-  Do not forget to copy the model file, material file and other js files into the project file:
+  Do not forget to *copy the model file*, material file and other js files into the project file:
   ![S8-ClassExamples-02-objLoader-Raycasting01](/Session8/(README)pictures/pic-3.png "S8-ClassExamples-02-objLoader-Raycasting01")
-2. To pick the object that when mouse move on them and thir color will change:
+2. To pick the object that when mouse *move on* them and thir color will change:
    ```javascript
    function onDocumentMouseMove( event ) {
      event.preventDefault();
@@ -139,10 +139,10 @@
 ********************
 
 ## S8-MyExamples-00-RaycastSpriteexercise: *Changing cubes' color by moving mouse on them*
-#### In this exercise, when moving the mouse on cubes, their color will change to random hex color and when clicking on them, their positions will be printed in console.
+#### In this exercise, when *moving the mouse on cubes*, their color will change to random hex color and when *clicking on them*, their positions will be printed in console.
 ![S8-MyExamples-00-RaycastSpriteexercise00](/Session8/(README)pictures/pic-4.png "S8-MyExamples-00-RaycastSpriteexercise00")
 ### Knowledge Points
-1. The difference between *S8-ClassExamples-01-RaycastSprite* and *S8-MyExamples-00-RaycastSpriteexercise* is that, in *S8-ClassExamples-01-RaycastSprite*, the condition for cubes to change color is clicking them. However, in this exercise, the condition for cubes to change color is moving mouse on them, so there are something needs to change in the script:
+1. The *difference* between *S8-ClassExamples-01-RaycastSprite* and *S8-MyExamples-00-RaycastSpriteexercise* is: in *S8-ClassExamples-01-RaycastSprite*, the condition for cubes to change color is **clicking** them. However, in this exercise, the condition for cubes to change color is **moving mouse on** them, so there are couple things need to change in the script:
    ```javascript
    unction onDocumentMouseMove( event ) {
      event.preventDefault();
@@ -164,7 +164,7 @@
    }
    ```
    As we can see in the code above, we change **onDocumentMouseDown** to **onDocumentMouseMove**, and set the color to the random color.
-2. Since we still need to click on objects to print their positions in console, the *onDocumentMouseDown* code is still needed:
+2. Since we still need to *click on* objects to print their positions in console, the *onDocumentMouseDown* code is still needed:
    ```javascript
    function onDocumentMouseDown( event ) {
      event.preventDefault();
@@ -189,9 +189,9 @@
 ********************
 
 ## S8-MyExamples-01-objLoader-Raycastingexercise: *Loading my own objects and when mouse clicking on them, their color will change to a random hex color*
-#### In this exercise, I tried to load my own models and materials. Meanwhile, I replaced the automatically rotating camera with OrbitControls.
+#### In this exercise, I tried to *load my own models and materials*. Meanwhile, I *replaced the automatically rotating camera with OrbitControls*.
 ![S8-MyExamples-01-objLoader-Raycastingexercise00](/Session8/(README)pictures/pic-5.png "S8-MyExamples-01-objLoader-Raycastingexercise00")
 ### Knowledge Points
-1. I think the main knowledges are well explained above, the only thing I want to mention in this project is different model and material may have different textures files or other relative files, you should make sure you copy all files you needs in the project file.
+1. I think the *main knowledges* are well explained above, the only thing I want to mention in this project is *different model and material may have different textures files or other relative files, you should make sure you copy all files you needs in the project file*.
 
    ![S8-MyExamples-01-objLoader-Raycastingexercise01](/Session8/(README)pictures/pic-6.png "S8-MyExamples-01-objLoader-Raycastingexercise01")
