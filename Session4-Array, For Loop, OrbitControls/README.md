@@ -6,14 +6,14 @@
 #### We studied how to use **For Loop** to *create objects efficiently* and how to use **Array** to _assign different values for individual objects which created by *for loop*_.
 ## S4-ClassExamples-00-ArrayMesh: *5 Cubes Created By For Loop*
 #### This is one example shows how to create five cubes by using for loop.
-![S4-ClassExamples-00-ArrayMesh00](/Session4/(README)pictures/pic-0.png "S4-ClassExamples-00-ArrayMesh00")
+![S4-ClassExamples-00-ArrayMesh00](/Session4-Array%2C%20For%20Loop%2C%20OrbitControls/(README)pictures/pic-0.png "S4-ClassExamples-00-ArrayMesh00")
 ### Knowledge Points
 1. [For Loop(百度百科)](https://baike.baidu.com/item/for循环/5755435?fr=aladdin) shows the chinese definition of **For Loop**.
 
    [For Loop(Wikipedia)](https://en.wikipedia.org/wiki/For_loop) shows the english definition of **For Loop**.
 
    For DAT505, for loop is used for creating massive objects efficiently, the note down below is made on the fourth class of the workshop, it explained how *for loop* works:
-   ![S4-ClassExamples-00-ArrayMesh01](/Session4/(README)pictures/pic-1.png "S4-ClassExamples-00-ArrayMesh01")
+   ![S4-ClassExamples-00-ArrayMesh01](/Session4-Array%2C%20For%20Loop%2C%20OrbitControls/(README)pictures/pic-1.png "S4-ClassExamples-00-ArrayMesh01")
 2. The *for loop code* in this example is:
    ```javascript
    for (var x = -10; x <= 10; x += 5) { // Start from -45 and sequentially add one every 5 pixels
@@ -45,7 +45,7 @@
 
 ## S4-ClassExamples-01-ArrayMesh-Exercise-template: *225 Cubes Created By For Loop*
 #### This example created more cubes based on what we did for *S4-ClassExamples-00-ArrayMesh*
-![S4-ClassExamples-01-ArrayMesh-Exercise-template00](/Session4/(README)pictures/pic-2.png "S4-ClassExamples-01-ArrayMesh-Exercise-template00")
+![S4-ClassExamples-01-ArrayMesh-Exercise-template00](/Session4-Array%2C%20For%20Loop%2C%20OrbitControls/(README)pictures/pic-2.png "S4-ClassExamples-01-ArrayMesh-Exercise-template00")
 ### Knowledge Points
 1. The *for loop* for this one added z position:
    ```javascript
@@ -100,7 +100,7 @@
 
  ## S4-MyExamples-00-ArrayMeshPractice: *Defining specific colors and rotation speed of the cubes created by for loop*
  #### For this exercise, we created 64 cubes(4 on each x,y and z axis,4x4x4). And we divided those cubes into 8 equal groups and we assigned different colors for each one of them.
- ![S4-MyExamples-00-ArrayMeshPractice00](/Session4/(README)pictures/pic-3.png "S4-MyExamples-00-ArrayMeshPractice00")
+ ![S4-MyExamples-00-ArrayMeshPractice00](/Session4-Array%2C%20For%20Loop%2C%20OrbitControls/(README)pictures/pic-3.png "S4-MyExamples-00-ArrayMeshPractice00")
  ### Knowledge Points:
  1. First, we need to create the *for loop* for each x,y and z axis.
  ```javascript
@@ -243,7 +243,7 @@
 
 ## S4-MyExamples-01-homework(easy): *Cubes who stay with different rotation directions*
 #### For this exercise, we created 225 cubes(15(X axis)x15(Z axis)). And try to make them have different rotate directions in one still scene.
-![S4-MyExamples-01-homework(easy)00](/Session4/(README)pictures/pic-4.png "S4-MyExamples-01-homework(easy)00")
+![S4-MyExamples-01-homework(easy)00](/Session4-Array%2C%20For%20Loop%2C%20OrbitControls/(README)pictures/pic-4.png "S4-MyExamples-01-homework(easy)00")
 ### Knowledge Points:
 1. It was very easy to find out the solution based on the for loop that we talked about during *S4-MyExamples-00-ArrayMeshPractice/3*, the solution for this one is to show the result of how each cube looks like after the rotation. So what we need to do is assigning the random rotate directions to the mesh inside the for loop that is all:
    ```javascript
@@ -269,7 +269,7 @@
 
 ## S4-MyExamples-02-homework(hard): *Cubes who keep rotating with different rotate speeds*
 #### For this exercise, we created 225 cubes(15(X axis)x15(Z axis)). And try to make them rotating with different rotate speeds in the scene.
-![S4-MyExamples-02-homework(hard)00](/Session4/(README)pictures/pic-5.png "S4-MyExamples-02-homework(hard)00")
+![S4-MyExamples-02-homework(hard)00](/Session4-Array%2C%20For%20Loop%2C%20OrbitControls/(README)pictures/pic-5.png "S4-MyExamples-02-homework(hard)00")
 ### Knowledge Points:
 1. To finding out the solution for this exercise, the **S4-MyExamples-00-ArrayMeshPractice readme note** is good for reference, as we know that if we want to make all cubes created in the for loop to animate, we must push those cubes in an array.
 
