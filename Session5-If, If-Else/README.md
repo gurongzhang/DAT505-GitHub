@@ -1,4 +1,4 @@
-# DAT505-Session5
+# DAT505-Session5-If, If-Else
 ## Introduction:
 #### This session introduced:
   * ### If Function
