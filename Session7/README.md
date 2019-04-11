@@ -3,9 +3,9 @@
 #### This session introduced:
   * ### How to load different textures randomly in the scene
   * ### How to transfer threejs 3D world coordinates to screen mouse coordinates
-#### This session has abundant contents, some of them might not be easy to absorb, especially the transformation between 3D coordinates and mouse coordinates, but I will try my best to explaine them.
-## S7-ClassExamples-00-Texture-Cube: *Loading random texures for the objects*
-#### This example demonstrates how to make the object do the 'drop loop' and change its initial position every time refresh the page. Another important part is to show how to load texture for the object.
+#### This session has abundant contents, some of them might not be easy to absorb, especially the *transformation between 3D coordinates and mouse coordinates*, but I will try my best to explaine them.
+## S7-ClassExamples-00-Texture-Cube: *Loading random texures to the objects*
+#### This example demonstrates how to make the object do the *'drop loop'* and change its initial position every time *refreshing the page*. Another important part is to *show how to load texture to the object*.
 ![S7-ClassExamples-00-Texture-Cube00](/Session7/(README)pictures/pic-0.png "S7-ClassExamples-00-Texture-Cube00")
 ### Knowledge Points
 1. First, to loading the texture, the following codes need to be added:
@@ -16,10 +16,10 @@
    ```
    What needs to be pointed out is the file catalog in the:
    ```javascript
-   texture = new THREE.TextureLoader().load( "" );
+   texture = new THREE.TextureLoader().load( "file catalog" );
    ```
-   needs to be the catalog which can shows where this texture file is, in other words, if the texture picture is put under one file named 'textures', the content inside should be like "textures/texture.jpg"
-2. Secondly, to make it looks like 'drop', the y position needs to consistly change, and the x position needs to be randomized. Of course, all these codes should appear under the *animate function* to make the object move:
+   needs to be the catalog which can shows where this texture file is, in other words, if the texture picture is put under one file named 'textures', the content inside should be something like "textures/texture.jpg".
+2. Secondly, to make it looks like 'drop', the y position needs to be *consistly changed*, and the x position needs to be *randomized*. Of course, all these codes should appear under the *animate function* to make the object move:
    ```javascript
    function animate() {
    	requestAnimationFrame( animate );
@@ -43,7 +43,7 @@
 ********************
 
 ## S7-MyExamples-03-Texture-Cubepractice: *Multipul cubes with random texures and random positions keep 'falling'*
-#### In this exercise, we were asked to load random texures for 10 cubes and made them do the same 'drop' just like *S7-ClassExamples-00-Texture-Cube* but with different 'drop speed', different initial positions and same rotate speeds.
+#### In this exercise, we were asked to load random texures to 10 cubes and made them do the *same* 'drop' just like *S7-ClassExamples-00-Texture-Cube* but with *different 'drop speed'*, *different initial positions* and *same rotate speeds*.
 ![S7-MyExamples-03-Texture-Cubepractice00](/Session7/(README)pictures/pic-1.png "S7-MyExamples-03-Texture-Cubepractice00")
 ### Knowledge Points
 1. To loading random texures, we need to divide the solution into two part.
@@ -89,7 +89,7 @@
 ********************
 
 ## S7-ClassExamples-01-Texture-Eyes-Interaction:*An 'eye' that continuously ‘looks’ the mouse position*
-#### In this example, a sphere with the eye texture will stare fixedly at the mouse, so with the mouse moving, the sphere will do the corresponding rotation.
+#### In this example, a sphere with the eye texture will *stare fixedly at the mouse*, so with the mouse moving, the sphere will do the *corresponding rotations*.
 ![S7-ClassExamples-01-Texture-Eyes-Interaction00](/Session7/(README)pictures/pic-7.png "S7-ClassExamples-01-Texture-Eyes-Interaction00")
 ### Knowledge Points
 1. First we find the values that **catch the mouse move** and *print them in console* to see the *mouse position*:
@@ -127,8 +127,8 @@
 #### In this demo, I moved the position of the 'eye' from (0,0) to (30,10) and made the new 'eye' still follow the mouse.
 ![S7-MyExamples-00-homeworkdemo00](/Session7/(README)pictures/pic-11.png "S7-MyExamples-00-homeworkdemo00")
 ### Knowledge Points
-1. I already explain my solution before, so I break my whole processes into several parts:
-   1. I check the origin of the screen mouse coordinate system and the 3D world coordinate system:
+1. I already explained my solution before, so I broke my whole processes into several parts:
+   1. I checked the **origin** of the s*creen mouse coordinate system* and the *3D world coordinate system*:
       ![S7-MyExamples-00-homeworkdemo01](/Session7/(README)pictures/pic-12.png "S7-MyExamples-00-homeworkdemo01")  
       by printing the console for *event.clientX,event.clientY*:
       ```javascript
@@ -149,12 +149,12 @@
       **So right now we can know that the top left corner is the origin of the screen mouse coordinate system and the middle of the screen is the origin of the 3D world coordinate system**
       ![S7-MyExamples-00-homeworkdemo03](/Session7/(README)pictures/pic-14.png "S7-MyExamples-00-homeworkdemo03")
    2. Since the direction of y-aixs in those two systems is reversed, we should put **'-'** before the y value when unifying the coordinates.
-   3. So if we know the length and width of the scene in the camera(3D world), we can calculate the proportion of the eye's coordinate in the half 3D world x-aixs and half 3D world y-axis and time the half length of the window.innerWidth and the negative value of half length of the window.innerHeight(unifying the coordinates). And the result will the be the coordinates of the eye in the screen mouse coordinate system. The code for this would be:
+   3. So if we know the *length* and *width* of the scene in the camera(3D world), we can *calculate the proportion of the eye's coordinate in the half 3D world x-aixs and half 3D world y-axis* and *time the half length of the window.innerWidth and the negative value of half length of the window.innerHeight(unifying the coordinates)*. And the result will the be the *coordinates of the eye *in the *screen mouse coordinate system*. The code for this would be:
       ```javascript
       transferredcoordinateX = (mesh.position.x / HalfcamerasceneWidth) * windowHalfX;
       transferredcoordinateY = (-mesh.position.y / HalfcamerasceneHeight) * windowHalfY;
       ```
-      In my exercise, I just used **ppx** and **ppy** to represent *transferredcoordinateX* and *transferredcoordinateY*, and I tried to get the data of the *HalfcamerasceneWidth* and *HalfcamerasceneHeight* by changing the position of the mesh, and finally after adjusting for several times, I found out '40' is a suitable number to use, so now I have the transferred coordinates, even if they are not absolutely correct, but it would kind of work:
+      In my exercise, I just used **ppx** and **ppy** to represent *transferredcoordinateX* and *transferredcoordinateY*, and I tried to get the data of the *HalfcamerasceneWidth* and *HalfcamerasceneHeight* by *changing the position of the mesh*, and finally after adjusting for several times, I found out '40' is a suitable number to use, so now I have the transferred coordinates, even if they are not absolutely correct, but it would kind of work:
       ```javascript
       var ppx;
       var ppy;
@@ -175,7 +175,7 @@
 #### In this example, I made the position of the 'eye' random.
 ![S7-MyExamples-01-homeworkdemo00](/Session7/(README)pictures/pic-15.png "S7-MyExamples-01-homeworkdemo00")
 ### Knowledge Points
-1. In this demo, I did not change anything from the *S7-MyExamples-00-homeworkdemo* but redefined the position of my 'eye':
+1. In this demo, I did not change anything from the *S7-MyExamples-00-homeworkdemo* but *redefined the position of my 'eye'*:
    ```javascript
    mesh.position.x = (Math.random()*90)-45;
    mesh.position.y = (Math.random()*90)-45;
@@ -185,7 +185,7 @@
 ********************
 
 ## S7-MyExamples-02-homeworkfinal:*Creating 10 random-position eyes and making them always follow the mouse*
-#### In this example, I randomized the position of 10 eyes and tried to make them work. It turned out that some eyes which appear in the corner did not work very well.
+#### In this example, I *randomized the position of 10 eyes* and tried to make them work. It turned out that some eyes which appear in the corner *did not work very well*.
 ![S7-MyExamples-01-homeworkdemo01](/Session7/(README)pictures/pic-16.png "S7-MyExamples-01-homeworkdemo01")
 ### Knowledge Points
 1. In this demo, since I use *for loop* to create 10 eyes, as we mentioned in the **Session4 README note**, if we want to make our objects animate, we need to create arrays to bring those values out, so I defined several arrays and of course, my *ppx* and *ppy* to store different values:
@@ -233,6 +233,6 @@
    }
    ```
 3. The ptimization method will be showed in the Session8 to fix the 'corner eyes problem'
-4. To understand better about the coordinates transformation:
+4. To understand better about the *coordinates transformation*:
    * [Coordinates Transformation1](https://blog.csdn.net/weitaming1/article/details/82387091)
    * [Coordinates Transformation2](https://blog.csdn.net/yrbin666/article/details/44565731)
