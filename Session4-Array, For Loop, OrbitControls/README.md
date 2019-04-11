@@ -1,8 +1,9 @@
-# DAT505-Session4
+# DAT505-Session4-Array, For Loop, OrbitControls
 ## Introduction:
 #### This session introduced:
   * ### Array System
   * ### For Loop
+  * ### OrbitControls
 #### We studied how to use **For Loop** to *create objects efficiently* and how to use **Array** to _assign different values for individual objects which created by *for loop*_.
 ## S4-ClassExamples-00-ArrayMesh: *5 Cubes Created By For Loop*
 #### This is one example shows how to create five cubes by using for loop.
@@ -95,6 +96,11 @@
        (X:35, Y:0, Z:25)
        (X:35, Y:0, Z:30)
        (X:35, Y:0, Z:35)  
+2. OrbitControls is something which can experience the scene with the mouse interaction, letting the scene move, controling the rotation, translation and scaling of the scene.
+   To studying furthur of the OrbitControls:
+   [OrbitControls Example](https://threejs.org/examples/misc_controls_orbit.html)
+   [OrbitControls Github](https://github.com/mattdesl/three-orbit-controls)
+   [OrbitControls Chinese Explaination](https://blog.csdn.net/qq_37338983/article/details/78575333)
 
 ********************
 
