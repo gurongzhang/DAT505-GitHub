@@ -164,7 +164,7 @@
    }
    ```
    As we can see in the code above, we change **onDocumentMouseDown** to **onDocumentMouseMove**, and set the color to the random color.
-2. Since we still need to *click on* objects to print their positions in console, the *onDocumentMouseDown* code is still needed:
+2. Since we still need to *click on* objects to print their scales in console, the *onDocumentMouseDown* code is still needed:
    ```javascript
    function onDocumentMouseDown( event ) {
      event.preventDefault();

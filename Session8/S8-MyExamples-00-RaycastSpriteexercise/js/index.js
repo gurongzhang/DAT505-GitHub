@@ -1,14 +1,10 @@
+// Set global variables
 var renderer, scene, camera;
 var controls, group;
-
 var raycaster = new THREE.Raycaster();
 var mouseVector = new THREE.Vector3();
-
 //Boolean (true or false) to show if an object has been selected
 var selectedObject = null;
-
-init();
-animate();
 
 function init() {
   // init renderer
@@ -58,10 +54,12 @@ function init() {
 
 }
 
+
 function animate() {
   renderer.render( scene, camera );
   requestAnimationFrame( animate );
 }
+
 
 function onWindowResize() {
   camera.aspect = window.innerWidth / window.innerHeight;
@@ -69,9 +67,11 @@ function onWindowResize() {
   renderer.setSize( window.innerWidth, window.innerHeight );
 }
 
+// Select the object conditionally under the mouse click
 function onDocumentMouseDown( event ) {
   event.preventDefault();
   if ( selectedObject ) {
+    // Select blue objects
     selectedObject.material.color.set( '#69f' );
     selectedObject = null;
   }
@@ -83,15 +83,17 @@ function onDocumentMouseDown( event ) {
     } )[ 0 ];
     if ( res && res.object ) {
       selectedObject = res.object;
+      // Everytime when mouse click on the eligible objects, print their scales(x,y,z) in the console
       console.log(selectedObject.scale);
     }
   }
 }
 
-
+// Select the object conditionally under the mouse movement
 function onDocumentMouseMove( event ) {
   event.preventDefault();
   if ( selectedObject ) {
+    // Select blue objects
     selectedObject.material.color.set( '#69f' );
     selectedObject = null;
   }
@@ -104,11 +106,13 @@ function onDocumentMouseMove( event ) {
     } )[ 0 ];
     if ( res && res.object ) {
       selectedObject = res.object;
+      // Everytime when mouse move on the eligible objects , change their colors to random colors
       selectedObject.material.color.setHex( Math.random() * 0xFFFFFF );
     //console.log(selectedObject.position);
     }
   }
 }
+
 
 function getIntersects( x, y ) {
   x = ( x / window.innerWidth ) * 2 - 1;
@@ -117,3 +121,7 @@ function getIntersects( x, y ) {
   raycaster.setFromCamera( mouseVector, camera );
   return raycaster.intersectObject( group, true );
 }
+
+
+init();
+animate();
