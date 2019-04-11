@@ -5,7 +5,7 @@ var geometry1, material1, mesh1;//IcosahedronGeometry1
 var spotLight, lightHelper, shadowCameraHelper;
 var radius = 20;
 
-// Basic settings
+// Basic settings(scene, cameram renderer)
 function init(){
   // Set scene
   scene = new THREE.Scene();
