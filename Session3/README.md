@@ -1,6 +1,6 @@
 # DAT505-Session3
 ## Introduction:
-#### This session introduced the concept of GUI(Graphical User Interface). From my understanding, GUI means users can change different values on the user interface directly instead of changing them in the code sources. What is more, we did our own creative GUI projects based on what we learned:
+#### This session introduced the concept of GUI(Graphical User Interface). From my understanding, GUI means users can change different variables on the user interface directly instead of changing them in the code sources. What is more, we did our own creative GUI projects based on what we learned:
   * ### GUI
   * ### Controller(Scale, Position, Rotation, Color(Color converter), Opacity)
 ## S3-ClassExamples-00-BasicStructure-GUI: *Cube(scale,position,rotation)*
@@ -29,7 +29,7 @@
        this.rotationZ = 1 ;
      }
      ```
-     Since the *rotation*, *position* and *scale* are the 3D properties which can be changed from X,Y and Z. So for users to see those properties conveniently, we need to add different folders to sort them out and put the relevant values under the corresponding folders:
+     Since the *rotation*, *position* and *scale* are the 3D properties which can be changed from X,Y and Z. So for users to see those properties conveniently, we need to add different folders to sort them out and put the relevant variables under the corresponding folders:
      ```javascript
      var gui = new dat.GUI();
      var f1 = gui.addFolder('Scale');
