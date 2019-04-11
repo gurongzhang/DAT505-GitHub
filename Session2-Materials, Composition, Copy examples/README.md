@@ -1,4 +1,4 @@
-# DAT505-Session2
+# DAT505-Session2-Materials, Composition, Copy examples
 ## Introduction:
 #### Session2 is the deeper, further learning of Session1:
   * ### Creating multiple objects
