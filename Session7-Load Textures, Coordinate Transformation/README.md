@@ -1,4 +1,4 @@
-# DAT505-Session7
+# DAT505-Session7-Load Textures, Coordinate Transformation
 ## Introduction:
 #### This session introduced:
   * ### How to load different textures randomly in the scene
