@@ -5,14 +5,14 @@
   * ### Controller(Scale, Position, Rotation, Color(Color converter), Opacity)
 ## S3-ClassExamples-00-BasicStructure-GUI: *Cube(scale,position,rotation)*
 #### This example shows that users can change the *rotation*, *position* and *scale* of the cube directly on the user interface.
-![S3-ClassExamples-00-BasicStructure-GUI00](/Session3/(README)pictures/pic-0.png "S3-ClassExamples-00-BasicStructure-GUI00")
+![S3-ClassExamples-00-BasicStructure-GUI00](/Session3-GUI%2C%20Controller/(README)pictures/pic-0.png "S3-ClassExamples-00-BasicStructure-GUI00")
 ### Knowledge Points
   1. To use GUI, one line of code that shows the script source containing the _**dat.gui.min.js** file_ must be added to the _**index.html** file_.
   ```javascript
     <script src="js/dat.gui.min.js"></script>
   ```
   * Meanwhile, the _**dat.gui.min.js** file_ should be copied to the _**js** file_ too.
-     ![S3-ClassExamples-00-BasicStructure-GUI01](/Session3/(README)pictures/pic-1.png "S3-ClassExamples-00-BasicStructure-GUI01")
+     ![S3-ClassExamples-00-BasicStructure-GUI01](/Session3-GUI%2C%20Controller/(README)pictures/pic-1.png "S3-ClassExamples-00-BasicStructure-GUI01")
   2. The following code will determine the initial value of different properties:
      ```javascript
      var controller = new function (){
@@ -72,7 +72,7 @@
 
 ## S3-ClassExamples-01-BasicGUI: *Cube(scale,position,rotation,color,opacity)*
 #### This example added two more properties —— *color* and *opacity* so that users can change the *rotation*, *position*, *scale*, *color* and *opacity* of the cube directly on the user interface.
-![S3-ClassExamples-01-BasicGUI00](/Session3/(README)pictures/pic-2.png "S3-ClassExamples-01-BasicGUI00")
+![S3-ClassExamples-01-BasicGUI00](/Session3-GUI%2C%20Controller/(README)pictures/pic-2.png "S3-ClassExamples-01-BasicGUI00")
 ### Knowledge Points
   1. To add the **Color converter**, the code below needs to be written to the script:
      ```javascript
@@ -106,7 +106,7 @@
 
 ## S3-MyExamples-00-GUICubes: *Cubes(users can change their rotation on the UI)*
 #### For this exercise, I created 20 cubes who have *different colors for each surface and change to random color everytime refresh the page*. I also *added rotation controllers and color controller for users controlling the X,Y,Z rotation and the color of those cubes on the UI*.
-![S3-MyExamples-00-GUICubes00](/Session3/(README)pictures/pic-3.png "S3-MyExamples-00-GUICubes00")
+![S3-MyExamples-00-GUICubes00](/Session3-GUI%2C%20Controller/(README)pictures/pic-3.png "S3-MyExamples-00-GUICubes00")
 ### Knowledge Points
   1. The basic code for setting the cube and the rotation controller is showed below:
   ```javascript
