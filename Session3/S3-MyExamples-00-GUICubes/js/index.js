@@ -16,7 +16,7 @@ var de2ra = function(degree) {
 init();
 render();
 
-// Basic settings
+// Basic settings, mesh settings and rotation controller settings
 function init(){
   threejs = document.getElementById('threejs');
   // Create a scene
@@ -352,7 +352,8 @@ function render () {
 };
 
 
-// Set lighting system
+// Lighting system
+lightingSystem();
 function lightingSystem(){
   var object3d  = new THREE.DirectionalLight('white', 0.15);
   object3d.position.set(6,3,9);
@@ -379,5 +380,5 @@ function lightingSystem(){
   spotLight.shadow.camera.fov = 45;
   scene.add( spotLight );
 
-  lightingSystem();
+
 }
