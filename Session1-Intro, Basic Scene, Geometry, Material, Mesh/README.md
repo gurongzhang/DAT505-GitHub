@@ -1,4 +1,4 @@
-# DAT505-Session1-Intro, Basic Scene, Geometry, Material, Mesh:
+# DAT505-Session1-Intro, Basic Scene, Geometry, Material, Mesh
 ## Introduction:
 #### This session introduced some basic threejs knowledge about creating an object:
   * ### Basic Scene
