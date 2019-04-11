@@ -4,7 +4,7 @@
   * ### Array System
   * ### For Loop
   * ### OrbitControls
-#### We studied how to use **For Loop** to *create objects efficiently* and how to use **Array** to _assign different values for individual objects which created by *for loop*_.
+#### We studied how to use **For Loop** to *create objects efficiently* and how to use **Array** to _assign different values for individual objects which created by *for loop*_. What is more, **OrbitControls** was a new, interesting thing which can help us experience our scene better.
 ## S4-ClassExamples-00-ArrayMesh: *5 Cubes Created By For Loop*
 #### This is one example shows how to create five cubes by using for loop.
 ![S4-ClassExamples-00-ArrayMesh00](/Session4-Array%2C%20For%20Loop%2C%20OrbitControls/(README)pictures/pic-0.png "S4-ClassExamples-00-ArrayMesh00")
