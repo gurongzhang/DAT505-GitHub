@@ -7,7 +7,7 @@
 #### We studied how to demonstrate different visual effects and simple animations based on these concepts.
 ## S1-ClassExamples-00-Test: *Rotating Cube*
 #### This is one example which shows a *cube* keeps *rotating* in the middle of the screen.
-![Rotating Cube](/Session1/(README)pictures/pic-0.png "Rotating Cube")
+![Rotating Cube](/Session1-Intro, Basic Scene, Geometry, Material, Mesh/(README)pictures/pic-0.png "Rotating Cube")
 ### Knowledge Points
 1. [Three.js](https://threejs.org) is a website that has a whole bunch of interesting featured projects using threejs to code.
  * **Documentation** and **Examples** have all the definitions and code which are very fundamental for reference.
