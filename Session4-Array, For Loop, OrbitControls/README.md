@@ -99,7 +99,7 @@
 2. OrbitControls is something which can experience the scene with the mouse interaction, letting the scene move, controling the rotation, translation and scaling of the scene.
    To studying furthur of the OrbitControls:
    [OrbitControls Example](https://threejs.org/examples/misc_controls_orbit.html)
-   [OrbitControls Github](https://github.com/mattdesl/three-orbit-controls)
+   [OrbitControls GitHub](https://github.com/mattdesl/three-orbit-controls)
    [OrbitControls Chinese Explaination](https://blog.csdn.net/qq_37338983/article/details/78575333)
 
 ********************
