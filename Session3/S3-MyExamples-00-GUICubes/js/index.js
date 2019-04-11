@@ -16,7 +16,9 @@ var de2ra = function(degree) {
 init();
 render();
 
-// Basic settings, mesh settings and rotation controller settings
+// Basic settings(scene, renderer, camera)
+// Mesh settings
+// Rotation controller settings
 function init(){
   threejs = document.getElementById('threejs');
   // Create a scene
@@ -327,7 +329,7 @@ function init(){
 }
 
 
-//Color converter and color controller
+// Color converter and color controller
 function dec2hex(i) {
   var result = "0x000000";
   if (i >= 0 && i <= 15) { result = "0x00000" + i.toString(16); }
