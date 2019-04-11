@@ -26,18 +26,20 @@ function init() {
   // Set OrbitControls
   controls = new THREE.OrbitControls(camera, renderer.domElement);
 
-  //Create a two dimensional grid of objects, and position them accordingly
+  // Create a two dimensional grid of objects, and position them accordingly
   // Start from -35 and sequentially add one every 5 pixels
   for (var x = -35; x < 40; x += 5) {
     for (var y = -35; y < 40; y += 5) {
-      // Create a Cube Mesh with Lambert material
+      // Create 225 Cube Meshes with Lambert material
       var boxGeometry = new THREE.BoxGeometry(3, 3, 3);
       //The color of the material is assigned a random color
       var boxMaterial = new THREE.MeshLambertMaterial({color: Math.random() * 0xFFFFFF});
       // Set mesh
       var mesh = new THREE.Mesh(boxGeometry, boxMaterial);
+        // Set mesh position
         mesh.position.x = x;
         mesh.position.z = y;
+        // Assign random rotation to x,y,z axises
         mesh.rotation.x = Math.random() * 2 * Math.PI;
         mesh.rotation.y = Math.random() * 2 * Math.PI;
         mesh.rotation.z = Math.random() * 2 * Math.PI;

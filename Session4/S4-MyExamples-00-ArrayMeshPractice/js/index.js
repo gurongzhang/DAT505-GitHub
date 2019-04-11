@@ -5,14 +5,13 @@ var cubes = [];
 var rot = 0;
 
 // Basic settings(scene, camera, spotLight, renderer)
-// OrbitControls
+// Set OrbitControls
 // Mesh settings
 function init() {
   // Add scene
   scene = new THREE.Scene();
-
-  var W = window.innerWidth,H = window.innerHeight;
   // Camera settings
+  var W = window.innerWidth,H = window.innerHeight;
   camera = new THREE.PerspectiveCamera(20, W / H, .1, 1000);
   camera.position.set(10, 10, 85);
   camera.lookAt(scene.position);
@@ -24,7 +23,6 @@ function init() {
   renderer = new THREE.WebGLRenderer({antialias:true});
   renderer.setClearColor(0x17293a);
   renderer.setSize(W, H);
-
   // Append Renderer to DOM
   document.body.appendChild(renderer.domElement);
 
@@ -36,7 +34,7 @@ function init() {
   for (var x = -10; x < 10; x += 5) {
     for (var y = -10; y < 10; y += 5) {
       for (var z = -10; z < 10; z += 5) {
-        // Create a Cube Mesh with Lambert material
+        // Create 64 Cube Meshes with Lambert material
         var boxGeometry = new THREE.BoxGeometry(3, 6, 3);
         // Set mesh
         mesh = new THREE.Mesh(boxGeometry, boxMaterial);

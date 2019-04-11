@@ -245,7 +245,7 @@
 #### For this exercise, we created 225 cubes(15(X axis)x15(Z axis)). And try to make them have different rotate directions in one still scene.
 ![S4-MyExamples-01-homework(easy)00](/Session4/(README)pictures/pic-4.png "S4-MyExamples-01-homework(easy)00")
 ### Knowledge Points:
-1. It was very easy to find out the solution based on the for loop that we talked about during *S4-MyExamples-00-ArrayMeshPractice/3*, the solution for this one is to show the result of what each cube looks like after the rotation. So what we need to do is write the rotation code inside the for loop that is all:
+1. It was very easy to find out the solution based on the for loop that we talked about during *S4-MyExamples-00-ArrayMeshPractice/3*, the solution for this one is to show the result of how each cube looks like after the rotation. So what we need to do is assigning the random rotate directions to the mesh inside the for loop that is all:
    ```javascript
    for (var x = -35; x < 40; x += 5) {
    for (var y = -35; y < 40; y += 5) {
