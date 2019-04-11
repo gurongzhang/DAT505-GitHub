@@ -5,7 +5,7 @@
   * ### If Else Function
 #### This session is the further study of Session4. We studied how to use **if and if else** to *set up conditions* to define some specific values for particular objects based on the *array* and *for loop* study.
 ## S5-MyExamples-00-ParticularRotatingCubes: *Make particular cubes colorful and rotate*
-#### This is one exercise which we were asked to make two specific cubes have different color and keep rotating in the scene. The color of those two specified cubes needs to be random and everytime when someone refresh the web page, those two colors need to change.
+#### This is one exercise which we were asked to *make two specific cubes have different color* and *keep rotating in the scene*. The color of those two specified cubes needs to be random and everytime when someone refresh the web page, those two colors need to change.
 ![S5-MyExamples-00-ParticularRotatingCubes00](/Session5/(README)pictures/pic-0.png "S5-MyExamples-00-ParticularRotatingCubes00")
 ### Knowledge Points
 1. First is the rotation part, which is well explained in **Session4 README notes**. But the only tiny difference is during Session4, we always make all cubes rotate together, so during Session4 we used:
@@ -55,7 +55,7 @@
 ********************
 
 ## S5-MyExamples-01-CreativeObjects: *Creative objects by using if function*
-#### In this example, I created 25 icosahedrons who showed their wireframe and defined them with random color, same position, same extending speed and different initial sizes. And when their size reaches to a certain value, they will turn back to an appropriate size.
+#### In this example, I created 25 icosahedrons who showed their wireframe and defined them with *random color*, *same position*, *same extending speed* and *different initial sizes*. And when their sizes *reach to a certain value*, they will *turn back to an appropriate size*.
 ![S5-MyExamples-01-CreativeObjects00](/Session5/(README)pictures/pic-2.png "S5-MyExamples-01-CreativeObjects00")
 ### Knowledge Points
 1. How to set up the **wireframe**, **initial position**, **color**, and **rotate speed** are well explained in the previous sessions.
