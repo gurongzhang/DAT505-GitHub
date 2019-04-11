@@ -8,7 +8,7 @@
 
 ## S2-ClassExamples-00-GeometryExercise-SOLVED: *Multiple Cubes With Different Rotate Speeds*
 #### In this example, 12 same-size cubes were placed in order with different rotate speeds and different rotate directions.
-![12 Rotating Cubes](/Session2/(README)pictures/pic-0.png "12 Rotating Cubes")
+![12 Rotating Cubes](/Session2-Materials%2C%20Composition%2C%20Copy%20examples/(README)pictures/pic-0.png "12 Rotating Cubes")
 ### Knowledge Points
 1. Since all cubes were using the *same geometry* and *same material*, we just needed to code the geometry and material **once**.
 ```javascript
@@ -43,7 +43,7 @@ var render = function () {
 
 ## S2-ClassExamples-01-BasicMaterials: *One Rotating Cubes With MeshBasicMaterial*
 #### In this example, a rotating cube was created for us to change its material to see the differences between basic materials.
-![Rotating Cube](/Session2/(README)pictures/pic-1.png "Rotating Cube")
+![Rotating Cube](/Session2-Materials%2C%20Composition%2C%20Copy%20examples/(README)pictures/pic-1.png "Rotating Cube")
 ### Knowledge Points
   * The characteristics of different materials are different, to see how to use basic materials properly, check: [Basic Materials](https://threejs.org/docs/index.html#api/en/materials/LineBasicMaterial).
 
@@ -51,7 +51,7 @@ var render = function () {
 
 ## S2-MyExamples-00-GeometriesAndMaterials: *Creating multiple objects With Different Materials*
 #### In this exercise, we were asked to create kinds of objects with different geometries, materials and properties.
-![GeometriesAndMaterials](/Session2/(README)pictures/pic-13.png "GeometriesAndMaterials")
+![GeometriesAndMaterials](/Session2-Materials%2C%20Composition%2C%20Copy%20examples/(README)pictures/pic-13.png "GeometriesAndMaterials")
 ### Knowledge Points
   * The capability of *reflecting light* is different between materials, so *the chosen of material* will decide how the object looks like as we can see in the picture. Meanwhile, we should also take this point under consideration when we adding lights in the scene.
 
@@ -59,13 +59,13 @@ var render = function () {
 
 ## S2-MyExamples-01-ThreeJS-Materials: *Copy the [Materials/transparency Example](https://threejs.org/examples/#webgl_materials_transparency) on [Threejs](https://threejs.org)*
 #### For this exercise, we were asked to copy one example on [Threejs](https://threejs.org) and make it work on our computers.
-![Transparency Example](/Session2/(README)pictures/pic-3.png "Transparency Example")
+![Transparency Example](/Session2-Materials%2C%20Composition%2C%20Copy%20examples/(README)pictures/pic-3.png "Transparency Example")
 ### Knowledge Points
 I will put the copy process of this example here to give a clear demonstration of how to copy the example properly:
   1. *Download* the **data folder** on [Threejs](https://threejs.org), the name of the folder is **three-3.js-master-r102**
-  ![Threejs Data Folder](/Session2/(README)pictures/pic-6.png "Threejs Data Folder")
+  ![Threejs Data Folder](/Session2-Materials%2C%20Composition%2C%20Copy%20examples/(README)pictures/pic-6.png "Threejs Data Folder")
   2. Go to that example and press *"View source"* in the lower right corner of the screen.
- ![Copy process1](/Session2/(README)pictures/pic-4.png "[Copy process1")
+ ![Copy process1](/Session2-Materials%2C%20Composition%2C%20Copy%20examples/(README)pictures/pic-4.png "[Copy process1")
  and copy all the source code:
  ```javascript
  <!DOCTYPE html>
@@ -225,7 +225,7 @@ I will put the copy process of this example here to give a clear demonstration o
 
      *Add* **index.js** file into **js** file.
 
-     ![Copy process2](/Session2/(README)pictures/pic-5.png "[Copy process2")
+     ![Copy process2](/Session2-Materials%2C%20Composition%2C%20Copy%20examples/(README)pictures/pic-5.png "[Copy process2")
 
   4. *Copy* all the **View source code** into **index.html** file. Cut all the code between
   ```javascript
@@ -395,17 +395,17 @@ I will put the copy process of this example here to give a clear demonstration o
   <script src="file directory"></script>
   ```
 
-  ![Copy process3](/Session2/(README)pictures/pic-8-.png "[Copy process3")
+  ![Copy process3](/Session2-Materials%2C%20Composition%2C%20Copy%20examples/(README)pictures/pic-8-.png "[Copy process3")
 
 in **three-3.js-master-r102** folder and *copy* them into each **js** or **build** folder
 
-![Copy process4](/Session2/(README)pictures/pic-7.png "[Copy process4")
+![Copy process4](/Session2-Materials%2C%20Composition%2C%20Copy%20examples/(README)pictures/pic-7.png "[Copy process4")
 
   6. *Delete uncessary file directories* in the **index.html**, for this case are these:
-  ![Copy process4](/Session2/(README)pictures/pic-9.png "[Copy process4")
+  ![Copy process4](/Session2-Materials%2C%20Composition%2C%20Copy%20examples/(README)pictures/pic-9.png "[Copy process4")
   to make the script sources available to access in our own computers. Since we created the _**js** file_ and _**build** file_, so we can keep *"js/"* and *"build/"* directories.
   The properly script source directories would be like:
-  ![Copy process5](/Session2/(README)pictures/pic-10.png "[Copy process5")
+  ![Copy process5](/Session2-Materials%2C%20Composition%2C%20Copy%20examples/(README)pictures/pic-10.png "[Copy process5")
 
   7. *Add* the code
   ```javascript
@@ -459,11 +459,11 @@ in **three-3.js-master-r102** folder and *copy* them into each **js** or **build
   ```
 
   8. In this example, texutres are loaded to the scene too：
-  ![Copy process6](/Session2/(README)pictures/pic-11.png "[Copy process6")
+  ![Copy process6](/Session2-Materials%2C%20Composition%2C%20Copy%20examples/(README)pictures/pic-11.png "[Copy process6")
 
      So we should find those two jpg files (**hardwood2_diffuse.jpg** and **hardwood2_roughness.jpg**) under the directory: **three-3.js-master-r102/textures**.
 
      what is more, to maintain the consistency of the source code we copied, one _**"textures"** file_ is need to built, and those two *texture jpg files* need to be put in it:
-     ![Copy process6](/Session2/(README)pictures/pic-12.png "[Copy process6")
+     ![Copy process6](/Session2-Materials%2C%20Composition%2C%20Copy%20examples/(README)pictures/pic-12.png "[Copy process6")
 
   9. The last step is **start atom-live-server** to check if the browser can load everything we need. If it did not work, check the console and see what is missing or what other problems are.
