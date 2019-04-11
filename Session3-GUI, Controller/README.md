@@ -1,4 +1,4 @@
-# DAT505-Session3
+# DAT505-Session3-GUI, Controller
 ## Introduction:
 #### This session introduced the concept of GUI(Graphical User Interface). From my understanding, GUI means users can change different variables on the user interface directly instead of changing them in the code sources. What is more, we did our own creative GUI projects based on what we learned:
   * ### GUI
