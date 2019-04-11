@@ -1,6 +1,7 @@
-# DAT505-Session1:
+# DAT505-Session1-Intro, Basic Scene, Geometry, Material, Mesh:
 ## Introduction:
 #### This session introduced some basic threejs knowledge about creating an object:
+  * ### Basic Scene
   * ### Geometry
   * ### Material
   * ### Mesh
@@ -9,19 +10,42 @@
 #### This is one example which shows a *cube* keeps *rotating* in the middle of the screen.
 ![Rotating Cube](/Session1-Intro,%20Basic%20Scene,%20Geometry,%20Material,%20Mesh/(README)pictures/pic-0.png "Rotating Cube")
 ### Knowledge Points
-1. [Three.js](https://threejs.org) is a website that has a whole bunch of interesting featured projects using threejs to code.
+1. To setting a scene, there are some basic settings(scene, camera, renderer):
+   ```javascript
+   function init(){
+     // Create an empty scene
+     scene = new THREE.Scene();
+
+     // Create a basic perspective camera --------------
+     camera = new THREE.PerspectiveCamera(35, window.innerWidth/window.innerHeight, 300, 10000 );
+
+     // Create a renderer with Antialiasing ------------
+     renderer = new THREE.WebGLRenderer({antialias:true});
+
+     // Configure renderer clear color
+     renderer.setClearColor("#000000");
+
+     // Configure renderer size
+     renderer.setSize( window.innerWidth, window.innerHeight );
+
+     // Append Renderer to DOM
+     document.body.appendChild( renderer.domElement );
+   }
+   ```
+   To know more precisely about how to create a scene, go to [Three.js-Creating a scene](https://threejs.org/docs/index.html#manual/en/introduction/Creating-a-scene)
+2. [Three.js](https://threejs.org) is a website that has a whole bunch of interesting featured projects using threejs to code.
  * **Documentation** and **Examples** have all the definitions and code which are very fundamental for reference.
   * The **js source files** that shows in the "*view source*" of each example need to be copied to the *local js file* from the __three-3.js-master-r102__ file which on the *Desktop*.
   ![view source](/Session1-Intro%2C%20Basic%20Scene%2C%20Geometry%2C%20Material%2C%20Mesh/(README)pictures/pic-1.png "view source")
     ![three-3.js-master-r102](/Session1-Intro%2C%20Basic%20Scene%2C%20Geometry%2C%20Material%2C%20Mesh/(README)pictures/pic-2.png "three-3.js-master-r102")
-2. **Mesh** is one significant element when creating an object. Each mesh includes two elemtents — **geometry** and **material**.
+3. **Mesh** is one significant element when creating an object. Each mesh includes two elemtents — **geometry** and **material**.
   * **Geometry** has different categories(to view more:*Threejs.org - documentation -  [Geometries](https://threejs.org/docs/index.html#api/en/geometries/BoxGeometry))*
  ![Geometries Categories](/Session1-Intro%2C%20Basic%20Scene%2C%20Geometry%2C%20Material%2C%20Mesh/(README)pictures/pic-3.png "Geometries Categories")
 
     There are different kinds of **Material** too(to view more: *Threejs.org - documentation -  [Materials](https://threejs.org/docs/index.html#api/en/materials/LineBasicMaterial))*
 ![Materials Categories](/Session1-Intro%2C%20Basic%20Scene%2C%20Geometry%2C%20Material%2C%20Mesh/(README)pictures/pic-4.png "Materials Categories")
 
-3. Do not forget to *add the mesh to the scene*
+4. Do not forget to *add the mesh to the scene*
 ```javascript
 scene.add( mesh );
 ```
