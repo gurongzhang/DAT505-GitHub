@@ -45,8 +45,8 @@
 #### In this example, lightings and glith are added to the scene to create cool effects.
 ![S9-ClassExample-01-PostProcessing-Glitch00](/Session9/(README)pictures/pic-2.png "S9-ClassExample-01-PostProcessing-Glitch00")
 ### Knowledge Points
-1. To adding different glitch effects:
-   *. The relative shader js files should be copied to the project file:
+1. To adding *different glitch* effects:
+   *. The relative shader js files should be *copied* to the project file:
       ![S9-ClassExample-01-PostProcessing-Glitch01](/Session9/(README)pictures/pic-3.png "S9-ClassExample-01-PostProcessing-Glitch01")
 2. The codes to load shaders:
    ```javascript
@@ -82,7 +82,7 @@
 ********************
 
 ## S9-ClassExample-02-GlitchGUI: *Adding GUI to control the glitch*
-#### In this example, GUI was added to control the properties of the glitch.
+#### In this example, **GUI** was *added* to control the *properties of the glitch*.
 ![S9-ClassExample-02-GlitchGUI00](/Session9/(README)pictures/pic-4.png "S9-ClassExample-02-GlitchGUI00")
 ### Knowledge Points
 1. GUI codes:
@@ -105,7 +105,7 @@
 
    onParamsChange();
    ```
-   Just like the describtion of this project, this *S9-ClassExample-02-GlitchGUI* is the combination of *GUI* and *Glitch*.
+   Just like the *describtion* of this project, this **S9-ClassExample-02-GlitchGUI** is the combination of **GUI** and **Glitch**.
 
 ********************
 
@@ -118,7 +118,7 @@
 ********************
 
 ## S9-MyExamples-00-RaycastAudioexercise: _Loading audio based on the project *S8-MyExamples-01-objLoader-Raycastingexercise*_
-#### In this exercise I downloaded 3 sound effects and loaded them into my previous project *S8-MyExamples-01-objLoader-Raycastingexercise*.
+#### In this exercise I *downloaded 3 sound effects* and *loaded them into my previous project* **S8-MyExamples-01-objLoader-Raycastingexercise**.
 ![S9-MyExamples-00-RaycastAudioexercise00](/Session9/(README)pictures/pic-6.png "S9-MyExamples-00-RaycastAudioexercise00")
 ### Knowledge Points
 1. First, I downloaded 3 sound effects and put them under the folder **audio**:
@@ -135,7 +135,7 @@
 ********************
 
 ## S9-MyExamples-01-PostProcessing-Glitchexercise: *Trying to load different shaders to the scene*
-#### In this exercise I find GammaCorrectionShader and created cool effects.
+#### In this exercise I loaded *GammaCorrectionShader* and created cool effects.
 ![S9-MyExamples-01-PostProcessing-Glitchexercise00](/Session9/(README)pictures/pic-8.png "S9-MyExamples-01-PostProcessing-Glitchexercise00")
 ### Knowledge Points
 1. What did I add:
