@@ -1,4 +1,4 @@
-# DAT505-Session9
+# DAT505-Session9-Audio, Shaders(Glitch), Advanced Project
 ## Introduction:
 #### This session introduced:
   * ### Audio
