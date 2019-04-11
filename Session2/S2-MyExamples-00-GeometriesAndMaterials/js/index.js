@@ -8,7 +8,7 @@ var material4, mesh4;
 var spotLight, lightHelper, shadowCameraHelper;
 var radius = 20;
 
-// Basic settings
+// Basic settings(scene, camera, renderer)
 function init(){
   // Create a black scene
   scene = new THREE.Scene();
