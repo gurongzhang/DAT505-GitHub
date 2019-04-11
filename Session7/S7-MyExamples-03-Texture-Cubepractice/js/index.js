@@ -1,25 +1,23 @@
 //Setup the global variables
 var camera, scene, renderer, geometry, material, mesh;
 var texture;
+// Arrays
 var cubes = [];
 var spd = [];
 
 function init() {
 	// Create a scene
 	scene = new THREE.Scene();
-
 	// Create a geometry
 	// 	Create a box (cube) of 10 width, length, and height
 	for (var x = 0; x < 10; x ++) { // Start from -35 and sequentially add one every 5 pixels
+    // Define the 'randomValue' whose range is: [0,0.5)
 		var randomValue = Math.random()*0.5;
-	geometry = new THREE.BoxGeometry(  10,10,10);
-
+	geometry = new THREE.BoxGeometry(10,10,10);
 	// Load a texture
 	var texture = new THREE.TextureLoader().load( "textures/texture"+ Math.floor(Math.random()*4)+".jpg" );
-
 	// Create a MeshBasicMaterial with a loaded texture
 	material = new THREE.MeshBasicMaterial( { map: texture} );
-
 	// Combine the geometry and material into a mesh
 	mesh = new THREE.Mesh( geometry, material );
 	mesh.position.x=(Math.random()*30)-15;
@@ -27,6 +25,7 @@ function init() {
 	// Add the mesh to the scene
 	scene.add( mesh );
 	cubes.push(mesh);
+	// Push the random value ranging[0,0.5) into array spd[i]
 	spd.push(randomValue);
 }
 	// Create a camera
@@ -37,12 +36,10 @@ function init() {
 	camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 2, 1000 );
 	// Move the camera 'out' by 30
 	camera.position.z = 30;
-
 	// Create a WebGL Rendered
 	renderer = new THREE.WebGLRenderer();
 	// Set the size of the rendered to the inner width and inner height of the window
 	renderer.setSize( window.innerWidth, window.innerHeight );
-
 	// Add in the created DOM element to the body of the document
 	document.body.appendChild( renderer.domElement );
 }
@@ -54,10 +51,10 @@ function animate() {
 
 	// Rotate the x position of the mesh by 0.03
 	cubes.forEach(function(c, i) {
+	// Rotate the x position of the mesh by 0.02
   c.rotation.x += 0.02;
-	// Rotate the y position of the mesh by 0.02
+	// Rotate the y position of the mesh by 0.01
 	c.rotation.y += 0.01;
-
 	//Move the mesh towards the bottom of the screen
 	c.position.y -= spd[i];
 

@@ -68,7 +68,6 @@ function animate() {
 }
 
 function render() {
-	console.log(window.innerHeight)
 	// Make the 'eye' rotate with the mouse
 	mesh.rotation.x = mouseY/window.innerHeight*2;
 	mesh.rotation.y = mouseX/window.innerWidth*2;
