@@ -52,3 +52,12 @@
    mesh.position.y = Math.floor( Math.random() * 200 - 100 ) * 4;
    scene.add(mesh);
    ```
+
+********************
+
+## S6-MyExamples-01-tryout: *My City*
+#### In this exercise, I tried to create 'my own city' with the FirstPersonControls and setupWorld function.
+![S6-MyExamples-01-tryout00](/Session6-FirstPersonControls%2C%20SetupWorld%20Function%2C%20THREE.GeometryUtils/(README)pictures/pic-3.png "S6-MyExamples-01-tryout00")
+### Knowledge Points
+1. Because in the *S6-MyExamples-00-tryout*, I use *OrbitControls* and *for loop* to create the city, so in this exercise, I try to use the FirstPersonControls and setupWorld function to do the same thing.
+2. I deleted the ground and made the scale of my *'buildings'* fixed(10,10,10), and randomized the color of my *'buildings'*, so everytime refreshing the page, the buiding's color would be different. Add I randomized the 3D positions of my buidings.

@@ -54,6 +54,7 @@
     * S6-ClassExample-CityScape-full
   * #### MyExamples:
     * S6-MyExamples-00-tryout
+    * S6-MyExamples-01-tryout
 
 *********************
 
@@ -92,7 +93,7 @@
 
 *********************
 
-### So I have 17 class examples and 19 my examples in total.
+### So I have 17 class examples and 20 my examples in total.
 
 ### My feelings for this DAT505 course are:
   * I spent a lot of time doing these exercises and got abundant intersting knowledges about how to be creative with the coding, threejs is a difficult and fun thing with countless possibilities.
