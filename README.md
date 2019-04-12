@@ -98,3 +98,5 @@
   * I spent a lot of time doing these exercises and got abundant intersting knowledges about how to be creative with the coding, threejs is a difficult and fun thing with countless possibilities.
   * I really appreciate the all the idea and technical supports that Stavros provided to me. Meanwhile, I deeply know that, this course introduced just a tiny part of the threejs. I am really grateful to experience this intriguing workshop and even if some tasks are difficult and took away a lot of my sleeping time, I still feel enjoyable.
   * I tried my best to put all my understanding of those examples in the README files. I did them not only for the grades but also for the furthur study in coding area and the efforts I put in this three-weeks workshop.
+  * Right now is 4/12/19 8:56A.M. in China and I finally finished all the first 3 weeks work. Feeling like crying and already start missing these bitter-sweet experiences. At the end, I want to thank myself for always keeping trying.
+  * Such a magic workshop!
