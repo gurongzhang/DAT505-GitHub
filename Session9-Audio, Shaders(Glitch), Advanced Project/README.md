@@ -79,7 +79,8 @@
    }
    ```
    The properties of the shaders can be changed in the corresponding shader js files.
-3. The *shader file* is in the catalog: three-3.js-master-r102/examples/js/shaders
+4. The *shader file* is in the catalog: three-3.js-master-r102/examples/js/shaders
+5. You can change the property values of different shaders in the corresponding js file to control the effect of how those shaders work so that the final look of the scene will be changed too.
 
 ********************
 
