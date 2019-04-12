@@ -48,7 +48,9 @@
 1. To adding *different glitch* effects:
    *. The relative shader js files should be *copied* to the project file:
       ![S9-ClassExample-01-PostProcessing-Glitch01](/Session9-Audio%2C%20Shaders(Glitch)%2C%20Advanced%20Project/(README)pictures/pic-3.png "S9-ClassExample-01-PostProcessing-Glitch01")
-2. The codes to load shaders:
+2. Adding script source to **index.html**:
+   ![S9-ClassExample-01-PostProcessing-Glitch01](/Session9-Audio%2C%20Shaders(Glitch)%2C%20Advanced%20Project/(README)pictures/pic-9.png "S9-ClassExample-01-PostProcessing-Glitch01")
+3. The codes to load shaders:
    ```javascript
    var effectGlitch, effectRGB, motion1, motion2;
    var kaleidoParams, kaleidoPass;
