@@ -105,6 +105,9 @@ function init() {
   glitchPass.renderToScreen = true;
   composer.addPass( glitchPass );
 
+  afterimagePass = new THREE.ShaderPass(THREE.AfterimageShader);
+  composer.addPass( afterimagePass );
+
   //GUI ------------------------------------------------------------------------
   hueSatParams = {
     hue: 0.,

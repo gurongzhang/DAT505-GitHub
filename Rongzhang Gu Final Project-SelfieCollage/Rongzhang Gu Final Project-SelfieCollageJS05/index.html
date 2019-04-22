@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>three.js webgl - postprocessing - digital glitch</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<style>
+			body {
+				margin: 0px;
+				background-color: #000000;
+				overflow: hidden;
+			}
+			div {
+				position: absolute;
+				z-index: 10;
+				color: #fff;
+				font-family: monospace;
+				text-align: center;
+				margin: 10px;
+				width: 100%;
+			}
+			input { cursor: pointer; }
+		</style>
+	</head>
+	<body>
+
+		<script src="build/three.js"></script>
+
+		<script src="shaders/CopyShader.js"></script>
+		<script src="shaders/DigitalGlitch.js"></script>
+
+		<script src="EffectCompose/EffectComposer.js"></script>
+		<script src="postprocessing/RenderPass.js"></script>
+		<script src="postprocessing/MaskPass.js"></script>
+		<script src="postprocessing/ShaderPass.js"></script>
+		<script src="postprocessing/GlitchPass.js"></script>
+
+		<div>
+      <label for="dotScreen">Glitch me wild:</label><input id="wildGlitch" type="checkbox" onchange="updateOptions()"/><br />
+		</div>
+
+      <!--  Three.js CDN  -->
+      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/96/three.min.js"></script>-->
+      <script src="build/three.min.js"></script>
+      <script src="js/OrbitControls.js"></script>
+    <!--  Our code  -->
+    <script src="js/index.js"></script>
+  </body>
+</html>
