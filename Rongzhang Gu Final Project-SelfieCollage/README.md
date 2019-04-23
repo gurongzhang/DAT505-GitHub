@@ -1,7 +1,7 @@
 # Rongzhang Gu Final Project-SelfieCollage
 ## Introduction:
 #### The core knowledges of this project are:
-  * ### Transferring one normal image into pixel image(Getting pixel color data of the image and assigning them to the cubes in order).
+  * ### Transfering one normal image into pixel image(Getting pixel color data of the image and assigning them to the cubes in order).
   * ### Defining the X,Y,Z scale of each cube according to its RBG color data.
   * ### Visual effect(position moving, rotations, lights)
 #### As I chose the **Mixed-media Collage** as my theme, I thought it might be quiet interesting to use my own selfie as the source to play with. I broke all proccesses into four files, and the content for each of them are roughly as follow:
@@ -9,12 +9,12 @@
 #### What I did when I thought to create a *Selfie Collage* at the begining were:
   * ### Pick one selfie that I like and pixelated it into a 40x40 pixel image in the Photoshop.
   * ### Used the **Digital Color Meter** to catch all the RGB data from the processed image and put them in a table.
-  * ### Transferrd all RGB data into Hex color data online and filled the table with those trasffered data.
+  * ### Transfered all RGB data into Hex color data online and filled the table with those transfered data.
   * ### Created a **for loop** which contains 1600 cubes(40x40(X and Y axis))and built an array to put all hex color data in. Finally, assigning all the hex color data to the cubes sequentially.
   * ### Made each cube ratate with different rotate speeds.
-![S4-ClassExamples-00-ArrayMesh00](/Session4-Array%2C%20For%20Loop%2C%20OrbitControls/(README)pictures/pic-0.png "S4-ClassExamples-00-ArrayMesh00")
+![00-SetCubesManually00](/Rongzhang%20Gu%20Final%20Project-SelfieCollage/(README)pictures/pic-0.png "00-SetCubesManually00")
 ### Solotion
-1. Since the **'Array'** and **'For loop'** lesson really left a deep impression in my mind, the first solution I thought to complete this project is to define the pixel color individually. And for reaching that goal I used **Digital Color Meter** to get all RGB color data I want and transferrd them online to *Hex color*.
+1. Since the **'Array'** and **'For loop'** lesson really left a deep impression in my mind, the first solution I thought to complete this project is to define the pixel color individually. And for reaching that goal I used **Digital Color Meter** to get all RGB color data I want and transfered them online to *Hex color*.
 2. The logic for the code is easy: creating two arrays and put colors and cubes in seperately. Then assigning colors to these cubes. However, the process of collecting data was a huge work, especially when doing it manually. This solotion was definitely not the efficient one.
 3. The positive perspectives are: Firstly, it is easy to code as long as I have all the data I need. What is more, I could see how my *Selfie Collage* looks like in threejs and use it as the reference when I started adding other effect on my project.
    To the contrary, if I want to change the image or replace *my selfie* with other pictures. It would be impossible to do it without a lot of manual work.
