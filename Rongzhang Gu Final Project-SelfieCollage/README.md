@@ -89,4 +89,47 @@ So I just need to use all the data I have in step one to define the scale due to
    c.scale.z = color[i][2]*0.1;
    ```
    And due to the table I made for *00-SetCubesManually*, I knew the range of all the RBG data I have, so I adjusted the scale couple times and finally found out the suitable scaling factors.
-2. So right now each cube has its own size, the **mouse control** part for this project is **OrbitControls**, because it was what we used a lot during the workshop. So I want to keep this *"old friend"*, what is more, this project is interesting when users can view these mix-media visual effects in 360 degrees with the mouse
+2. So right now each cube has its own size, the **mouse control** part for this project is **OrbitControls**, because it was what we used a lot during the workshop. So I want to keep this *"old friend"*, what is more, I thought this project will be more interesting and more creative when users can view these mix-media visual effects in 360 degrees with the mouse.
+
+********************
+
+##03-OptimalDesign: *Lights, moving*
+![03-OptimalDesign00](/Rongzhang%20Gu%20Final%20Project-SelfieCollage/(README)pictures/pic-5.png "03-OptimalDesign00")
+#### Solotion
+In this *03-OptimalDesign*, I tried to add more lights and make the cubes rotate and move to made my project cooler and more creative:
+1. Add the AmbientLight to light the whole scene.
+2. Reduce the intensity of the three spot lights I added before since too many lights would make the image unclear.
+3. Randomize the color of top spotLight and the right spotLight so evertime refreshing the page, the visual color of the image will change a little bit.
+4. Randomize the moving speed of z axis of the cubes and use *if function* to limit the movement of the cubes.
+### Details
+1. There are four lights in the scene, I only randomized two of them to make the visual effect nice and clear.
+   ```javascript
+   // Add 3 spot lights in the scene
+ 	//light from the top
+ 	var ambient = new THREE.AmbientLight(0xffffff);
+ 	var spotLight = new THREE.SpotLight(Math.random()*0xFFFFFF);
+ 	spotLight.position.set(0, 10, 0);
+ 	//light from the right
+ 	var spotLight1 = new THREE.SpotLight(Math.random()*0xFFFFFF);
+ 	spotLight1.position.set(10, 0, 0);
+ 	//light from the front
+ 	var spotLight2 = new THREE.SpotLight(0xFFFFFF);
+ 	spotLight2.position.set(0, 0, 10);
+ 	scene.add(spotLight);
+ 	scene.add(spotLight1);
+ 	scene.add(spotLight2);
+ 	scene.add(ambient);
+   ```
+2. To limit the cubes movement, I took my homework *S5-MyExamples-01-CreativeObjects* as the reference, but there were still some diffrences between S5-MyExamples-01-CreativeObjects and this project:
+   1. The reason why in S5-MyExamples-01-CreativeObjects, all objects seemed have different moving speed is actually because the initial scale of each object is different. Under this circumstance, although they all have the same growing speed, they will not appear with the same movement.
+      So for S5-MyExamples-01-CreativeObjects, I just need to use *if function* to limit the size of those objects.
+   2. But for this project, the x,y,z scale of each cube were set according to its RGB, so randomize the scale would not be the propriate solution. For this case, the first thing I did is randomize the move speed.  
+      So I defined a random range:[-5,5) and assigned it to the move speed of z axis. However, during the code test I found that, if I only limit the speed, those cubes would not go back to their origin positions, the reason was even if the speed will not beyond the number I set, the speed will keep change from negative number to positive number. So I wrote:
+      ```javascript
+      var spd = [];
+      spd.push(Math.random()* 10 -5);
+      c.position.z += spd[i];
+      if (c.position.z > 20) spd[i] = -spd[i];
+      if (c.position.z < -20) spd[i] = -spd[i];
+      ```
+      to make sure my cubes keep the nice movement.
