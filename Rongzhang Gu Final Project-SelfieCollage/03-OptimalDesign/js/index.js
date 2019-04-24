@@ -89,25 +89,29 @@ function init() {
   }
 }
 
+// Transferrd RGB colors to Hex colors
 function RGB2Hex(clr) {
-    var r = clr[0];
-    var g = clr[1];
-    var b = clr[2];
+    var r = clr[0];// The first element
+    var g = clr[1];// The second element
+    var b = clr[2];// The third element
 
     var hex = "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
     return hex;
  }
 
-function drawFrame(){
-	requestAnimationFrame(drawFrame);
-  var imagedata = getImageData( imgTexture);
+ function drawFrame(){
+ 	requestAnimationFrame(drawFrame);
+   // Get the RGB data of the image
+ 	var imagedata = getImageData( imgTexture );
+   // Execute the loop 1600 times and each time it is executed, get the RGB data of one pixel and save it in color[]
+ 	// Then transfered the RGB colors to Hex colors in function RGB2Hex(clr)
+ 	// Use the transfered Hex color to define the color of the cubes
+ 	for (var x = 0; x < pixelnum; x += 1) {
+ 		for (var y = 0; y < pixelnum; y += 1) {
 
-	for (var x = 0; x < pixelnum; x += 1) {
-		for (var y = 0; y < pixelnum; y += 1) {
-
-			color[x * pixelnum + y] = getPixel( imagedata,parseInt((imgwidth)/pixelnum * x),parseInt(imgheight-1-(imgheight)/pixelnum * y));
-		}
-	}
+ 			color[x * pixelnum + y] = getPixel( imagedata,parseInt((imgwidth)/pixelnum * x),parseInt(imgheight-1-(imgheight)/pixelnum * y));
+ 		}
+ 	}
 
 	cubes.forEach(function(c, i) {
 		// Set the color of those 1600 cubes
