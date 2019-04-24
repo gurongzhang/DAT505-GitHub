@@ -80,7 +80,7 @@ function init() {
 	  	var mesh = new THREE.Mesh(boxGeometry, boxMaterial);
 		      mesh.position.x = x;
 	    	  mesh.position.y = y;
-	 // Randomize the speed
+	 // Push a random range:[-5,5) into array spd
    spd.push(Math.random()* 10 -5);
 	 scene.add(mesh);
 	 // Push those meshes into array
