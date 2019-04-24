@@ -1,6 +1,4 @@
-var renderer, scene, camera, controls, composer;
-var glitchPass;
-
+var renderer, scene, camera, controls;
 var imgTexture = new THREE.ImageLoader().load("image.jpg");
 var cubes=[];
 var color = [];
@@ -9,10 +7,6 @@ var imgwidth,imgheight;
 var spd = [];
 var spd1 = [];
 
-function updateOptions() {
-			var wildGlitch = document.getElementById( 'wildGlitch' );
-			glitchPass.goWild = wildGlitch.checked;
-		}
 
 function getImageData( image ) {
 
@@ -49,11 +43,7 @@ function getImageData( image ) {
 function init() {
 	// Add scene
 	scene = new THREE.Scene();
-	// Try to add some fog
-	// Reference on threejs.org: https://threejs.org/docs/index.html#api/zh/scenes/Fog
-	//scene.fog = new THREE.Fog( Math.random()*0xFFFFFF, 1, 300 );
-
-	// Set camera
+  // Set camera
 	var W = window.innerWidth,H = window.innerHeight;
 	camera = new THREE.PerspectiveCamera(20, W / H, 0.1, 1000);
 	camera.position.set(0, 0, 350);
@@ -83,7 +73,6 @@ function init() {
   // Set OrbitControls to know the scene better
 	controls = new THREE.OrbitControls(camera, renderer.domElement);
 
-
 	// Create a two dimensional grid(x,y) of objects, and position them accordingly
   // Start from -50 and sequentially add one every 2 pixels
 	for (var x = -50; x < 50; x += 2) {
@@ -94,40 +83,33 @@ function init() {
 	  	var mesh = new THREE.Mesh(boxGeometry, boxMaterial);
 		      mesh.position.x = x;
 	    	  mesh.position.y = y;
+	 // Push a random range:[-5,5) into array spd
    spd.push(Math.random()* 10 -5);
 	 spd1.push(Math.random()* 0.5 - 0.25);
 	 scene.add(mesh);
 	 // Push those meshes into array
 	 cubes.push(mesh);
-	 // postprocessing
-	 composer = new THREE.EffectComposer( renderer );
-	 composer.addPass( new THREE.RenderPass( scene, camera ) );
-	 glitchPass = new THREE.GlitchPass();
-	 composer.addPass( glitchPass );
-	 window.addEventListener( 'resize', onWindowResize, false );
-		updateOptions();
 	  }
   }
 }
 
+// Transferrd RGB colors to Hex colors
 function RGB2Hex(clr) {
-    var r = clr[0];
-    var g = clr[1];
-    var b = clr[2];
+    var r = clr[0];// The first element
+    var g = clr[1];// The second element
+    var b = clr[2];// The third element
 
     var hex = "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
     return hex;
  }
-function onWindowResize() {
- 		camera.aspect = window.innerWidth / window.innerHeight;
- 		camera.updateProjectionMatrix();
- 		renderer.setSize( window.innerWidth, window.innerHeight );
- 		composer.setSize( window.innerWidth, window.innerHeight );
- 			}
+
 function drawFrame(){
 	requestAnimationFrame(drawFrame);
-  var imagedata = getImageData( imgTexture);
-
+  // Get the RGB data of the image
+	var imagedata = getImageData( imgTexture );
+  // Execute the loop 1600 times and each time it is executed, get the RGB data of one pixel and save it in color[]
+	// Then transfered the RGB colors to Hex colors in function RGB2Hex(clr)
+	// Use the transfered Hex color to define the color of the cubes
 	for (var x = 0; x < pixelnum; x += 1) {
 		for (var y = 0; y < pixelnum; y += 1) {
 
@@ -141,8 +123,11 @@ function drawFrame(){
 		c.scale.x = color[i][0]*0.01;
 		c.scale.y = color[i][1]*0.01;
 		c.scale.z = color[i][2]*0.2;
+		// Assign the random rotate speed to z axis
 		c.rotation.z += spd1[i];
+	  // Assign the random move speed to z axis
   	c.position.z += spd[i];
+		// Make sure cubes will return to the origin position to make the visul effect looks nice
 		if (c.position.z > 20) spd[i] = -spd[i];
 		if (c.position.z < -20) spd[i] = -spd[i];
 	});
