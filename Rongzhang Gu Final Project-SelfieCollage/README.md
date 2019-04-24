@@ -28,7 +28,7 @@ What I did when I thought to create a *Selfie Collage* at the begining were:
 ![01-GetRGBDataAutomatically00](/Rongzhang%20Gu%20Final%20Project-SelfieCollage/(README)pictures/pic-3.png "01-GetRGBDataAutomatically00")
 #### For doing my project more efficiently and making it more creative. Stavros gave me 3 suggestions and the corresponding links that I may need as the reference:
   * ### Using the code to transfer the selfie image into pixel image automatically instead of setting each cube's property manually.
-  * ### Trying to make the cubes more *interesting* with different images that we use, or in other words, when loading different images, the scales or other properties of the cubes would change according to its unique pixel RGB data.
+  * ### Trying to make the cubes more *interesting*, to be more specific, when loading different images, the scales or other properties of the cubes would change according to its unique pixel RGB data.
   * ### Adding some mouse control to make the project more *creative*.
 ### Solution
 1. For this *01-GetRGBDataAutomatically*, I started doing the first solution that Stavros gave to me. The [reference link](https://github.com/mrdoob/three.js/issues/758)
@@ -55,66 +55,38 @@ What I did when I thought to create a *Selfie Collage* at the begining were:
    ```
 2. My thought was since I knew from the online answer that there was some function such as *"getPixel"*, which perfectly meets my project requirements and can help me get the pixels automatically, there must be a way I can transfer the whole image into pixels. So I palnned to figure out how to use the *"getPixel function"* and *"getImageData function"* to reach this goal.
 ### Details
-1. 
-********************
-
-## S4-MyExamples-01-homework(easy): *Cubes who stay with different rotation directions*
-#### For this exercise, we created 225 cubes(15(X axis)x15(Z axis)). And try to make them have different rotate directions in one still scene.
-![S4-MyExamples-01-homework(easy)00](/Session4-Array%2C%20For%20Loop%2C%20OrbitControls/(README)pictures/pic-4.png "S4-MyExamples-01-homework(easy)00")
-### Knowledge Points:
-1. It was very easy to find out the solution based on the for loop that we talked about during *S4-MyExamples-00-ArrayMeshPractice/3*, the solution for this one is to show the result of how each cube looks like after the rotation. So what we need to do is assigning the random rotate directions to the mesh inside the for loop that is all:
+1. The link which Stavros gave me only showed the *"getPixel function"* and *"getImageData function"*. To make the system work, I added *"RGB2Hex function"* to transfer the RGB colors to Hex colors. The comments I wrote in *index.js* can explained everthing very well.
+2. There is a confusing part that why the
    ```javascript
-   for (var x = -35; x < 40; x += 5) {
-   for (var y = -35; y < 40; y += 5) {
-   var boxGeometry = new THREE.BoxGeometry(3, 3, 3);
-
-   var boxMaterial = new THREE.MeshLambertMaterial({color: Math.random() * 0xFFFFFF});
-   var mesh = new THREE.Mesh(boxGeometry, boxMaterial);
-
-   mesh.position.x = x;
-   mesh.position.z = y;
-   mesh.rotation.x = Math.random() * 2 * Math.PI;
-   mesh.rotation.y = Math.random() * 2 * Math.PI;
-   mesh.rotation.z = Math.random() * 2 * Math.PI;
-   scene.add(mesh);
-   cubes.push(mesh);
-     }
-   }
+   var imagedata = getImageData( imgTexture );
+ 	   for (var x = 0; x < pixelnum; x += 1) {
+ 		   for (var y = 0; y < pixelnum; y += 1) {
+ 		   	color[x * pixelnum + y] = getPixel( imagedata,parseInt((imgwidth)/pixelnum * x),parseInt(imgheight-1-(imgheight)/pixelnum * y));
+ 		 }
+ 	 }
    ```
+   can only be put under the drawFrame function, once putting it out of the drawFrame, it won't work. In my opnion, these codes do not need to be executed over and over, so put under the drawFrame is not the perfect solution. The reason why it only works when put under the drawFrame is maybe because it causes some conflicts with other function which is related to pixel-getting.
 
 ********************
 
-## S4-MyExamples-02-homework(hard): *Cubes who keep rotating with different rotate speeds*
-#### For this exercise, we created 225 cubes(15(X axis)x15(Z axis)). And try to make them rotating with different rotate speeds in the scene.
-![S4-MyExamples-02-homework(hard)00](/Session4-Array%2C%20For%20Loop%2C%20OrbitControls/(README)pictures/pic-5.png "S4-MyExamples-02-homework(hard)00")
-### Knowledge Points:
-1. To finding out the solution for this exercise, the **S4-MyExamples-00-ArrayMeshPractice readme note** is good for reference, as we know that if we want to make all cubes created in the for loop to animate, we must push those cubes in an array.
-
-   However, what is this exercise that differ from the *S4-MyExamples-00-ArrayMeshPractice* is that, in this exercise, each cube has their own rotation speed, which means, they will do the rotation individually, in the *S4-MyExamples-00-ArrayMeshPractice*, all cubes rotate the same. So for this *S4-MyExamples-02-homework(hard)* exercise, how to give each cube their unique rotate speed is what should be working on.
-
-2. To solve this quesiton:
-   * First, we need to create an array to push all meshes in:
-     ```javascript
-     var cubes = [];
-     cubes.push(mesh);
-     ```
-   * So **right now** *we can bring all cubes out from the for loop*, the **next step** is to *define the unique rotate speed for each cube*. So basicly, *every cube should has different rotate speed for its X,Y,Z*. _The **array** which has different random values in it_ would be a perfect choice to define the rotate speed. So we need to **define 3 arrays** to *put the rotate speed values for X,Y,Z*:
-     ```javascript
-     var rot_spd = [];
-     var rot_spd1 = [];
-     var rot_spd2 = [];
-     ```
-   * Then we *push random numbers which from different ranges into these 3 arrays* to *make the rotate speed for X,Y,Z different*, **if we assign those random numbers directly to the rotate speed**, the cubes **will still have the same X,Y,Z rotate speeds ,just with 3 random speed values**:
-     ```javascript
-     rot_spd.push(Math.random() * 0.1 - 0.05);
-     rot_spd1.push(Math.random() * 0.1 - 0.02);
-     rot_spd2.push(Math.random() * 0.1 - 0.08);
-     ```
-   * The last step was to assign those values to the X,Y,Z rotate speeds:
-     ```javascript
-     cubes.forEach(function(c, i) {
-     c.rotation.x += rot_spd[i];
-     c.rotation.y += rot_spd1[i];
-     c.rotation.z += rot_spd2[i];
-     });
-     ```
+## 02-SetScaleBasedOnTheRGBData: *Give each cube its own size*
+![02-SetScaleBasedOnTheRGBData00](/Rongzhang%20Gu%20Final%20Project-SelfieCollage/(README)pictures/pic-4.png "02-SetScaleBasedOnTheRGBData00")
+#### Solotion
+This *02-SetScaleBasedOnTheRGBData* is for solving the second suggestion Stavros gave me. Because my solotion to pixelate the image was:
+1. Get the RGB data of each pixel.
+2. Transfer the RGB colors to Hex colors.
+3. Define the color of all meshes.
+So I just need to use all the data I have in step one to define the scale due to each pixel's RGB is unique(it is not absolutely unique, but basically these pixels won't have repeating colors)
+### Details
+1. Since I already had the RGB data from:
+   ```javascript
+   function getPixel( imagedata, x, y) {}
+   ```
+   All RGB colors data were stored as the elements in the array *color[]*, I just need to use those data from this array:
+   ```javascript
+   c.scale.x = color[i][0]*0.01;
+   c.scale.y = color[i][1]*0.01;
+   c.scale.z = color[i][2]*0.1;
+   ```
+   And due to the table I made for *00-SetCubesManually*, I knew the range of all the RBG data I have, so I adjusted the scale couple times and finally found out the suitable scaling factors.
+2. So right now each cube has its own size, the **mouse control** part for this project is **OrbitControls**, because it was what we used a lot during the workshop. So I want to keep this *"old friend"*, what is more, this project is interesting when users can view these mix-media visual effects in 360 degrees with the mouse

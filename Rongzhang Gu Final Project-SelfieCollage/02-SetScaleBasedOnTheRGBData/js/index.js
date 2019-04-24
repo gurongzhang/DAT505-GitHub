@@ -42,7 +42,7 @@ function init() {
 	scene = new THREE.Scene();
   // Set camera
 	var W = window.innerWidth,H = window.innerHeight;
-	camera = new THREE.PerspectiveCamera(30, W / H, .1, 1000);
+	camera = new THREE.PerspectiveCamera(10, W / H, .1, 1000);
 	camera.position.set(0, 0, 300);
 	camera.lookAt(scene.position);
   // Add 3 spot lights in the scene
@@ -65,10 +65,10 @@ function init() {
 
 	// Create a two dimensional grid(x,y) of objects, and position them accordingly
   // Start from -20 and sequentially add one every 1 pixels
-	for (var x = -40; x < 40; x += 2) {
-  	for (var y = -40; y < 40; y += 2) {
+	for (var x = -20; x < 20; x += 1) {
+  	for (var y = -20; y < 20; y += 1) {
 			// Create 1600 Cube Meshes with Lambert material
-		  var boxGeometry = new THREE.BoxGeometry(1.5, 1.5, 1.5);
+		  var boxGeometry = new THREE.BoxGeometry(0.7, 0.7, 0.7);
 		  var boxMaterial = new THREE.MeshLambertMaterial();
 	  	var mesh = new THREE.Mesh(boxGeometry, boxMaterial);
 		      mesh.position.x = x;
@@ -80,10 +80,11 @@ function init() {
   }
 }
 
+// Transferrd RGB colors to Hex colors
 function RGB2Hex(clr) {
-    var r = clr[0];
-    var g = clr[1];
-    var b = clr[2];
+    var r = clr[0];// The first element
+    var g = clr[1];// The second element
+    var b = clr[2];// The third element
 
     var hex = "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
     return hex;
@@ -91,8 +92,11 @@ function RGB2Hex(clr) {
 
 function drawFrame(){
 	requestAnimationFrame(drawFrame);
-  var imagedata = getImageData( imgTexture);
-
+  // Get the RGB data of the image
+	var imagedata = getImageData( imgTexture );
+  // Execute the loop 1600 times and each time it is executed, get the RGB data of one pixel and save it in color[]
+	// Then transfered the RGB colors to Hex colors in function RGB2Hex(clr)
+	// Use the transfered Hex color to define the color of the cubes
 	for (var x = 0; x < pixelnum; x += 1) {
 		for (var y = 0; y < pixelnum; y += 1) {
 
@@ -103,9 +107,9 @@ function drawFrame(){
 	cubes.forEach(function(c, i) {
 		// Set the color of those 1600 cubes
 		c.material.color.set(RGB2Hex(color[i]));
-		c.scale.x = color[i][0]*0.01;
-		c.scale.y = color[i][1]*0.01;
-		c.scale.z = color[i][2]*0.1;
+		c.scale.x = color[i][0]*0.01;// Set the x scale based on the R data
+		c.scale.y = color[i][1]*0.01;// Set the y scale based on the G data
+		c.scale.z = color[i][2]*0.1;// Set the z scale based on the B data
 	});
 	renderer.render(scene, camera);
 }

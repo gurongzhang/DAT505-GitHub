@@ -82,9 +82,9 @@ function init() {
 
 // Transferrd RGB colors to Hex colors
 function RGB2Hex(clr) {
-    var r = clr[0];// The first element of the array
-    var g = clr[1];// The second element of the array
-    var b = clr[2];// The third element of the array
+    var r = clr[0];// The first element 
+    var g = clr[1];// The second element
+    var b = clr[2];// The third element
 
     var hex = "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
     return hex;
