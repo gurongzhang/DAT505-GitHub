@@ -83,6 +83,7 @@ function init() {
 	  	var mesh = new THREE.Mesh(boxGeometry, boxMaterial);
 		      mesh.position.x = x;
 	    	  mesh.position.y = y;
+	 // Push a random range:[-5,5) into array spd
    spd.push(Math.random()* 10 -5);
 	 spd1.push(Math.random()* 0.5 - 0.25);
 	 scene.add(mesh);
@@ -92,10 +93,11 @@ function init() {
   }
 }
 
+// Transferrd RGB colors to Hex colors
 function RGB2Hex(clr) {
-    var r = clr[0];
-    var g = clr[1];
-    var b = clr[2];
+    var r = clr[0];// The first element
+    var g = clr[1];// The second element
+    var b = clr[2];// The third element
 
     var hex = "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
     return hex;
@@ -103,8 +105,11 @@ function RGB2Hex(clr) {
 
 function drawFrame(){
 	requestAnimationFrame(drawFrame);
-  var imagedata = getImageData( imgTexture);
-
+  // Get the RGB data of the image
+	var imagedata = getImageData( imgTexture );
+  // Execute the loop 1600 times and each time it is executed, get the RGB data of one pixel and save it in color[]
+	// Then transfered the RGB colors to Hex colors in function RGB2Hex(clr)
+	// Use the transfered Hex color to define the color of the cubes
 	for (var x = 0; x < pixelnum; x += 1) {
 		for (var y = 0; y < pixelnum; y += 1) {
 
@@ -118,8 +123,11 @@ function drawFrame(){
 		c.scale.x = color[i][0]*0.01;
 		c.scale.y = color[i][1]*0.01;
 		c.scale.z = color[i][2]*0.2;
+		// Assign the random rotate speed to z axis
 		c.rotation.z += spd1[i];
+	  // Assign the random move speed to z axis
   	c.position.z += spd[i];
+		// Make sure cubes will return to the origin position to make the visul effect looks nice
 		if (c.position.z > 20) spd[i] = -spd[i];
 		if (c.position.z < -20) spd[i] = -spd[i];
 	});

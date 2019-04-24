@@ -93,7 +93,7 @@ So I just need to use all the data I have in step one to define the scale due to
 
 ********************
 
-##03-OptimalDesign: *Lights, moving*
+##03-OptimalDesign: *Lights, Moving*
 ![03-OptimalDesign00](/Rongzhang%20Gu%20Final%20Project-SelfieCollage/(README)pictures/pic-5.png "03-OptimalDesign00")
 #### Solotion
 In this *03-OptimalDesign*, I tried to add more lights and make the cubes rotate and move to made my project cooler and more creative:
@@ -133,3 +133,19 @@ In this *03-OptimalDesign*, I tried to add more lights and make the cubes rotate
       if (c.position.z < -20) spd[i] = -spd[i];
       ```
       to make sure my cubes keep the nice movement.
+
+********************
+
+##04-VisualAdjustment: *Rotation, More cubes, A clearer display*
+![04-VisualAdjustment00](/Rongzhang%20Gu%20Final%20Project-SelfieCollage/(README)pictures/pic-6.png "04-VisualAdjustment00")
+#### Solotion
+In this *04-VisualAdjustment*, what I did are:
+1. Randomize the rotate speed of z axis of each cube.
+2. Use the code:
+   ```javascript
+   renderer.setPixelRatio( window.devicePixelRatio );
+   ```
+   to make a better display of the whole project.
+3. Change the total number of the cubes 1600(40x40) to 2500(50x50) to make the visual effect more delicate.
+### Details
+1. Those are small details I thought may make the project more interesting.

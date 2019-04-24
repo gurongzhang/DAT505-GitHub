@@ -119,7 +119,7 @@ function RGB2Hex(clr) {
 		c.scale.x = color[i][0]*0.01;
 		c.scale.y = color[i][1]*0.01;
 		c.scale.z = color[i][2]*0.2;
-    // Assign the random speed to z axis
+    // Assign the random move speed to z axis
   	c.position.z += spd[i];
 		// Make sure cubes will return to the origin position to make the visul effect looks nice
 		if (c.position.z > 20) spd[i] = -spd[i];
