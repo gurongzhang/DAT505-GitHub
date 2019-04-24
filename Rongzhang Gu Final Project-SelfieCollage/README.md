@@ -10,8 +10,7 @@
 #### Solotion
 What I did when I thought to create a *Selfie Collage* at the begining were:
   * ### Pick one selfie that I like and pixelated it into a 40x40 pixel image in the Photoshop.
-  ![00-SetCubesManually03](/Rongzhang%20Gu%20Final%20Project-SelfieCollage/(README)pictures/pic-9.jpg "00-SetCubesManually03")
-  ![00-SetCubesManually01](/Rongzhang%20Gu%20Final%20Project-SelfieCollage/(README)pictures/pic-1.png "00-SetCubesManually01")
+  ![00-SetCubesManually01](/Rongzhang%20Gu%20Final%20Project-SelfieCollage/(README)pictures/pic-9.png "00-SetCubesManually01")
   * ### Used the **Digital Color Meter** to catch all the RGB data from the processed image and put them in a table.
   * ### Transfered all RGB data into Hex color data [online](https://www.css-js.com/tools/rgba.html) and filled the table with those transfered data.
   ![00-SetCubesManually02](/Rongzhang%20Gu%20Final%20Project-SelfieCollage/(README)pictures/pic-2.png "00-SetCubesManually02")
