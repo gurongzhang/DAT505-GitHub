@@ -10,10 +10,11 @@
 #### Solotion
 What I did when I thought to create a *Selfie Collage* at the begining were:
   * ### Pick one selfie that I like and pixelated it into a 40x40 pixel image in the Photoshop.
-  ![00-SetCubesManually01](/Rongzhang%20Gu%20Final%20Project-SelfieCollage/(README)pictures/pic-9.png "00-SetCubesManually01")
-  * ### Used the **Digital Color Meter** to catch all the RGB data from the processed image and put them in a table.
+    ![00-SetCubesManually01](/Rongzhang%20Gu%20Final%20Project-SelfieCollage/(README)pictures/pic-9.png "00-SetCubesManually01")
+  * ### Used the **Digital Color Meter** to catch all the RGB data from the processed image and put them in a table. Here is the screen cut of the 1600 pictures I took to for recording the RGB color data:
+    ![00-SetCubesManually04](/Rongzhang%20Gu%20Final%20Project-SelfieCollage/(README)pictures/pic-10.jpeg "00-SetCubesManually04")
   * ### Transfered all RGB data into Hex color data [online](https://www.css-js.com/tools/rgba.html) and filled the table with those transfered data.
-  ![00-SetCubesManually02](/Rongzhang%20Gu%20Final%20Project-SelfieCollage/(README)pictures/pic-2.png "00-SetCubesManually02")
+    ![00-SetCubesManually02](/Rongzhang%20Gu%20Final%20Project-SelfieCollage/(README)pictures/pic-2.png "00-SetCubesManually02")
   * ### Created a **for loop** which contains 1600 cubes(40x40(X and Y axis))and built an array to put all hex color data in. Finally, assigning all the hex color data to the cubes sequentially.
   * ### Made each cube ratate with different rotate speeds.
 ### Details
