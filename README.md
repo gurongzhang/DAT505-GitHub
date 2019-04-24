@@ -93,7 +93,7 @@
 
 *********************
 
-### So I have 17 class examples and 20 my examples in total.
+### So I have 17 class examples and 20 my examples for the first three weeks in total.
 
 ### My feelings for this DAT505 course are:
   * I spent a lot of time doing these exercises and got abundant intersting knowledges about how to be creative with the coding, threejs is a difficult and fun thing with countless possibilities.
@@ -101,3 +101,17 @@
   * I tried my best to put all my understanding of those examples in the README files. I did them not only for the grades but also for the furthur study in coding area and the efforts I put in this three-weeks workshop.
   * Right now is 4/12/19 11:09A.M. in China and I finally finished all the first 3 weeks work. Feeling like crying and already started missing these bitter-sweet experiences. At the end, I want to thank myself for always keeping trying.
   * Such a magic workshop!
+
+*********************
+
+### Rongzhang Gu Final Project-SelfieCollage:
+  * #### Files that cannot be viewed directly in the browser:
+    * 00-SetCubesManually
+  * #### Files that can be viewed directly in the browser:
+    * 01-GetRGBDataAutomatically
+    * 02-SetScaleBasedOnTheRGBData
+    * 03-OptimalDesign
+    * 04-VisualAdjustment
+    * 05-FinalProject
+  * #### Four final pictures file:
+    * RongzhangGuDAT505FinalProjectPictures
