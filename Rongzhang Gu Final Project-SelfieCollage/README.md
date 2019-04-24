@@ -1,4 +1,5 @@
 # Rongzhang Gu Final Project-SelfieCollage
+## The GitHub link for this project is:https://github.com/gurongzhang/DAT505-GitHub/tree/master/Rongzhang%20Gu%20Final%20Project-SelfieCollage
 ## Introduction:
 #### The core knowledges of this project are:
   * ### Transfering one normal image into pixel image(Getting pixel color data of the image and assigning them to the cubes in order).
