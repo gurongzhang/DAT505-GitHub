@@ -4,32 +4,58 @@
   * ### Transfering one normal image into pixel image(Getting pixel color data of the image and assigning them to the cubes in order).
   * ### Defining the X,Y,Z scale of each cube according to its RBG color data.
   * ### Visual effect(position moving, rotations, lights)
-#### As I chose the **Mixed-media Collage** as my theme, I thought it might be quiet interesting to use my own selfie as the source to play with. I broke all proccesses into four files, and the content for each of them are roughly as follow:
+#### Since I chose the **Mixed-media Collage** as my theme, I thought it might be quiet interesting to use my own selfie as the source to play with. I broke all proccesses into four files, and the content for each of them are roughly as follow:
 ## 00-SetCubesManually: *Initial Thought*
-#### What I did when I thought to create a *Selfie Collage* at the begining were:
+![00-SetCubesManually00](/Rongzhang%20Gu%20Final%20Project-SelfieCollage/(README)pictures/pic-0.png "00-SetCubesManually00")
+#### Solotion
+What I did when I thought to create a *Selfie Collage* at the begining were:
   * ### Pick one selfie that I like and pixelated it into a 40x40 pixel image in the Photoshop.
+  ![00-SetCubesManually01](/Rongzhang%20Gu%20Final%20Project-SelfieCollage/(README)pictures/pic-1.png "00-SetCubesManually01")
   * ### Used the **Digital Color Meter** to catch all the RGB data from the processed image and put them in a table.
-  * ### Transfered all RGB data into Hex color data online and filled the table with those transfered data.
+  * ### Transfered all RGB data into Hex color data [online](https://www.css-js.com/tools/rgba.html) and filled the table with those transfered data.
+  ![00-SetCubesManually02](/Rongzhang%20Gu%20Final%20Project-SelfieCollage/(README)pictures/pic-2.png "00-SetCubesManually02")
   * ### Created a **for loop** which contains 1600 cubes(40x40(X and Y axis))and built an array to put all hex color data in. Finally, assigning all the hex color data to the cubes sequentially.
   * ### Made each cube ratate with different rotate speeds.
-![00-SetCubesManually00](/Rongzhang%20Gu%20Final%20Project-SelfieCollage/(README)pictures/pic-0.png "00-SetCubesManually00")
-### Solotion
-1. Since the **'Array'** and **'For loop'** lesson really left a deep impression in my mind, the first solution I thought to complete this project is to define the pixel color individually. And for reaching that goal I used **Digital Color Meter** to get all RGB color data I want and transfered them online to *Hex color*.
-2. The logic for the code is easy: creating two arrays and put colors and cubes in seperately. Then assigning colors to these cubes. However, the process of collecting data was a huge work, especially when doing it manually. This solotion was definitely not the efficient one.
+### Details
+1. Since the **'Array'** and **'For loop'** lecture really left a deep impression in my mind, the first solution I thought to complete this project is to define the pixel color individually. And for reaching that goal I used **Digital Color Meter** to get all RGB color data I want and transfered them online to *Hex color*.
+2. The logic for the code is easy: creating two arrays and put colors and cubes in seperately. Then assigning colors to these cubes. However, the process of collecting data was a huge work, especially when doing it manually. This solution was definitely not the efficient one.
 3. The positive perspectives are: Firstly, it is easy to code as long as I have all the data I need. What is more, I could see how my *Selfie Collage* looks like in threejs and use it as the reference when I started adding other effect on my project.
    To the contrary, if I want to change the image or replace *my selfie* with other pictures. It would be impossible to do it without a lot of manual work.
 
 ********************
 
 ## 01-GetRGBDataAutomatically: *Get the RGB color data for the pixel color*
-#### For doing my project more efficiently and making it more creative. Stavros gave me 3 suggestions and the corresponding link that I may need during the tutorial time:
+![01-GetRGBDataAutomatically00](/Rongzhang%20Gu%20Final%20Project-SelfieCollage/(README)pictures/pic-3.png "01-GetRGBDataAutomatically00")
+#### For doing my project more efficiently and making it more creative. Stavros gave me 3 suggestions and the corresponding links that I may need as the reference:
   * ### Using the code to transfer the selfie image into pixel image automatically instead of setting each cube's property manually.
   * ### Trying to make the cubes more *interesting* with different images that we use, or in other words, when loading different images, the scales or other properties of the cubes would change according to its unique pixel RGB data.
   * ### Adding some mouse control to make the project more *creative*.
-![S4-ClassExamples-01-ArrayMesh-Exercise-template00](/Session4-Array%2C%20For%20Loop%2C%20OrbitControls/(README)pictures/pic-2.png "S4-ClassExamples-01-ArrayMesh-Exercise-template00")
-### Solotion
+### Solution
 1. For this *01-GetRGBDataAutomatically*, I started doing the first solution that Stavros gave to me. The [reference link](https://github.com/mrdoob/three.js/issues/758)
+   The reference code were:
+   ```javascript
+   function getImageData( image ) {
+    var canvas = document.createElement( 'canvas' );
+    canvas.width = image.width;
+    canvas.height = image.height;
 
+    var context = canvas.getContext( '2d' );
+    context.drawImage( image, 0, 0 );
+
+    return context.getImageData( 0, 0, image.width, image.height );
+    }
+
+   function getPixel( imagedata, x, y ) {
+    var position = ( x + imagedata.width * y ) * 4, data = imagedata.data;
+    return { r: data[ position ], g: data[ position + 1 ], b: data[ position + 2 ], a: data[ position + 3 ] };
+    }
+
+    var imagedata = getImageData( imgTexture.image );
+    var color = getPixel( imagedata, 10, 10 );
+   ```
+2. My thought was since I knew from the online answer that there was some function such as *"getPixel"*, which perfectly meets my project requirements and can help me get the pixels automatically, there must be a way I can transfer the whole image into pixels. So I palnned to figure out how to use the *"getPixel function"* and *"getImageData function"* to reach this goal.
+### Details
+1. 
 ********************
 
 ## S4-MyExamples-01-homework(easy): *Cubes who stay with different rotation directions*

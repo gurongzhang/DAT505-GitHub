@@ -92,8 +92,11 @@ function RGB2Hex(clr) {
 
 function drawFrame(){
 	requestAnimationFrame(drawFrame);
-  var imagedata = getImageData( imgTexture );
-
+  // Get the RGB data of the image
+	var imagedata = getImageData( imgTexture );
+  // Execute the loop 1600 times and each time it is executed, get the RGB data of one pixel and save it in color[]
+	// Then transfered the RGB colors to Hex colors in function RGB2Hex(clr)
+	// Use the transfered Hex color to define the color of the cubes
 	for (var x = 0; x < pixelnum; x += 1) {
 		for (var y = 0; y < pixelnum; y += 1) {
 
