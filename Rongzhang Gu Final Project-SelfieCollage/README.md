@@ -148,7 +148,7 @@ In this *04-VisualAdjustment*, what I did are:
    to make a better display of the whole project.
 3. Change the total number of the cubes 1600(40x40) to 2500(50x50) to make the visual effect more delicate.
 ### Details
-1. Those are small details I thought may make the project more interesting.
+1. In this project I added some small details which I thought might make the project more interesting.
 
 ********************
 
@@ -170,6 +170,7 @@ In this *final version*, what I did are:
 ## This is the comparison between the original image and the my final project version:
 ![comparison00](/Rongzhang%20Gu%20Final%20Project-SelfieCollage/(README)pictures/pic-8.png "comparison00")
 
+By the way, the images use for this project are better be square, since the pixel scale I set is 1:1.
 ********************
 ## Thank NUA for giving me the chance to study this DAT505.
 ## Thank Stavros for all the supports he provided to me.
