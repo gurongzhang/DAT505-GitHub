@@ -43,6 +43,9 @@ function getImageData( image ) {
 function init() {
 	// Add scene
 	scene = new THREE.Scene();
+	// Randomize the background
+	var texture = new THREE.TextureLoader().load( "backgrounds/bg"+ Math.floor(Math.random()*5)+".jpg" );
+	scene.background=texture;
   // Set camera
 	var W = window.innerWidth,H = window.innerHeight;
 	camera = new THREE.PerspectiveCamera(20, W / H, 0.1, 1000);

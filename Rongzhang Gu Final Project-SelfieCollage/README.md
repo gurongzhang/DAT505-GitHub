@@ -6,7 +6,8 @@
   * ### Visual effect(position moving, rotations, lights)
 #### Since I chose the **Mixed-media Collage** as my theme, I thought it might be quiet interesting to use my own selfie as the source to play with. I broke all proccesses into four files, and the content for each of them are roughly as follow:
 ## 00-SetCubesManually: *Initial Thought*
-![00-SetCubesManually00](/Rongzhang%20Gu%20Final%20Project-SelfieCollage/(README)pictures/pic-0.png "00-SetCubesManually00")
+![00-SetCubesManually00](/Rongzhang%20Gu%20Final%20Project-SelfieCollage/(README)pictures/pic-9.png "00-SetCubesManually00")
+![00-SetCubesManually01](/Rongzhang%20Gu%20Final%20Project-SelfieCollage/(README)pictures/pic-0.png "00-SetCubesManually01")
 #### Solotion
 What I did when I thought to create a *Selfie Collage* at the begining were:
   * ### Pick one selfie that I like and pixelated it into a 40x40 pixel image in the Photoshop.
@@ -149,3 +150,22 @@ In this *04-VisualAdjustment*, what I did are:
 3. Change the total number of the cubes 1600(40x40) to 2500(50x50) to make the visual effect more delicate.
 ### Details
 1. Those are small details I thought may make the project more interesting.
+
+********************
+
+##05-FinalProject: *Background and text*
+![05-FinalProject00](/Rongzhang%20Gu%20Final%20Project-SelfieCollage/(README)pictures/pic-7.png "05-FinalProject00")
+#### Solotion
+In this *final version*, what I did are:
+1. Add text on the top.
+2. Add background.
+### Details
+1. I took *S7-MyExamples-03-Texture-Cubepractice* as the reference to randomize the background texture.
+2. I search on the internet to know better about the text part:
+   [Reference link1](https://blog.csdn.net/soyanzhong/article/details/78708478) showed me what kinds of property I can change.
+   [Reference link2](https://blog.csdn.net/yuanxw44/article/details/80019501) showed me the details about font-family.
+
+********************
+
+## This is the comparison between the original image and the my final project version:
+![comparison00](/Rongzhang%20Gu%20Final%20Project-SelfieCollage/(README)pictures/pic-8.png "comparison00")
