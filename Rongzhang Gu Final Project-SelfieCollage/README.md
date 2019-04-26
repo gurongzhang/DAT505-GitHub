@@ -1,3 +1,6 @@
+### Name；Rongzhang G
+### Student ID:B161006066
+*******************************
 # Rongzhang Gu Final Project-SelfieCollage
 ## The GitHub link for this project is:https://github.com/gurongzhang/DAT505-GitHub/tree/master/Rongzhang%20Gu%20Final%20Project-SelfieCollage
 ## Introduction:
