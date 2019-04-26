@@ -1,4 +1,4 @@
-### Name；Rongzhang G
+### Name；Rongzhang Gu
 ### Student ID:B161006066
 *******************************
 # Rongzhang Gu Final Project-SelfieCollage
