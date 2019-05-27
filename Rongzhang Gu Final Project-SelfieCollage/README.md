@@ -98,7 +98,7 @@ So I just need to use all the data I have in step one to define the scale due to
 
 ********************
 
-##03-OptimalDesign: *Lights, Moving*
+## 03-OptimalDesign: *Lights, Moving*
 ![03-OptimalDesign00](/Rongzhang%20Gu%20Final%20Project-SelfieCollage/(README)pictures/pic-5.png "03-OptimalDesign00")
 #### Solotion
 In this *03-OptimalDesign*, I tried to add more lights and make the cubes rotate and move to made my project cooler and more creative:
@@ -141,7 +141,7 @@ In this *03-OptimalDesign*, I tried to add more lights and make the cubes rotate
 
 ********************
 
-##04-VisualAdjustment: *Rotation, More cubes, A clearer display*
+## 04-VisualAdjustment: *Rotation, More cubes, A clearer display*
 ![04-VisualAdjustment00](/Rongzhang%20Gu%20Final%20Project-SelfieCollage/(README)pictures/pic-6.png "04-VisualAdjustment00")
 #### Solotion
 In this *04-VisualAdjustment*, what I did are:
@@ -157,7 +157,7 @@ In this *04-VisualAdjustment*, what I did are:
 
 ********************
 
-##05-FinalProject: *Background and text*
+## 05-FinalProject: *Background and text*
 ![05-FinalProject00](/Rongzhang%20Gu%20Final%20Project-SelfieCollage/(README)pictures/pic-7.png "05-FinalProject00")
 #### Solotion
 In this *final version*, what I did are:
