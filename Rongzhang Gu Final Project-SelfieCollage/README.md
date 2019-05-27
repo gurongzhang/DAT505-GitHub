@@ -83,7 +83,7 @@ This *02-SetScaleBasedOnTheRGBData* is for solving the second suggestion Stavros
 3. Define the color of all meshes.
 So I just need to use all the data I have in step one to define the scale due to each pixel's RGB is unique(it is not absolutely unique, but basically these pixels won't have repeating colors)
 ### Details
-1. Since I already had the RGB data from:
+1. Since I already had the RGB data from the following script:
    ```javascript
    function getPixel( imagedata, x, y) {}
    ```
