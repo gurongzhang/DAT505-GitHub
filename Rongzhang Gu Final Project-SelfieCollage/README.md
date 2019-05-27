@@ -36,7 +36,7 @@ What I did when I thought to create a *Selfie Collage* at the begining were:
   * ### Trying to make the cubes more *interesting*, to be more specific, when loading different images, the scales or other properties of the cubes would change according to its unique pixel RGB data.
   * ### Adding some mouse control to make the project more *creative*.
 ### Solution
-1. For this *01-GetRGBDataAutomatically*, I started doing the first solution that Stavros gave to me. The [reference link](https://github.com/mrdoob/three.js/issues/758)
+1. For this *01-GetRGBDataAutomatically*, I started doing the first solution that Stavros gave me. The [reference link](https://github.com/mrdoob/three.js/issues/758) inspired me a lot, and
    The reference code were:
    ```javascript
    function getImageData( image ) {
